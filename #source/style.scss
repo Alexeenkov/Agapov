@@ -1,0 +1,355 @@
+/* ------------------------fonts-------------------- */
+
+@font-face {
+    font-family: "Ustroke Regular";
+    src: url("../fonts/Ustroke-regular.ttf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "CCRickVeitch";
+    src: url("../fonts/CCRickVeitch.otf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "City Nova Regular";
+    src: url("../fonts/City-Nova-regular.ttf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* -------------------reset-styles------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+
+/* ------------------------body-------------------- */
+
+html,
+body {
+    min-width: 320px;
+    height: 100%;
+    font-family: "CCRickVeitch";
+    font-weight: 400;
+    font-style: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+// !===========================!!! for all devices !!!================================
+.wrapper {
+    min-height: 100%;
+}
+
+.page {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    &__screen {}
+    &__pagination {
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+    }
+    &__bullet {
+        margin: 10px 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        transition: background-color 0.3s ease 0s;
+    }
+    &__bullet_active {
+        background-color: #fff;
+    }
+    &__scroll {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 100%;
+        background-color: rgba($color: #000000, $alpha: 0.2);
+    }
+    &__drag-scroll {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba($color: #e9411d, $alpha: 0.7);
+    }
+}
+
+.screen {
+    position: relative;
+    flex: 1 0 100%;
+    &__content {
+        position: relative;
+        z-index: 2;
+    }
+    &__body {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+    }
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+}
+
+// ! СТАРОЕ ! ================================================
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000000;
+        opacity: 0.4;
+    }
+    &__top-panel {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        background-color: #ffffff;
+    }
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 25px;
+        max-width: 1800px;
+        color: rgb(230, 230, 230);
+    }
+    &__logo {
+        font-family: "Ustroke Regular";
+        font-weight: 400;
+        font-style: normal;
+    }
+    &__menu {
+        margin-top: 50px;
+    }
+    &__cost {
+        width: 500px;
+    }
+}
+
+.top-panel {
+    &__wrapper {
+        padding: 10px 15px;
+    }
+    &__content {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        span {
+            margin-right: 20px;
+        }
+    }
+    &__image {
+        width: 21px;
+        height: 21px;
+        &_position {
+            transform: translateY(15%);
+            margin-right: 5px;
+        }
+    }
+    &__link {
+        color: inherit;
+        span {
+            font-size: 20px;
+            font-weight: 700;
+        }
+    }
+}
+
+.logo {
+    &__link {
+        display: flex;
+        align-items: center;
+        color: inherit;
+    }
+    &__name {
+        font-size: 60px;
+    }
+    &__subtitle {
+        font-size: 25px;
+        letter-spacing: 4px;
+    }
+    &__image {
+        margin-left: 10px;
+        width: 100px;
+    }
+}
+
+.menu {
+    font-family: "City Nova Regular";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    letter-spacing: 3px;
+    &__list {
+        display: flex;
+        li:nth-child(n+2) {
+            margin-left: 40px;
+        }
+    }
+    &__link {
+        color: inherit;
+    }
+}
+
+.cost {
+    &__title {
+        font-size: 22px;
+        text-align: center;
+    }
+    &__subtitle {
+        margin-top: 5px;
+        text-align: center;
+    }
+    &__button {
+        position: relative;
+        display: block;
+        margin: 20px auto 0 auto;
+        padding: 20px 0;
+        width: 300px;
+        height: 70px;
+        text-align: center;
+        border-radius: 50px;
+        background-color: #eb6320;
+        font-family: "City Nova Regular";
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+        font-size: 25px;
+        color: #fff;
+    }
+}
+
+.description {
+    margin-bottom: 6.2%;
+    position: relative;
+    z-index: 1;
+    color: rgb(230, 230, 230);
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 25px;
+        max-width: 1700px;
+    }
+    &__container-title {
+        width: 600px;
+    }
+    &__title {
+        font-size: 50px;
+    }
+    &__subtitle {
+        margin-top: 10px;
+        font-size: 25px;
+    }
+    &__container-button {
+        width: 600px;
+        text-align: center;
+    }
+    &__text {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    &__button {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        padding: 20px 20px;
+        width: 500px;
+        height: 100px;
+        text-align: center;
+        border-radius: 50px;
+        background-color: #eb6320;
+        font-family: "City Nova Regular";
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: 1px;
+        font-size: 25px;
+        color: #fff;
+    }
+}
