@@ -399,7 +399,7 @@ body {
   }
 
   .calculation {
-    padding-top: 60px;
+    padding-top: 80px;
     right: 50px;
   }
   .calculation__title-cost {
@@ -411,6 +411,7 @@ body {
     font-size: 20px;
   }
   .calculation__title-tax {
+    margin-top: 100px;
     font-size: 15px;
     letter-spacing: 1px;
   }
@@ -421,7 +422,7 @@ body {
 
   .button-cost {
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width: 300px;
     height: 60px;
   }
