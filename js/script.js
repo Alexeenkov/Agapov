@@ -96,6 +96,15 @@ let pageSlider = new Swiper('.page', {
             setScrollType();
         }
     },
+    // Отключить предзагрузку картинок
+    preloadImages: false,
+    // Lazy Loading
+    // (подгрузка картинок)
+    lazy: {
+        // Подгрузить предыдущую
+        // и следующую картинки
+        loadPrevNext: true,
+    },
 });
 
 let menuLinks = document.querySelectorAll('.menu__link');
