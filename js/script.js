@@ -14,6 +14,9 @@ let pageSlider = new Swiper('.page', {
     // Включаем параллакс
     parallax: true,
 
+    // Включение/отключение
+    // перетаскивания на ПК
+    simulateTouch: false,
 
     // Управление клавиатурой
     keyboard: {
