@@ -28,6 +28,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Avenir Next";
+    src: url("../fonts/Avenir-Next.ttf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
 
 /* ! -------------------reset-styles------------------ */
 
@@ -470,10 +477,11 @@ body.touch .arrow {
 
 // ! --------------------- screen № 2 --------------------------------
 .about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
-    max-width: 1600px;
-    padding-top: 150px;
-    margin: 0 auto;
     &::after {
         content: "";
         position: absolute;
@@ -485,14 +493,16 @@ body.touch .arrow {
         opacity: 0.5;
     }
     &__wrapper {
-        padding: 0 100px;
         display: flex;
-        height: 50vh;
         justify-content: space-between;
         align-items: flex-start;
+        margin: 0 auto;
+        width: 95%;
+        padding: 120px 80px 0 80px;
     }
     &__block {
         position: relative;
+        z-index: 1;
         background-color: rgba(0, 0, 0, 0.6);
         border-radius: 15px;
         border: 3px solid rgb(233, 65, 29);
@@ -503,15 +513,15 @@ body.touch .arrow {
         line-height: 1.5;
         letter-spacing: 1px;
         &:last-child {
-            align-self: flex-end;
+            margin-left: 25%;
         }
-        p {
-            position: relative;
-            z-index: 1;
-            font-size: 20px;
-            span {
-                color: rgba(233, 65, 29, 1);
-            }
+    }
+    p {
+        position: relative;
+        z-index: 1;
+        font-size: 20px;
+        span {
+            color: rgba(233, 65, 29, 1);
         }
     }
     &__title {
@@ -522,16 +532,56 @@ body.touch .arrow {
         padding: 15px 25px;
         text-align: center;
         border-radius: 15px;
-        background-color: rgba(233, 65, 29, 0.8);
-        font-size: 23px;
+        background-color: rgba(233, 65, 29, 0.9);
+        font-family: "Ustroke Regular";
+        font-size: 25px;
+        color: #fff;
+    }
+    &__offers {
+        margin: 0 auto 20px auto;
+    }
+    &__main-title {
+        position: relative;
+        z-index: 1;
+        margin: 10px auto;
+        font-family: "Ustroke Regular";
+        font-size: 40px;
+        letter-spacing: 2px;
+        color: #e6e6e6;
     }
 }
 
-.test {
-    height: 100vh;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding-top: 150px;
+.offers {
+    display: flex;
+    padding: 0 15px;
+    &__block {
+        position: relative;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 15px;
+        border: 3px solid #eb6320;
+        padding: 15px;
+        color: #e6e6e6;
+        &:nth-child(n+2) {
+            margin-left: 20px;
+        }
+        p {
+            position: relative;
+            z-index: 1;
+            font-family: "Avenir Next";
+            font-size: 18px;
+            span {
+                color: rgba(233, 65, 29, 1);
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 10px;
+        text-align: center;
+        font-family: "CCRickVeitch";
+        font-size: 20px;
+        color: #eb6320;
+    }
 }
 
 // * -------------------------------------------------!
@@ -611,10 +661,9 @@ body.touch .arrow {
         height: 85px;
     }
     .about {
-        max-width: 1300px;
-        padding-top: 100px;
         &__wrapper {
-            padding: 0 80px;
+            padding-top: 100px;
+            padding: 100px 80px 0 80px;
         }
         &__block {
             padding: 40px 15px 30px 25px;
@@ -626,10 +675,21 @@ body.touch .arrow {
         &__title {
             font-size: 19px;
         }
+        &__main-title {
+            font-size: 34px;
+        }
     }
-    .test {
-        max-width: 1300px;
-        margin: 0 auto;
-        padding-top: 100px;
+    .offers {
+        &__block {
+            &:nth-child(n+2) {
+                margin-left: 20px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+        &__title {
+            font-size: 18px;
+        }
     }
 }
