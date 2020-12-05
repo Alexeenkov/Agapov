@@ -1,3 +1,32 @@
+// ВОПРОСЫ КУПИТЬ ИЛИ ПРОДАТЬ КВАРТИРУ
+
+let questions__buy = document.querySelector('.questions__buy');
+let questions__sale = document.querySelector('.questions__sale');
+let buy__button = document.querySelector('.buy__button');
+let buy__sign = document.querySelector('.buy__sign');
+let sale = document.querySelector('.sale');
+let buy__new = document.querySelector('.buy__new');
+let buy__old = document.querySelector('.buy__old');
+let buy__title = document.querySelector('.buy__main-title');
+
+questions__buy.onclick = function() {
+    questions__buy.classList.add('close-to-left');
+    questions__sale.classList.add('close-to-right');
+    buy__button.classList.add('buy__button_active');
+    buy__sign.classList.add('buy__sign_active');
+    buy__new.classList.add('buy__new_active');
+    buy__old.classList.add('buy__old_active');
+    buy__title.classList.add('buy__main-title_active');
+}
+
+questions__sale.onclick = function() {
+    questions__buy.classList.add('close-to-left');
+    questions__sale.classList.add('close-to-right');
+    sale.classList.add('active-choice');
+}
+
+// СЛАЙДЕР СВАЙПЕР
+
 let wrapper = document.querySelector('.wrapper');
 
 let pageSlider = new Swiper('.page', {
