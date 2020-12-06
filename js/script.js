@@ -8,6 +8,8 @@ let sale = document.querySelector('.sale');
 let buy__new = document.querySelector('.buy__new');
 let buy__old = document.querySelector('.buy__old');
 let buy__title = document.querySelector('.buy__main-title');
+let to__slide_buy = document.querySelector('.go-to-slide-buy');
+let to__slide_sale = document.querySelector('.go-to-slide-sale');
 
 questions__buy.onclick = function() {
     questions__buy.classList.add('close-to-left');
@@ -20,6 +22,22 @@ questions__buy.onclick = function() {
 }
 
 questions__sale.onclick = function() {
+    questions__buy.classList.add('close-to-left');
+    questions__sale.classList.add('close-to-right');
+    sale.classList.add('active-choice');
+}
+
+to__slide_buy.onclick = function() {
+    questions__buy.classList.add('close-to-left');
+    questions__sale.classList.add('close-to-right');
+    buy__button.classList.add('buy__button_active');
+    buy__sign.classList.add('buy__sign_active');
+    buy__new.classList.add('buy__new_active');
+    buy__old.classList.add('buy__old_active');
+    buy__title.classList.add('buy__main-title_active');
+}
+
+to__slide_sale.onclick = function() {
     questions__buy.classList.add('close-to-left');
     questions__sale.classList.add('close-to-right');
     sale.classList.add('active-choice');
@@ -137,6 +155,11 @@ let pageSlider = new Swiper('.page', {
         // и следующую картинки
         loadPrevNext: true,
     },
+    // Навигация по хэшу
+    hashNavigation: {
+        // Отслеживать состояние
+        watchState: true,
+    },
 });
 
 let menuLinks = document.querySelectorAll('.menu__link');
@@ -183,6 +206,7 @@ function setScrollType() {
 }
 
 pageSlider.init();
+
 
 // Выпадающее меню
 
