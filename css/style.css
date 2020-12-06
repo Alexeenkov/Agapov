@@ -996,6 +996,10 @@ body.touch .arrow {
   transition: opacity 0.5s ease 2s, top 0.5s ease 0s, box-shadow 0.5s ease 1s;
 }
 
+.hide {
+  display: none;
+}
+
 @media (max-width: 1630px) {
   .header {
     padding: 5px 20px;
