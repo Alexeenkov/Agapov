@@ -2,14 +2,17 @@
 
 let questions__buy = document.querySelector('.questions__buy');
 let questions__sale = document.querySelector('.questions__sale');
+let questions__or = document.querySelector('.questions__or');
 let buy__button = document.querySelector('.buy__button');
 let buy__sign = document.querySelector('.buy__sign');
-let sale = document.querySelector('.sale');
 let buy__new = document.querySelector('.buy__new');
 let buy__old = document.querySelector('.buy__old');
 let buy__title = document.querySelector('.buy__main-title');
+let sale__title = document.querySelector('.sale__main-title');
 let to__slide_buy = document.querySelector('.go-to-slide-buy');
 let to__slide_sale = document.querySelector('.go-to-slide-sale');
+let sale__button = document.querySelector('.sale__button');
+let sale__block = document.querySelector('.sale__block');
 
 questions__buy.onclick = function() {
     questions__buy.classList.add('close-to-left');
@@ -24,7 +27,10 @@ questions__buy.onclick = function() {
 questions__sale.onclick = function() {
     questions__buy.classList.add('close-to-left');
     questions__sale.classList.add('close-to-right');
-    sale.classList.add('active-choice');
+    questions__or.classList.add('close-to-shadow');
+    sale__title.classList.add('sale__main-title_active');
+    sale__button.classList.add('sale__button_active');
+    sale__block.classList.add('sale__block_active');
 }
 
 to__slide_buy.onclick = function() {
@@ -40,7 +46,10 @@ to__slide_buy.onclick = function() {
 to__slide_sale.onclick = function() {
     questions__buy.classList.add('close-to-left');
     questions__sale.classList.add('close-to-right');
-    sale.classList.add('active-choice');
+    questions__or.classList.add('close-to-shadow');
+    sale__title.classList.add('sale__main-title_active');
+    sale__button.classList.add('sale__button_active');
+    sale__block.classList.add('sale__block_active');
 }
 
 // СЛАЙДЕР СВАЙПЕР
