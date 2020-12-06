@@ -8,9 +8,9 @@
     <title>Агапов Иван. Недвижимость - просто!</title>
 </head>
 
-<body>
+<body class="body">
     <div class="wrapper">
-        <header class="header">
+        <header class="header lock-padding">
             <nav class="header__menu menu">
                 <a href="" class="menu__link">Главная</a>
                 <a href="" class="menu__link">Обо мне</a>
@@ -26,7 +26,7 @@
         </header>
         <main class="page">
             <div class="page__wrapper">
-                <div class="page__screen screen">
+                <div data-hash="slide-1" class="page__screen screen">
                     <div class="screen__content">
                         <div class="main">
                             <div>
@@ -43,16 +43,16 @@
                                         </div>
                                         <nav class="main-menu">
                                             <ul class="main-menu__list">
-                                                <li><a href="" class="main-menu__link">Обо мне</a></li>
+                                                <li><a href="/#slide-2" class="main-menu__link">Обо мне</a></li>
                                                 <li>
                                                     <a href="#0" class="main-menu__link">Услуги</a>
                                                     <span class="sub-menu__arrow arrow"></span>
                                                     <ul class="sub-menu__list">
                                                         <li>
-                                                            <a href="#0" class="sub-menu__link">Купить квартиру в новостройке</a>
+                                                            <a href="/#slide-3" class="sub-menu__link go-to-slide-buy">Купить квартиру</a>
                                                         </li>
                                                         <li>
-                                                            <a href="#0" class="sub-menu__link">Продать квартиру</a>
+                                                            <a href="/#slide-3" class="sub-menu__link go-to-slide-sale">Продать квартиру</a>
                                                         </li>
                                                     </ul>
                                                 </li>
@@ -85,7 +85,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="page__screen screen">
+
+                <div data-hash="slide-2" class="page__screen screen">
                     <div class="screen__content">
                         <div class="about">
                             <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000" class="about__wrapper">
@@ -129,14 +130,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="page__screen screen">
+
+                <div data-hash="slide-3" class="page__screen screen">
                     <div class="screen__content">
                         <div class="buy-or-sale">
                             <div class="buy-or-sale__wrapper">
                                 <div class="buy-or-sale__questions questions">
-                                    <a href="#0" class="questions__buy"> Хотите купить квартиру?</a>
+                                    <a href="#0" class="questions__buy"> Хочу купить квартиру</a>
                                     <div class="questions__or">или</div>
-                                    <a href="#0" class="questions__sale">Хотите продать квартиру?</a>
+                                    <a href="#0" class="questions__sale">Хочу продать квартиру</a>
                                 </div>
                                 <div class="buy-or-sale__buy buy">
                                     <div class="buy__main-title">Все пожелания будут учтены и в результате Вы станете счастливым обладателем своей мечты!</div>
@@ -159,7 +161,7 @@
                                         </div>
                                     </div>
                                     <div class="buy__sign">Одобрение ипотеки для <span>Вac!</span></div>
-                                    <a href="#0" class="buy__button button">Подобрать квартиру</a>
+                                    <a href="#popup-buy" class="buy__button button popup-link">Подобрать квартиру</a>
                                 </div>
                                 <div class="buy-or-sale__sale sale">Я ПРОДАЛ КВАРТИРУ!!!</div>
                             </div>
@@ -176,7 +178,133 @@
             <div class="page__scroll"></div>
         </main>
     </div>
+
+    <aside class="popup" id="popup-buy">
+        <div class="popup__body">
+            <div class="popup__content popup-buy">
+                <div class="popup__close close-popup">
+                    <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
+                </div>
+                <form class="popup-buy__form">
+                    <h4 class="popup-buy__title">Я подберу квартиру Вашей мечты!</h4>
+                    <div class="popup-buy__form-group">
+                        <label class="popup-buy__label">
+							<span class="popup-buy__name">Выберете количество комнат*:</span>
+							<select name="rooms" class="popup-buy__rooms">
+								<option selected>Выберите вариант из списка</option>
+								<option value="studio">Студия</option>
+								<option value="1-room">Однокомнатная</option>
+								<option value="Every-few-days">Двухкомнатная</option>
+								<option value="Every-few-weeks">Трёхкомнатная</option>
+								<option value="Several-times-a-year">Более 3-х комнат</option>
+							</select>
+						</label>
+                    </div>
+                    <div class="popup-buy__form-group">
+                        <label class="popup-buy__label">
+							<span class="popup-buy__name">Укажите площадь:</span>
+							<div class="popup-buy__container">
+								<input type="text" placeholder="от (м3)" class="popup-buy__size-apartment">
+								<input type="text" placeholder="до (м3)" class="popup-buy__size-apartment">
+							</div>
+						</label>
+                    </div>
+                    <div class="popup-buy__form-group">
+                        <label class="popup-buy__label">
+							<span class="popup-buy__name">Метро:</span>
+							<select name="metro" class="popup-buy__metro">
+								<option selected>Выберите вариант из списка</option>
+								<option value="Автово">Автово</option>
+								<option value="Адмиралтейская">Адмиралтейская</option>
+								<option value="Академическая">Академическая</option>
+								<option value="Балтийская">Балтийская</option>
+								<option value="Бухарестская">Бухарестская</option>
+								<option value="Василеостровская">Василеостровская</option>
+								<option value="Владимирская">Владимирская</option>
+								<option value="Волковская">Волковская</option>
+								<option value="Выборгская">Выборгская</option>
+								<option value="Горьковская">Горьковская</option>
+								<option value="Гостиный двор">Гостиный двор</option>
+								<option value="Гражданский проспект">Гражданский проспект</option>
+								<option value="Девяткино">Девяткино</option>
+								<option value="Достоевская">Достоевская</option>
+								<option value="Елизаровская">Елизаровская</option>
+								<option value="Звёздная">Звёздная</option>
+								<option value="Звенигородская">Звенигородская</option>
+								<option value="Кировский завод">Кировский завод</option>
+								<option value="Комендантский проспект">Комендантский проспект</option>
+								<option value="Крестовский остров">Крестовский остров</option>
+								<option value="Купчино">Купчино</option>
+								<option value="Ладожская">Ладожская</option>
+								<option value="Лесная">Лесная</option>
+								<option value="Лиговский проспект">Лиговский проспект</option>
+								<option value="Ломоносовская">Ломоносовская</option>
+								<option value="Маяковская">Маяковская</option>
+								<option value="Международная">Международная</option>
+								<option value="Московская">Московская</option>
+								<option value="Московские ворота">Московские ворота</option>
+								<option value="Нарвская">Нарвская</option>
+								<option value="Невский проспект">Невский проспект</option>
+								<option value="Новочеркасская">Новочеркасская</option>
+								<option value="Обводный канал">Обводный канал</option>
+								<option value="Обухово">Обухово</option>
+								<option value="Озерки">Озерки</option>
+								<option value="Парнас">Парнас</option>
+								<option value="Петроградская">Петроградская</option>
+								<option value="Пионерская">Пионерская</option>
+								<option value="Площадь Александра Невского I">Площадь Александра Невского I</option>
+								<option value="Площадь Восстания">Площадь Восстания</option>
+								<option value="Площадь Мужества">Площадь Мужества</option>
+								<option value="Площадь Невского">Площадь Невского</option>
+								<option value="Политехническая">Политехническая</option>
+								<option value="Приморская">Приморская</option>
+								<option value="Пролетарская">Пролетарская</option>
+								<option value="Проспект Большевиков">Проспект Большевиков</option>
+								<option value="Проспект Ветеранов">Проспект Ветеранов</option>
+								<option value="Проспект Просвещения">Проспект Просвещения</option>
+								<option value="Пушкинская">Пушкинская</option>
+								<option value="Рыбацкое">Рыбацкое</option>
+								<option value="Садовая">Садовая</option>
+								<option value="Сенная площадь">Сенная площадь</option>
+								<option value="Спасская">Спасская</option>
+								<option value="Спортивная">Спортивная</option>
+								<option value="Старая Деревня">Старая Деревня</option>
+								<option value="Технологический институт I">Технологический институт I</option>
+								<option value="Технологический институт II">Технологический институт II</option>
+								<option value="Удельная">Удельная</option>
+								<option value="Улица Дыбенко">Улица Дыбенко</option>
+								<option value="Фрунзенская">Фрунзенская</option>
+								<option value="Чёрная речка">Чёрная речка</option>
+								<option value="Чернышевская">Чернышевская</option>
+								<option value="Чкаловская">Чкаловская</option>
+								<option value="Электросила">Электросила</option>
+							</select>
+						</label>
+                    </div>
+                    <div class="popup-buy__form-group">
+                        <label class="popup-buy__label">
+							<span class="popup-buy__name">Укажите стоимость:</span>
+							<div class="popup-buy__container">
+								<input type="text" placeholder="от (т.р.)" class="popup-buy__cost">
+								<input type="text" placeholder="до (т.р.)" class="popup-buy__cost">
+							</div>
+						</label>
+                    </div>
+                    <div class="popup-buy__form-group">
+                        <label class="popup-buy__label">
+							<span class="popup-buy__name">Укажите контактные данные:</span>
+							<input type="text" placeholder="Ваш номер телефона*" class="popup-buy__contacts">
+							<input type="text" placeholder="Имя*" class="popup-buy__contacts">
+							<input type="text" placeholder="Ваш e-mail" class="popup-buy__contacts">
+						</label>
+                    </div>
+                    <button type="submit" class="popup-buy__button button">Подобрать квартиру</button>
+                </form>
+            </div>
+        </div>
+    </aside>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/popups.js"></script>
     <script src="js/script.js"></script>
 </body>
 
