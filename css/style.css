@@ -72,6 +72,14 @@ body {
   font-style: normal;
 }
 
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 .wrapper {
   min-height: 100%;
   opacity: 0;
@@ -426,14 +434,27 @@ body.touch .arrow {
 .button {
   position: relative;
   display: block;
+  top: 0;
   padding: 20px 20px;
   text-align: center;
-  border-radius: 50px;
-  background-color: #eb6320;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  text-decoration: none;
+  background: linear-gradient(to left, #E94110, #Eb6320);
   font-family: "City Nova Regular";
   letter-spacing: 1px;
   font-size: 25px;
   color: #fff;
+  transition: all 0.2s ease 0s;
+}
+.button:hover {
+  top: -5px;
+  box-shadow: 0 0 40px rgba(233, 65, 29, 0.7);
+  transition: all 0.2s ease 0s;
+}
+.button:active {
+  top: 0;
 }
 
 .button-cost {
@@ -603,7 +624,10 @@ body.touch .arrow {
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
-  transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+  transition: left 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s, color 0.8s ease 0s;
+}
+.questions__buy:hover {
+  color: #e9411d;
 }
 .questions__sale {
   display: block;
@@ -612,7 +636,10 @@ body.touch .arrow {
   top: 70%;
   right: 50%;
   transform: translateX(50%);
-  transition: all 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+  transition: right 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s, color 0.8s ease 0s;
+}
+.questions__sale:hover {
+  color: #e9411d;
 }
 .questions__or {
   position: absolute;
@@ -725,10 +752,173 @@ body.touch .arrow {
 .buy__button {
   opacity: 0;
   margin-top: 100px;
-  transition: all 0.5s ease 2s;
+  transition: opacity 0.5s ease 2s;
 }
 .buy__button_active {
   opacity: 1;
+  transition: top 0.5s ease 0s;
+}
+
+.popup {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  padding: 33px 15px;
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 1.2s ease 0s;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup.open .popup__content {
+  transform: translateY(0);
+  opacity: 1;
+}
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup__content {
+  position: relative;
+  background-color: #ffffff;
+  transition: all 1.2s ease 0s;
+  opacity: 0;
+  transform: perspective(600px) translateY(-200%) rotateX(45deg);
+}
+.popup__close {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../svg/form-x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  fill: #e9411d;
+  cursor: pointer;
+}
+
+.popup-buy {
+  max-width: 550px;
+  padding: 25px;
+  background-image: url("../img/3-screen/form-buy_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.popup-buy::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+.popup-buy:focus {
+  outline: none;
+}
+.popup-buy__form {
+  position: relative;
+  z-index: 2;
+}
+.popup-buy__title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  font-family: "Ustroke Regular";
+  color: #e6e6e6;
+}
+.popup-buy__form-group {
+  margin-top: 20px;
+}
+.popup-buy__label {
+  display: flex;
+  flex-direction: column;
+}
+.popup-buy__name {
+  margin-bottom: 5px;
+  font-family: "Trajan Pro";
+  font-weight: 700;
+  font-size: 25px;
+  color: #e6e6e6;
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+}
+.popup-buy__container {
+  display: flex;
+  justify-content: space-between;
+}
+.popup-buy__rooms {
+  padding: 10px;
+  min-height: 40px;
+  cursor: pointer;
+}
+.popup-buy__rooms:focus {
+  outline: 2px solid #e9411d;
+}
+.popup-buy__size-apartment {
+  padding: 10px;
+  width: 47%;
+  min-height: 40px;
+}
+.popup-buy__size-apartment:nth-child(n+2) {
+  margin-left: 20px;
+}
+.popup-buy__size-apartment:focus {
+  outline: 2px solid #e9411d;
+}
+.popup-buy__metro {
+  padding: 10px;
+  min-height: 40px;
+  cursor: pointer;
+}
+.popup-buy__metro:focus {
+  outline: 2px solid #e9411d;
+}
+.popup-buy__cost {
+  padding: 10px;
+  width: 47%;
+  min-height: 40px;
+}
+.popup-buy__cost:nth-child(n+2) {
+  margin-left: 20px;
+}
+.popup-buy__cost:focus {
+  outline: 2px solid #e9411d;
+}
+.popup-buy__contacts {
+  padding: 10px;
+  min-height: 40px;
+}
+.popup-buy__contacts:focus {
+  outline: 2px solid #e9411d;
+}
+.popup-buy__contacts:nth-child(n+2) {
+  margin-top: 10px;
+}
+.popup-buy__button {
+  margin: 30px auto 0 auto;
+  cursor: pointer;
+}
+.popup-buy__button:focus {
+  outline: none;
+}
+
+.sale {
+  display: none;
 }
 
 @media (max-width: 1630px) {
