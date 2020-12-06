@@ -1,5 +1,7 @@
 // ВОПРОСЫ КУПИТЬ ИЛИ ПРОДАТЬ КВАРТИРУ
 
+let buy = document.querySelector('.buy');
+let sale = document.querySelector('.sale');
 let questions__buy = document.querySelector('.questions__buy');
 let questions__sale = document.querySelector('.questions__sale');
 let questions__or = document.querySelector('.questions__or');
@@ -22,6 +24,7 @@ questions__buy.onclick = function() {
     buy__new.classList.add('buy__new_active');
     buy__old.classList.add('buy__old_active');
     buy__title.classList.add('buy__main-title_active');
+    sale.classList.add('hide');
 }
 
 questions__sale.onclick = function() {
@@ -31,6 +34,7 @@ questions__sale.onclick = function() {
     sale__title.classList.add('sale__main-title_active');
     sale__button.classList.add('sale__button_active');
     sale__block.classList.add('sale__block_active');
+    buy.classList.add('hide');
 }
 
 to__slide_buy.onclick = function() {
@@ -41,6 +45,8 @@ to__slide_buy.onclick = function() {
     buy__new.classList.add('buy__new_active');
     buy__old.classList.add('buy__old_active');
     buy__title.classList.add('buy__main-title_active');
+    sale.classList.add('hide');
+    buy.classList.remove('hide');
 }
 
 to__slide_sale.onclick = function() {
@@ -50,6 +56,8 @@ to__slide_sale.onclick = function() {
     sale__title.classList.add('sale__main-title_active');
     sale__button.classList.add('sale__button_active');
     sale__block.classList.add('sale__block_active');
+    buy.classList.add('hide');
+    sale.classList.remove('hide');
 }
 
 // СЛАЙДЕР СВАЙПЕР
