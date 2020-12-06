@@ -661,8 +661,14 @@ body.touch .arrow {
   right: -50%;
 }
 
+.close-to-shadow {
+  transition: all 1s ease 0s;
+  opacity: 0;
+}
+
 .buy {
   position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -713,16 +719,12 @@ body.touch .arrow {
   right: 0;
 }
 .buy__title {
-  position: relative;
-  z-index: 1;
   text-align: center;
   font-family: "Ustroke Regular";
   font-size: 35px;
   color: #e9411d;
 }
 .buy__description {
-  position: relative;
-  z-index: 1;
   margin-top: 15px;
   font-family: "Avenir Next";
   font-size: 20px;
@@ -755,11 +757,11 @@ body.touch .arrow {
 .buy__button {
   opacity: 0;
   margin-top: 100px;
-  transition: opacity 0.5s ease 2s;
+  transition: opacity 0.5s ease 2s, box-shadow 0.5s ease 1s;
 }
 .buy__button_active {
   opacity: 1;
-  transition: opacity 0.5s ease 2s, top 0.5s ease 0s;
+  transition: opacity 0.5s ease 2s, top 0.5s ease 0s, box-shadow 0.5s ease 1s;
 }
 
 .popup {
@@ -922,7 +924,76 @@ body.touch .arrow {
 }
 
 .sale {
-  display: none;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  padding-top: 120px;
+  max-width: 1650px;
+}
+.sale__main-title {
+  position: relative;
+  top: -400px;
+  opacity: 0;
+  font-family: "Trajan Pro";
+  font-weight: 700;
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+  transition: all 0.5s ease 0.6s;
+}
+.sale__main-title_active {
+  top: 0;
+  opacity: 1;
+}
+.sale__block {
+  position: relative;
+  bottom: -850px;
+  opacity: 0;
+  margin: 50px auto 0 auto;
+  border: 3px solid #e9411d;
+  border-radius: 15px;
+  padding: 25px;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.5s ease 1.4s;
+}
+.sale__block_active {
+  bottom: 0;
+  opacity: 1;
+}
+.sale__title {
+  text-align: center;
+  font-family: "Ustroke Regular";
+  font-size: 35px;
+  color: #e9411d;
+}
+.sale__description {
+  margin-top: 15px;
+  font-family: "Avenir Next";
+  font-size: 20px;
+}
+.sale__description li:nth-child(n+2) {
+  margin-top: 10px;
+}
+.sale__description li::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-right: 8px;
+  border-left: 10px solid #e9411d;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.sale__button {
+  margin: 50px auto 0 auto;
+  opacity: 0;
+  width: 300px;
+  transition: opacity 0.5s ease 2s, box-shadow 0.5s ease 1s;
+}
+.sale__button_active {
+  opacity: 1;
+  transition: opacity 0.5s ease 2s, top 0.5s ease 0s, box-shadow 0.5s ease 1s;
 }
 
 @media (max-width: 1630px) {
@@ -1081,5 +1152,36 @@ body.touch .arrow {
   }
   .buy__button {
     margin-top: 50px;
+  }
+
+  .sale {
+    padding-top: 60px;
+    max-width: 950px;
+  }
+  .sale__main-title {
+    font-size: 28px;
+  }
+  .sale__block {
+    margin-top: 20px;
+    padding: 20px;
+    width: 750px;
+  }
+  .sale__title {
+    font-size: 28px;
+  }
+  .sale__description {
+    margin-top: 10px;
+    font-family: "Avenir Next";
+    font-size: 18px;
+  }
+  .sale__button {
+    margin-top: 25px;
+    opacity: 0;
+    width: 300px;
+    transition: opacity 0.5s ease 2s, box-shadow 0.5s ease 1s;
+  }
+  .sale__button_active {
+    opacity: 1;
+    transition: opacity 0.5s ease 2s, top 0.5s ease 0s, box-shadow 0.5s ease 1s;
   }
 }
