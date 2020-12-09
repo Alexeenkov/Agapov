@@ -627,6 +627,7 @@ body.touch .arrow {
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
   transition: left 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s, color 0.8s ease 0s;
 }
 .questions__buy:hover {
@@ -639,6 +640,7 @@ body.touch .arrow {
   top: 70%;
   right: 50%;
   transform: translateX(50%);
+  cursor: pointer;
   transition: right 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s, color 0.8s ease 0s;
 }
 .questions__sale:hover {
@@ -1000,6 +1002,160 @@ body.touch .arrow {
   display: none;
 }
 
+.feedback {
+  position: relative;
+  height: 100vh;
+  color: #e6e6e6;
+  padding-top: 100px;
+}
+.feedback::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.2;
+}
+.feedback__wrapper {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: 85%;
+}
+.feedback__main-title {
+  position: relative;
+  z-index: 2;
+  font-family: "Trajan Pro";
+  font-weight: 700;
+  text-align: center;
+  font-size: 48px;
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+}
+.feedback__section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.feedback__card {
+  position: relative;
+  padding: 15px 25px 25px 25px;
+  border: 3px solid rgba(233, 65, 29, 0.6);
+  border-radius: 0 0 20px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  flex-grow: 1;
+}
+.feedback__quote {
+  position: relative;
+  flex-shrink: 0;
+  bottom: -20px;
+  left: 0;
+  width: 100px;
+  min-width: 0;
+  height: 85px;
+  background-image: url("../img/4-screen/quote.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+}
+.feedback__foto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 0 0 20px 0;
+  object-fit: cover;
+  object-position: top;
+}
+.feedback__title {
+  padding-left: 100px;
+  margin-bottom: 30px;
+  font-family: "Avenir Next";
+}
+.feedback__name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+.feedback__name::after {
+  content: "";
+  display: block;
+  margin: 5px 0 10px 0;
+  height: 2px;
+  width: 60px;
+  background-color: #E94110;
+}
+.feedback__source {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+.feedback__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.feedback__container {
+  position: relative;
+  z-index: 2;
+  margin: 20px auto 0 auto;
+  padding: 10px 15px 15px 15px;
+  max-width: 76.6%;
+  border: 3px solid rgba(233, 65, 29, 0.6);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.feedback__instagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 40px;
+  font-family: "Ustroke Regular";
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+}
+.feedback__instagram a {
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  width: 300px;
+}
+.feedback__instagram a img {
+  width: 230px;
+  height: 30px;
+  vertical-align: middle;
+}
+.feedback__instagram a::before {
+  content: "";
+  display: inline-block;
+  background-image: url("../img/4-screen/instagram_logo.png");
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+.feedback__macromir {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-family: "Avenir Next";
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+}
+.feedback__macromir a {
+  margin-left: 20px;
+}
+.feedback__macromir a img {
+  position: relative;
+  top: 4px;
+  width: 200px;
+}
+
+.feedback-slider {
+  position: relative;
+  width: 90%;
+}
+
 @media (max-width: 1630px) {
   .header {
     padding: 5px 20px;
@@ -1175,17 +1331,53 @@ body.touch .arrow {
   }
   .sale__description {
     margin-top: 10px;
-    font-family: "Avenir Next";
     font-size: 18px;
   }
   .sale__button {
     margin-top: 25px;
-    opacity: 0;
-    width: 300px;
-    transition: opacity 0.5s ease 2s, box-shadow 0.5s ease 1s;
   }
-  .sale__button_active {
-    opacity: 1;
-    transition: opacity 0.5s ease 2s, top 0.5s ease 0s, box-shadow 0.5s ease 1s;
+
+  .feedback {
+    padding-top: 60px;
+  }
+  .feedback__main-title {
+    font-size: 38px;
+  }
+  .feedback__card {
+    padding: 10px 15px 15px 15px;
+  }
+  .feedback__quote {
+    width: 60px;
+    height: 60px;
+  }
+  .feedback__foto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 0 0 20px 0;
+    object-fit: cover;
+    object-position: top;
+  }
+  .feedback__title {
+    padding-left: 80px;
+    margin-bottom: 25px;
+  }
+  .feedback__name {
+    font-size: 20px;
+  }
+  .feedback__name::after {
+    margin: 3px 0 6px 0;
+  }
+  .feedback__source {
+    font-size: 16px;
+  }
+  .feedback__text {
+    font-size: 14px;
+  }
+  .feedback__instagram {
+    margin-top: 15px;
+    font-size: 30px;
   }
 }
