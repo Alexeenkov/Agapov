@@ -646,14 +646,6 @@ body.touch .arrow {
 .questions__sale:hover {
   color: #e9411d;
 }
-.questions__or {
-  position: absolute;
-  z-index: 3;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 40px;
-}
 
 .close-to-left {
   left: -50%;
@@ -661,11 +653,6 @@ body.touch .arrow {
 
 .close-to-right {
   right: -50%;
-}
-
-.close-to-shadow {
-  transition: all 1s ease 0s;
-  opacity: 0;
 }
 
 .buy {
@@ -1004,9 +991,11 @@ body.touch .arrow {
 
 .feedback {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
   color: #e6e6e6;
-  padding-top: 100px;
 }
 .feedback::after {
   content: "";
@@ -1021,8 +1010,8 @@ body.touch .arrow {
 .feedback__wrapper {
   position: relative;
   display: flex;
-  margin: 0 auto;
   width: 85%;
+  margin: 60px auto 0 auto;
 }
 .feedback__main-title {
   position: relative;
@@ -1038,6 +1027,16 @@ body.touch .arrow {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  border-radius: 25px;
+  background-color: #fff;
+  padding: 15px;
+  border: 3px solid #e9411d;
+}
+.feedback__image {
+  object-fit: contain;
+  object-position: top;
+  border-radius: 25px;
+  max-width: 100%;
 }
 .feedback__card {
   position: relative;
@@ -1100,7 +1099,7 @@ body.touch .arrow {
   z-index: 2;
   margin: 20px auto 0 auto;
   padding: 10px 15px 15px 15px;
-  max-width: 76.6%;
+  width: 76.6%;
   border: 3px solid rgba(233, 65, 29, 0.6);
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -1110,15 +1109,14 @@ body.touch .arrow {
   align-items: center;
   justify-content: center;
   margin-top: 15px;
-  font-size: 40px;
-  font-family: "Ustroke Regular";
+  font-family: "Avenir Next";
+  font-size: 30px;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
 }
 .feedback__instagram a {
   position: relative;
   display: inline-block;
   margin-left: 20px;
-  width: 300px;
 }
 .feedback__instagram a img {
   width: 230px;
@@ -1156,9 +1154,111 @@ body.touch .arrow {
   width: 90%;
 }
 
+.consultation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  color: #e6e6e6;
+}
+.consultation::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.2;
+}
+.consultation__wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Trajan Pro";
+  font-weight: 700;
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+}
+.consultation__title {
+  text-align: center;
+  font-size: 48px;
+}
+.consultation__description {
+  margin-top: 30px;
+  font-size: 25px;
+}
+.consultation__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  max-width: 60%;
+  margin: 70px auto 0 auto;
+}
+.consultation__form-group:nth-child(n+2) {
+  margin-top: 20px;
+}
+.consultation__name {
+  font-size: 20px;
+}
+.consultation__input {
+  margin-left: 20px;
+  width: 400px;
+  height: 30px;
+  padding: 0 15px;
+}
+.consultation__input:focus {
+  outline: 2px solid #e9411d;
+}
+.consultation__textarea {
+  margin-left: 20px;
+  width: 400px;
+  height: 150px;
+  vertical-align: top;
+  resize: none;
+  padding: 15px;
+}
+.consultation__textarea:focus {
+  outline: 2px solid #e9411d;
+}
+.consultation__button {
+  display: block;
+  align-self: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.consultation__button:focus {
+  outline: none;
+}
+
+.partners {
+  position: relative;
+  height: 100vh;
+  color: #e6e6e6;
+  padding-top: 100px;
+}
+.partners::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.4;
+}
+
 @media (max-width: 1630px) {
   .header {
     padding: 5px 20px;
+  }
+
+  .menu__link {
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin: 0px 20px 0px 0px;
   }
 
   .main__wrapper {
@@ -1337,8 +1437,8 @@ body.touch .arrow {
     margin-top: 25px;
   }
 
-  .feedback {
-    padding-top: 60px;
+  .feedback__wrapper {
+    margin: 20px auto;
   }
   .feedback__main-title {
     font-size: 38px;
@@ -1376,8 +1476,11 @@ body.touch .arrow {
   .feedback__text {
     font-size: 14px;
   }
+  .feedback__container {
+    margin: 0 auto;
+  }
   .feedback__instagram {
     margin-top: 15px;
-    font-size: 30px;
+    font-size: 25px;
   }
 }
