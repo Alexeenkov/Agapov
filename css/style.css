@@ -450,6 +450,7 @@ body.touch .arrow {
   font-size: 25px;
   color: #fff;
   transition: all 0.2s ease 0s;
+  overflow: hidden;
 }
 .button:hover {
   top: -5px;
@@ -459,7 +460,36 @@ body.touch .arrow {
 .button:active {
   top: 0;
 }
-
+.button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 200px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 100%);
+  position: absolute;
+  left: -80px;
+  top: -50px;
+  z-index: 1;
+  transform: rotate(45deg);
+  animation-name: slideme;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes slideme {
+  0% {
+    left: -110px;
+    margin-left: 0px;
+  }
+  30% {
+    left: 110%;
+    margin-left: 60px;
+  }
+  100% {
+    left: 110%;
+    margin-left: 60px;
+  }
+}
 .button-cost {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -1038,62 +1068,6 @@ body.touch .arrow {
   border-radius: 25px;
   max-width: 100%;
 }
-.feedback__card {
-  position: relative;
-  padding: 15px 25px 25px 25px;
-  border: 3px solid rgba(233, 65, 29, 0.6);
-  border-radius: 0 0 20px 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  flex-grow: 1;
-}
-.feedback__quote {
-  position: relative;
-  flex-shrink: 0;
-  bottom: -20px;
-  left: 0;
-  width: 100px;
-  min-width: 0;
-  height: 85px;
-  background-image: url("../img/4-screen/quote.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0.5;
-}
-.feedback__foto {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  border-radius: 0 0 20px 0;
-  object-fit: cover;
-  object-position: top;
-}
-.feedback__title {
-  padding-left: 100px;
-  margin-bottom: 30px;
-  font-family: "Avenir Next";
-}
-.feedback__name {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 24px;
-}
-.feedback__name::after {
-  content: "";
-  display: block;
-  margin: 5px 0 10px 0;
-  height: 2px;
-  width: 60px;
-  background-color: #E94110;
-}
-.feedback__source {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-}
-.feedback__text {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-}
 .feedback__container {
   position: relative;
   z-index: 2;
@@ -1205,23 +1179,47 @@ body.touch .arrow {
 }
 .consultation__input {
   margin-left: 20px;
-  width: 400px;
-  height: 30px;
+  width: 420px;
+  height: 40px;
   padding: 0 15px;
+  border-radius: 7px;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.5s ease 0s;
+}
+.consultation__input:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .consultation__input:focus {
-  outline: 2px solid #e9411d;
+  background-color: rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+.consultation__input::placeholder {
+  color: red;
 }
 .consultation__textarea {
   margin-left: 20px;
-  width: 400px;
+  width: 420px;
   height: 150px;
   vertical-align: top;
   resize: none;
   padding: 15px;
+  border-radius: 7px;
+  font-family: "Avenir Next";
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.5s ease 0s;
+}
+.consultation__textarea:hover {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .consultation__textarea:focus {
-  outline: 2px solid #e9411d;
+  background-color: rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+.consultation__textarea::placeholder {
+  color: red;
 }
 .consultation__button {
   display: block;
@@ -1232,11 +1230,35 @@ body.touch .arrow {
 .consultation__button:focus {
   outline: none;
 }
+.consultation ::-webkit-scrollbar-button {
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px;
+}
+.consultation ::-webkit-scrollbar-track {
+  background-color: #32312e;
+  box-shadow: 0px 0px 3px #000 inset;
+}
+.consultation ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #e9411d;
+  box-shadow: 0px 1px 1px #fff inset;
+  background-image: url("https://yraaa.ru/_pu/24/59610063.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.consultation ::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0px;
+}
+.consultation ::-webkit-scrollbar {
+  width: 11px;
+}
 
 .partners {
   position: relative;
-  height: 100vh;
-  color: #e6e6e6;
   padding-top: 100px;
 }
 .partners::after {
@@ -1248,6 +1270,50 @@ body.touch .arrow {
   bottom: 0;
   background-color: #000000;
   opacity: 0.4;
+}
+
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #e6e6e6;
+}
+.partners__wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 90%;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.partners__title {
+  position: absolute;
+  left: 50%;
+  top: -65px;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 48px;
+  font-family: "Trajan Pro";
+  font-weight: 700;
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+}
+.partners__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-basis: 25%;
+  height: 33.333%;
+  padding: 35px;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.partners__logo {
+  object-fit: contain;
+  max-width: 100%;
 }
 
 @media (max-width: 1630px) {
