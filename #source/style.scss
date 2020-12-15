@@ -2,42 +2,35 @@
     
     @font-face {
         font-family: "Ustroke Regular";
-        src: url("../fonts/Ustroke-regular.ttf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
+        src: url("../fonts/Ustroke-regular.woff2"), url("../fonts/Ustroke-regular.woff"), url("../fonts/Ustroke-regular.ttf");
         font-weight: 400;
         font-style: normal;
     }
     
     @font-face {
         font-family: "CCRickVeitch";
-        src: url("../fonts/CCRickVeitch.otf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
+        src: url("../fonts/CCRickVeitch.woff2"), url("../fonts/CCRickVeitch.woff"), url("../fonts/CCRickVeitch.woff2");
         font-weight: 400;
         font-style: normal;
     }
     
     @font-face {
         font-family: "City Nova Regular";
-        src: url("../fonts/City-Nova-regular.ttf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
+        src: url("../fonts/City-Nova-regular.woff2"), url("../fonts/City-Nova-regular.woff"), url("../fonts/City-Nova-regular.ttf");
         font-weight: 400;
         font-style: normal;
     }
     
     @font-face {
         font-family: "Trajan Pro";
-        src: url("../fonts/TrajanPro-regular.ttf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
+        src: url("../fonts/TrajanPro-regular.woff2"), url("../fonts/TrajanPro-regular.woff"), url("../fonts/TrajanPro-regular.ttf");
         font-weight: 700;
         font-style: normal;
     }
     
     @font-face {
         font-family: "Avenir Next";
-        src: url("../fonts/Avenir-Next.ttf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
-        font-weight: 400;
-        font-style: normal;
-    }
-    
-    @font-face {
-        font-family: "Candara Regular";
-        src: url("../fonts/Candara-Regular.ttf"), url("../fonts/gilroy-bold.woff"), url("../fonts/gilroy-bold.ttf");
+        src: url("../fonts/Avenir-Next.woff2"), url("../fonts/Avenir-Next.woff"), url("../fonts/Avenir-Next.ttf");
         font-weight: 400;
         font-style: normal;
     }
@@ -151,7 +144,7 @@
         display: flex;
         align-items: center;
         &__link {
-            font-family: "City Nova Regular";
+            font-family: "City Nova Regular", Arial, Helvetica, sans-serif;
             font-weight: 700;
             font-size: 20px;
             letter-spacing: 3px;
@@ -310,7 +303,7 @@
             height: 100%;
         }
         &__logo {
-            font-family: "Ustroke Regular";
+            font-family: "Ustroke Regular", Arial, Helvetica, sans-serif;
         }
         &__calculation {
             padding: 90px 25px 25px 25px;
@@ -339,7 +332,7 @@
     
     .main-menu {
         margin-top: 50px;
-        font-family: "City Nova Regular";
+        font-family: "City Nova Regular", Arial, Helvetica, sans-serif;
         font-size: 25px;
         letter-spacing: 3px;
         &__list {
@@ -442,7 +435,7 @@
         margin-bottom: 40px;
         text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
         &__title {
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             font-size: 50px;
         }
@@ -461,16 +454,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-family: "Candara Regular";
+        font-family: "Avenir Next";
         line-height: 1.1;
         &__title-cost {
             text-align: center;
-            font-size: 34px;
+            font-size: 30px;
         }
         &__title-tax {
             margin-top: 100px;
             text-align: center;
-            font-size: 26px;
+            font-size: 24px;
         }
         &__sign {
             text-align: center;
@@ -489,7 +482,7 @@
         border-radius: 15px;
         text-decoration: none;
         background: linear-gradient(to left, #E94110, #Eb6320);
-        font-family: "City Nova Regular";
+        font-family: "City Nova Regular", Arial, Helvetica, sans-serif;
         letter-spacing: 1px;
         font-size: 25px;
         color: #fff;
@@ -603,7 +596,7 @@
             padding: 60px 25px 50px 25px;
             width: 500px;
             color: #e6e6e6;
-            font-family: "CCRickVeitch";
+            font-family: "CCRickVeitch", Arial, Helvetica, sans-serif;
             line-height: 1.5;
             letter-spacing: 1px;
             &:last-child {
@@ -627,7 +620,7 @@
             text-align: center;
             border-radius: 15px;
             background-color: rgba(233, 65, 29, 0.9);
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
             font-size: 25px;
@@ -640,7 +633,7 @@
             position: relative;
             z-index: 1;
             margin: 10px auto;
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
             font-size: 40px;
@@ -668,7 +661,7 @@
             p {
                 position: relative;
                 z-index: 1;
-                font-family: "Avenir Next";
+                font-family: "Avenir Next", Arial, Helvetica, sans-serif;
                 font-size: 18px;
                 span {
                     color: rgba(233, 65, 29, 1);
@@ -679,7 +672,7 @@
             min-height: 46px;
             margin-bottom: 10px;
             text-align: center;
-            font-family: "CCRickVeitch";
+            font-family: "CCRickVeitch", Arial, Helvetica, sans-serif;
             font-size: 20px;
             color: #eb6320;
         }
@@ -717,7 +710,7 @@
     }
     
     .questions {
-        font-family: "Trajan Pro";
+        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
         font-weight: 700;
         font-size: 48px;
         letter-spacing: 2px;
@@ -769,7 +762,7 @@
             position: relative;
             top: -400px;
             opacity: 0;
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             text-align: center;
             font-size: 48px;
@@ -811,13 +804,13 @@
         }
         &__title {
             text-align: center;
-            font-family: "Ustroke Regular";
+            font-family: "Ustroke Regular", Arial, Helvetica, sans-serif;
             font-size: 35px;
             color: rgb(233, 65, 29);
         }
         &__description {
             margin-top: 15px;
-            font-family: "Avenir Next";
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
             font-size: 20px;
             li {
                 &:nth-child(n+2) {
@@ -836,7 +829,7 @@
             }
         }
         &__sign {
-            font-family: "CCRickVeitch";
+            font-family: "CCRickVeitch", Arial, Helvetica, sans-serif;
             font-size: 30px;
             opacity: 0;
             transition: all 0.5s ease 1.5s;
@@ -941,7 +934,7 @@
             text-align: center;
             font-size: 40px;
             margin-bottom: 20px;
-            font-family: "Ustroke Regular";
+            font-family: "Ustroke Regular", Arial, Helvetica, sans-serif;
             color: #e6e6e6;
         }
         &__form-group {
@@ -953,7 +946,7 @@
         }
         &__name {
             margin-bottom: 5px;
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             font-size: 25px;
             color: #e6e6e6;
@@ -1030,7 +1023,7 @@
             position: relative;
             top: -400px;
             opacity: 0;
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             text-align: center;
             font-size: 48px;
@@ -1059,13 +1052,13 @@
         }
         &__title {
             text-align: center;
-            font-family: "Ustroke Regular";
+            font-family: "Ustroke Regular", Arial, Helvetica, sans-serif;
             font-size: 35px;
             color: rgb(233, 65, 29);
         }
         &__description {
             margin-top: 15px;
-            font-family: "Avenir Next";
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
             font-size: 20px;
             li {
                 &:nth-child(n+2) {
@@ -1126,7 +1119,7 @@
         &__main-title {
             position: relative;
             z-index: 2;
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             text-align: center;
             font-size: 48px;
@@ -1165,7 +1158,7 @@
             align-items: center;
             justify-content: center;
             margin-top: 15px;
-            font-family: "Avenir Next";
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
             font-size: 30px;
             text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
             a {
@@ -1193,7 +1186,7 @@
             align-items: center;
             justify-content: center;
             font-size: 25px;
-            font-family: "Avenir Next";
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
             text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
             a {
                 margin-left: 20px;
@@ -1235,7 +1228,7 @@
             flex-direction: column;
             width: 80%;
             margin: 0 auto;
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
         }
@@ -1253,7 +1246,7 @@
         &__list {
             margin: 30px auto 0 auto;
             width: 60%;
-            font-family: "Avenir Next";
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
             font-size: 18px;
             letter-spacing: 2px;
         }
@@ -1311,7 +1304,7 @@
             margin-top: 10px;
             padding: 0 15px;
             border-radius: 7px;
-            font-family: "Avenir Next";
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
             font-size: 16px;
             background-color: rgba(255, 255, 255, 0.4);
             transition: all 0.5s ease 0s;
@@ -1334,7 +1327,7 @@
             margin-top: 10px;
             padding: 15px;
             border-radius: 7px;
-            font-family: "Avenir Next";
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
             font-size: 16px;
             background-color: rgba(255, 255, 255, 0.4);
             transition: all 0.5s ease 0s;
@@ -1423,7 +1416,7 @@
             transform: translateX(-50%);
             text-align: center;
             font-size: 48px;
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
         }
@@ -1489,7 +1482,7 @@
             align-items: center;
             background-color: #eb6320;
             padding: 25px;
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             font-size: 20px;
         }
@@ -1535,7 +1528,7 @@
             flex-direction: column;
             padding: 25px;
             min-height: 400px;
-            font-family: "Avenir Next";
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
         }
         &__title {
             font-size: 25px;
@@ -1560,7 +1553,7 @@
             margin-top: 30px;
             padding: 10px 20px;
             border-bottom: 1px solid #E94110;
-            font-family: "Trajan Pro";
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
             font-weight: 700;
             font-size: 20px;
             &:focus {
@@ -1634,7 +1627,7 @@
         padding-bottom: 15px;
         border-radius: 35px;
         background: linear-gradient(to left, #E94110, #Eb6320);
-        font-family: "Avenir Next";
+        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
         font-size: 22px;
         color: #fff;
         overflow: hidden;
