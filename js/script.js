@@ -1,5 +1,4 @@
 // ВОПРОСЫ КУПИТЬ ИЛИ ПРОДАТЬ КВАРТИРУ
-
 let buy = document.querySelector('.buy');
 let sale = document.querySelector('.sale');
 let questions__buy = document.querySelector('.questions__buy');

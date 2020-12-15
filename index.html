@@ -79,12 +79,12 @@
                             </div>
                             <div class="main__calculation calculation" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800">
                                 <div class="calculation__title-cost">Ответьте на 6 вопросов и узнайте, сколько стоит Ваша квартира</div>
-                                <button type="button" href="#0" class="button-cost button">узнать стоимость</button>
+                                <button type="button" href="#0" class="button-cost popup-link button">узнать стоимость</button>
                                 <div class="calculation__sign">Воспользуйтесь бесплатным сервисом за 1 минуту</div>
                                 <div class="calculation__title-tax">
                                     Всё, что касается вопросов налогообложения - очень важно, но зачастую запутанно и непонятно
                                 </div>
-                                <button type="button" href="#0" class="button-tax button">бесплатно рассчитать сумму налога при продаже квартиры</button>
+                                <button type="button" href="#popup-tax" class="button-tax popup-link button">бесплатно рассчитать сумму налога при продаже квартиры</button>
                                 <div class="calculation__sign">Пройдите краткий опрос и получите ответ</div>
                             </div>
                         </div>
@@ -365,7 +365,96 @@
             <div class="page__scroll"></div>
         </main>
     </div>
-
+    <!--! ====================================== ПОПАП РАССЧЁТ НАЛОГА ПРИ ПРОДАЖЕ ========================================  -->
+    <aside class="popup" id="popup-tax">
+        <div class="popup__body">
+            <div class="popup__content popup-tax">
+                <div class="popup__close close-popup">
+                    <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
+                </div>
+                <form class="popup-tax__form">
+                    <div class="popup-tax__header">
+                        <h4 class="popup-tax__main-title">Бесплатно рассчитать сумму налога при продаже квартиры</h4>
+                        <span class="popup-tax__page">1/3</span>
+                    </div>
+                    <div class="popup-tax__progress">
+                        <div class="popup-tax__progress-value">
+                            <span class="visually-hidden">Прогресс прохождения теста</span>
+                        </div>
+                    </div>
+                    <div class="popup-tax__container popup-tax__container_1">
+                        <div class="popup-tax__form-group">
+                            <h5 class="popup-tax__title">На основании чего Вы получили квартиру в собственность?</h5>
+                            <label class="popup-tax__label">
+								<input type="radio" name="first-radio-group" class="popup-tax__radio visually-hidden">
+								<span class="popup-tax__point">По договору купли-продажи</span>
+							</label>
+                            <label class="popup-tax__label">
+								<input type="radio" name="first-radio-group" class="popup-tax__radio visually-hidden">
+								<span class="popup-tax__point">По наследству или дарению от ближайших членов семьи</span>
+							</label>
+                            <label class="popup-tax__label">
+								<input type="radio" name="first-radio-group" class="popup-tax__radio visually-hidden">
+								<span class="popup-tax__point">В результате приватизации</span>
+							</label>
+                            <label class="popup-tax__label">
+								<input type="radio" name="first-radio-group" class="popup-tax__radio visually-hidden">
+								<span class="popup-tax__point">В результате передачи имущества плательщику ренты</span>
+							</label>
+                        </div>
+                        <div class="popup-tax__footer">
+                            <button type="button" class="button-popup popup-tax__button-up popup-tax__button-up_1">Вперед <span>→</span></button>
+                        </div>
+                    </div>
+                    <div class="popup-tax__container popup-tax__container_2 hide">
+                        <div class="popup-tax__form-group">
+                            <h5 class="popup-tax__title">В каком году зарегистрировано право собственности на вашу квартиру?</h5>
+                            <label class="popup-tax__label">
+								<input type="radio" name="second-radio-group" class="popup-tax__radio visually-hidden">
+								<span class="popup-tax__point">До 2016 года</span>
+							</label>
+                            <label class="popup-tax__label">
+								<input type="radio" name="second-radio-group" class="popup-tax__radio visually-hidden">
+								<span class="popup-tax__point">После 2016 года</span>
+							</label>
+                            <label class="popup-tax__label">
+								<input type="radio" name="second-radio-group" class="popup-tax__radio visually-hidden">
+								<span class="popup-tax__point">Не знаю</span>
+							</label>
+                        </div>
+                        <div class="popup-tax__footer">
+                            <button type="button" class="button-popup popup-tax__button-back popup-tax__button-back_2"><span>→</span> Назад</button>
+                            <button type="button" class="button-popup popup-tax__button-up popup-tax__button-up_2">Вперед <span>→</span></button>
+                        </div>
+                    </div>
+                    <div class="popup-tax__container popup-tax__container_3 hide">
+                        <div class="popup-tax__form-group">
+                            <h5 class="popup-tax__title">Напишите точный адрес или кадастровый номер объекта недвижимости</h5>
+                            <input type="text" class="popup-tax__text" placeholder="Введите адрес или кадастровый номер">
+                        </div>
+                        <div class="popup-tax__footer">
+                            <button type="button" class="button-popup popup-tax__button-back popup-tax__button-back_3"><span>→</span> Назад</button>
+                            <button type="button" class="button-popup popup-tax__button-up popup-tax__button-up_3">Результат</button>
+                        </div>
+                    </div>
+                    <div class="popup-tax__container popup-tax__container_4 hide">
+                        <div class="popup-tax__form-group">
+                            <h5 class="popup-tax__title">Я рассчитаю сумму налога, исходя из кадастровой стоимости, и свяжусь с Вами</h5>
+                            <label class="popup-tax__label">
+								<input type="text" class="popup-tax__text" placeholder="Введите имя" required>
+								<input type="text" class="popup-tax__text" placeholder="Введите номер телефона" required>
+							</label>
+                        </div>
+                        <div class="popup-tax__footer">
+                            <button type="button" class="button-popup popup-tax__button-back popup-tax__button-back_4"><span>→</span> Назад</button>
+                            <button type="submit" class="button-popup popup-tax__button-up">Отправить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </aside>
+    <!--! ====================================== ПОПАП ПОКУПКА КВАРТИРЫ ========================================  -->
     <aside class="popup" id="popup-buy">
         <div class="popup__body">
             <div class="popup__content popup-buy">
@@ -491,6 +580,7 @@
         </div>
     </aside>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/forms.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/popups.js"></script>
     <script src="js/script.js"></script>
