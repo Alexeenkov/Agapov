@@ -151,7 +151,7 @@ button {
         font-family: "City Nova Regular", Arial, Helvetica, sans-serif;
         font-weight: 700;
         font-size: 20px;
-        letter-spacing: 3px;
+        letter-spacing: 1px;
         transition: color 0.3s ease 0s;
         margin: 0px 20px 0px 0px;
     }
@@ -1248,16 +1248,29 @@ body.touch .arrow {
         min-width: 0;
         border-radius: 25px;
         background-color: #fff;
-        padding: 15px;
+        padding: 15px 15px 100px 15px;
         border: 3px solid rgba(233, 65, 29, 1);
     }
-    &__image {
+    &__text {
         -o-object-fit: contain;
         object-fit: contain;
         -o-object-position: top;
         object-position: top;
         border-radius: 25px;
         max-width: 100%;
+    }
+    &__image {
+        background-size: cover;
+        background-position: top;
+        &_1 {
+            background-image: url("../img/5-screen/image_1.jpg");
+        }
+        &_2 {
+            background-image: url("../img/5-screen/image_2.jpg");
+        }
+        &_3 {
+            background-image: url("../img/5-screen/image_3.jpg");
+        }
     }
     &__container {
         position: relative;
