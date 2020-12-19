@@ -20,7 +20,7 @@
 @font-face {
   font-family: "Trajan Pro";
   src: url("../fonts/TrajanPro-regular.woff2"), url("../fonts/TrajanPro-regular.woff"), url("../fonts/TrajanPro-regular.ttf");
-  font-weight: 700;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
@@ -410,7 +410,6 @@ body.touch .arrow {
 }
 .description__title {
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   font-size: 50px;
 }
 .description__subtitle {
@@ -569,11 +568,9 @@ body.touch .arrow {
   left: -30px;
   z-index: 2;
   padding: 15px 25px;
-  text-align: center;
   border-radius: 15px;
   background-color: rgba(233, 65, 29, 0.9);
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
   font-size: 25px;
   color: #fff;
@@ -586,7 +583,6 @@ body.touch .arrow {
   z-index: 1;
   margin: 10px auto;
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
   font-size: 40px;
   letter-spacing: 2px;
@@ -621,9 +617,12 @@ body.touch .arrow {
   color: #e9411d;
 }
 .offers__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   min-height: 46px;
   margin-bottom: 10px;
-  text-align: center;
   font-family: "CCRickVeitch", Arial, Helvetica, sans-serif;
   font-size: 20px;
   color: #eb6320;
@@ -658,7 +657,6 @@ body.touch .arrow {
 }
 .questions {
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   font-size: 48px;
   letter-spacing: 2px;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
@@ -711,7 +709,6 @@ body.touch .arrow {
   top: -400px;
   opacity: 0;
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   text-align: center;
   font-size: 48px;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
@@ -893,7 +890,6 @@ body.touch .arrow {
 .popup-buy__name {
   margin-bottom: 5px;
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   font-size: 25px;
   color: #e6e6e6;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
@@ -970,7 +966,6 @@ body.touch .arrow {
   top: -400px;
   opacity: 0;
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   text-align: center;
   font-size: 48px;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
@@ -1035,6 +1030,123 @@ body.touch .arrow {
   display: none;
 }
 
+.portfolio {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  color: #e6e6e6;
+}
+.portfolio::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000000;
+  opacity: 0.6;
+}
+.portfolio__wrapper {
+  position: relative;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+.portfolio__main-title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E94110;
+  font-family: "Trajan Pro", "Times New Roman", Times, serif;
+  text-align: center;
+  font-size: 34px;
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+}
+.portfolio__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 730px;
+  min-width: 0;
+}
+.portfolio__title {
+  font-family: "Trajan Pro", "Times New Roman", Times, serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+}
+.portfolio__content {
+  font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+.portfolio__image {
+  margin-top: 15px;
+  width: 100%;
+  padding: 30% 0;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+.portfolio__image_1 {
+  background-image: url("../img/portfolio/1.jpg");
+}
+.portfolio__image_2 {
+  background-image: url("../img/portfolio/2.jpg");
+}
+.portfolio__image_3 {
+  background-image: url("../img/portfolio/3.jpg");
+}
+.portfolio__image_4 {
+  background-image: url("../img/portfolio/4.jpg");
+}
+.portfolio__image_5 {
+  background-image: url("../img/portfolio/5.jpg");
+}
+.portfolio__description {
+  margin: 0 auto;
+  width: 95%;
+  padding: 20px 20px 20px 20px;
+}
+
+.result {
+  border: 2px solid #E94110;
+  border-radius: 15px;
+  transform: translateY(-20px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.result__flex-container {
+  display: flex;
+}
+.result__title {
+  font-family: "Trajan Pro", "Times New Roman", Times, serif;
+  font-size: 24px;
+  text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+}
+.result__subtitle {
+  font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+.result__block {
+  position: relative;
+}
+.result__new-cost {
+  margin-top: 20px;
+}
+.result__prev-cost {
+  margin-left: 10px;
+}
+.result__image {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+.portfolio-slider {
+  position: relative;
+  width: 90%;
+}
+
 .feedback {
   position: relative;
   display: flex;
@@ -1063,7 +1175,6 @@ body.touch .arrow {
   position: relative;
   z-index: 2;
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   text-align: center;
   font-size: 48px;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
@@ -1169,7 +1280,6 @@ body.touch .arrow {
   width: 80%;
   margin: 0 auto;
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
 }
 .consultation__title {
@@ -1355,7 +1465,6 @@ body.touch .arrow {
   text-align: center;
   font-size: 48px;
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
 }
 .partners__card {
@@ -1404,27 +1513,23 @@ body.touch .arrow {
   width: 90%;
 }
 
-.popup-tax {
+.popup-test {
   max-width: 1200px;
 }
-.popup-tax__form {
+.popup-test__form {
   display: flex;
   flex-direction: column;
 }
-.popup-tax__header {
+.popup-test__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #eb6320;
   padding: 25px;
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   font-size: 20px;
 }
-.popup-tax__main-title {
-  margin-right: 300px;
-}
-.popup-tax__main-title::before {
+.popup-test__main-title::before {
   content: "";
   display: inline-block;
   width: 20px;
@@ -1434,42 +1539,39 @@ body.touch .arrow {
   background-size: contain;
   background-repeat: no-repeat;
 }
-.popup-tax__page {
+.popup-test__page {
   display: inline-block;
   width: 30px;
 }
-.popup-tax__progress {
+.popup-test__progress {
   width: 100%;
   height: 7px;
   background-color: #cbcbcb;
 }
-.popup-tax__progress-value {
+.popup-test__progress-value {
   height: 100%;
   width: 0%;
   background-color: #E94110;
   transition: all 1s ease 0s;
 }
-.popup-tax__progress-value_2 {
-  width: 33.33%;
-}
-.popup-tax__progress-value_3 {
-  width: 66.67%;
-}
-.popup-tax__progress-value_end {
-  width: 100%;
-}
-.popup-tax__form-group {
+.popup-test__form-group {
   display: flex;
   flex-direction: column;
   padding: 25px;
   min-height: 400px;
   font-family: "Avenir Next", Arial, Helvetica, sans-serif;
 }
-.popup-tax__title {
+.popup-test__title {
   font-size: 25px;
   margin-bottom: 30px;
 }
-.popup-tax__label {
+.popup-test__form-box {
+  display: flex;
+}
+.popup-test__form-box div:nth-child(2) {
+  margin-left: 80px;
+}
+.popup-test__label {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1478,28 +1580,30 @@ body.touch .arrow {
   font-size: 20px;
   cursor: pointer;
 }
-.popup-tax__radio {
+.popup-test__radio {
   position: absolute;
 }
-.popup-tax__radio:checked ~ .popup-tax__point::before {
+.popup-test__radio:checked ~ .popup-test__point::before {
   background-image: url("../svg/form-circle.svg");
 }
-.popup-tax__text {
+.popup-test__text {
   margin-top: 30px;
   padding: 10px 20px;
   border-bottom: 1px solid #E94110;
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-weight: 700;
   font-size: 20px;
 }
-.popup-tax__text:focus {
+.popup-test__text_position {
+  margin: 0;
+}
+.popup-test__text:focus {
   outline: 1px solid #E94110;
   border: 0;
 }
-.popup-tax__point {
+.popup-test__point {
   position: relative;
 }
-.popup-tax__point::before {
+.popup-test__point::before {
   content: "";
   position: relative;
   top: 3px;
@@ -1511,21 +1615,21 @@ body.touch .arrow {
   background-size: contain;
   transition: all 0.3s ease 0s;
 }
-.popup-tax__footer {
+.popup-test__footer {
   display: flex;
   justify-content: space-between;
   padding: 25px;
 }
-.popup-tax__button-back span {
+.popup-test__button-back span {
   position: relative;
   top: 2px;
   display: inline-block;
   transform: rotate(180deg);
 }
-.popup-tax__button-up {
+.popup-test__button-up {
   margin-left: auto;
 }
-.popup-tax__button-up::after {
+.popup-test__button-up::after {
   content: "";
   display: block;
   width: 50px;
@@ -1541,7 +1645,7 @@ body.touch .arrow {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
-.popup-tax__button-up span {
+.popup-test__button-up span {
   position: relative;
   top: 2px;
 }
@@ -1560,11 +1664,49 @@ body.touch .arrow {
   color: #fff;
   overflow: hidden;
 }
+.button-popup_size {
+  width: 280px;
+}
 .button-popup:hover {
   box-shadow: 0 0 20px rgba(233, 65, 29, 0.7);
 }
 .button-popup:active {
   top: 3px;
+}
+
+.cost-test__main-title {
+  margin-right: 500px;
+}
+.cost-test__progress-value_2 {
+  width: 16.67%;
+}
+.cost-test__progress-value_3 {
+  width: 33.34%;
+}
+.cost-test__progress-value_4 {
+  width: 50%;
+}
+.cost-test__progress-value_5 {
+  width: 66.68%;
+}
+.cost-test__progress-value_6 {
+  width: 83.35%;
+}
+.cost-test__progress-value_end {
+  width: 100%;
+}
+
+.tax-test__main-title {
+  margin-right: 300px;
+}
+.tax-test__progress-value_2 {
+  width: 33.33%;
+}
+.tax-test__progress-value_3 {
+  width: 66.67%;
+}
+.tax-test__progress-value_end {
+  width: 100%;
 }
 
 @media (max-width: 1630px) {
