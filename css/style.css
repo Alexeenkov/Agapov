@@ -1088,21 +1088,6 @@ body.touch .arrow {
   background-size: cover;
   background-position: center;
 }
-.portfolio__image_1 {
-  background-image: url("../img/portfolio/1.jpg");
-}
-.portfolio__image_2 {
-  background-image: url("../img/portfolio/2.jpg");
-}
-.portfolio__image_3 {
-  background-image: url("../img/portfolio/3.jpg");
-}
-.portfolio__image_4 {
-  background-image: url("../img/portfolio/4.jpg");
-}
-.portfolio__image_5 {
-  background-image: url("../img/portfolio/5.jpg");
-}
 .portfolio__description {
   margin: 0 auto;
   width: 95%;
@@ -1198,15 +1183,6 @@ body.touch .arrow {
 .feedback__image {
   background-size: cover;
   background-position: top;
-}
-.feedback__image_1 {
-  background-image: url("../img/5-screen/image_1.jpg");
-}
-.feedback__image_2 {
-  background-image: url("../img/5-screen/image_2.jpg");
-}
-.feedback__image_3 {
-  background-image: url("../img/5-screen/image_3.jpg");
 }
 .feedback__container {
   position: relative;

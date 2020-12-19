@@ -1148,21 +1148,6 @@ body.touch .arrow {
         border-radius: 10px;
         background-size: cover;
         background-position: center;
-        &_1 {
-            background-image: url("../img/portfolio/1.jpg");
-        }
-        &_2 {
-            background-image: url("../img/portfolio/2.jpg");
-        }
-        &_3 {
-            background-image: url("../img/portfolio/3.jpg");
-        }
-        &_4 {
-            background-image: url("../img/portfolio/4.jpg");
-        }
-        &_5 {
-            background-image: url("../img/portfolio/5.jpg");
-        }
     }
     &__description {
         margin: 0 auto;
@@ -1262,15 +1247,6 @@ body.touch .arrow {
     &__image {
         background-size: cover;
         background-position: top;
-        &_1 {
-            background-image: url("../img/5-screen/image_1.jpg");
-        }
-        &_2 {
-            background-image: url("../img/5-screen/image_2.jpg");
-        }
-        &_3 {
-            background-image: url("../img/5-screen/image_3.jpg");
-        }
     }
     &__container {
         position: relative;

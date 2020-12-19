@@ -53,6 +53,7 @@ new Swiper('.feedback-slider', {
     nested: true,
     // Переключение при клике на слайд
     slideToClickedSlide: false,
+
 });
 
 new Swiper('.portfolio-slider', {
