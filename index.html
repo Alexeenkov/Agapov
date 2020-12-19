@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -86,12 +86,12 @@
                             </div>
                             <div class="main__calculation calculation" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800">
                                 <div class="calculation__title-cost">Ответьте на 6 вопросов и узнайте, сколько стоит Ваша квартира</div>
-                                <button type="button" href="#popup-cost" class="button-cost popup-link button">узнать стоимость</button>
+                                <a href="#popup-cost" class="button-cost popup-link button">узнать стоимость</a>
                                 <div class="calculation__sign">Воспользуйтесь бесплатным сервисом за 1 минуту</div>
                                 <div class="calculation__title-tax">
                                     Всё, что касается вопросов налогообложения - очень важно, но зачастую запутанно и непонятно
                                 </div>
-                                <button type="button" href="#popup-tax" class="button-tax popup-link button">бесплатно рассчитать сумму налога при продаже квартиры</button>
+                                <a href="#popup-tax" class="button-tax popup-link button">бесплатно рассчитать сумму налога при продаже квартиры</a>
                                 <div class="calculation__sign">Пройдите краткий опрос и получите ответ</div>
                             </div>
                         </div>
@@ -179,7 +179,7 @@
                                         </div>
                                     </div>
                                     <div class="buy__sign">Одобрение ипотеки для <span>Вac!</span></div>
-                                    <button type="button" href="#popup-buy" class="buy__button popup-link button">подобрать квартиру</button>
+                                    <a href="#popup-buy" class="buy__button popup-link button">подобрать квартиру</a>
                                 </div>
                                 <div class="buy-or-sale__sale sale">
                                     <div class="sale__main-title">
@@ -194,7 +194,7 @@
                                             <li>Рассмотрю всех покупателей с любой формы оплаты и выберу лучшего</li>
                                         </ul>
                                     </div>
-                                    <button type="button" href="#popup-cost" class="sale__button popup-link button">узнать стоимость</button>
+                                    <a href="#popup-cost" class="sale__button popup-link button">узнать стоимость</a>
                                 </div>
                             </div>
                         </div>
@@ -503,10 +503,10 @@
                                     <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="700" class="consultation__form-group-textarea">
                                         <label class="consultation__label">
 											<span class="consultation__name">Введите Ваш вопрос:</span>
-											<textarea type="text" class="consultation__textarea"></textarea>
+											<textarea class="consultation__textarea"></textarea>
 										</label>
                                     </div>
-                                    <button data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="700" submit="button" class="consultation__button button">отправить</button>
+                                    <button data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="700" type="submit" class="consultation__button button">отправить</button>
                                 </form>
                             </div>
                         </div>
@@ -646,9 +646,9 @@
     <aside class="popup" id="popup-cost">
         <div class="popup__body">
             <div class="popup__content popup-test cost-test">
-                <div class="popup__close close-popup">
+                <button type="button" class="popup__close close-popup">
                     <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
-                </div>
+                </button>
                 <form class="popup-test__form">
                     <div class="popup-test__header">
                         <h4 class="popup-test__main-title cost-test__main-title">Оценка стоимости квартиры</h4>
@@ -752,17 +752,17 @@
                         <div class="popup-test__form-group">
                             <h5 class="popup-test__title">Этаж</h5>
                             <label class="popup-test__label">
-									<input type="radio" name="floor" class="popup-test__radio visually-hidden">
-									<span class="popup-test__point">Первый этаж</span>
-								</label>
+								<input type="radio" name="floor" class="popup-test__radio visually-hidden">
+								<span class="popup-test__point">Первый этаж</span>
+							</label>
                             <label class="popup-test__label">
-									<input type="radio" name="floor" class="popup-test__radio visually-hidden">
-									<span class="popup-test__point">Последний этаж</span>
-								</label>
+								<input type="radio" name="floor" class="popup-test__radio visually-hidden">
+								<span class="popup-test__point">Последний этаж</span>
+							</label>
                             <label class="popup-test__label">
-									<input type="radio" name="floor" class="popup-test__radio visually-hidden">
-									<span class="popup-test__point">Ни первы и не последний этаж</span>
-								</label>
+								<input type="radio" name="floor" class="popup-test__radio visually-hidden">
+								<span class="popup-test__point">Ни первы и не последний этаж</span>
+							</label>
                         </div>
                         <div class="popup-test__footer">
                             <button type="button" class="button-popup popup-test__button-back cost-test__button-back_3"><span>→</span> Назад</button>
@@ -824,32 +824,32 @@
                             <div class="popup-test__form-box">
                                 <div>
                                     <label class="popup-test__label">
-											<input type="radio" name="reason" class="popup-test__radio visually-hidden">
-											<span class="popup-test__point">Просто интересуюсь</span>
-										</label>
+										<input type="radio" name="reason" class="popup-test__radio visually-hidden">
+										<span class="popup-test__point">Просто интересуюсь</span>
+									</label>
                                     <label class="popup-test__label">
-											<input type="radio" name="reason" class="popup-test__radio visually-hidden">
-											<span class="popup-test__point">Планирую продавать квартиру</span>
-										</label>
+										<input type="radio" name="reason" class="popup-test__radio visually-hidden">
+										<span class="popup-test__point">Планирую продавать квартиру</span>
+									</label>
                                 </div>
                                 <div>
                                     <label class="popup-test__label">
-											<input type="radio" name="reason" class="popup-test__radio visually-hidden">
-											<span class="popup-test__point">Для суда</span>
-										</label>
+										<input type="radio" name="reason" class="popup-test__radio visually-hidden">
+										<span class="popup-test__point">Для суда</span>
+									</label>
                                     <label class="popup-test__label">
-											<input type="radio" name="reason" class="popup-test__radio visually-hidden">
-											<span class="popup-test__point">Для раздела квартиры с родственниками</span>
-										</label>
+										<input type="radio" name="reason" class="popup-test__radio visually-hidden">
+										<span class="popup-test__point">Для раздела квартиры с родственниками</span>
+									</label>
                                 </div>
                             </div>
-                            <label class="popup-test__label">
-									<div class="popup-test__form-box">
-										<input type="radio" name="reason" class="popup-test__radio visually-hidden">
-										<span class="popup-test__point"></span>
-										<input type="text" class="popup-test__text popup-test__text_position" placeholder="Другое...">
-									</div>
+                            <div class="popup-test__form-box popup-test__form-box_indent">
+                                <label class="popup-test__label">
+									<input type="radio" name="reason" class="popup-test__radio visually-hidden">
+									<span class="popup-test__point"></span>
 								</label>
+                                <input type="text" class="popup-test__text popup-test__text_position" placeholder="Другое...">
+                            </div>
                         </div>
                         <div class="popup-test__footer">
                             <button type="button" class="button-popup popup-test__button-back cost-test__button-back_6"><span>→</span> Назад</button>
@@ -859,10 +859,8 @@
                     <div class="popup-test__container cost-test__container-7 hide">
                         <div class="popup-test__form-group">
                             <h5 class="popup-test__title">Заполните форму, чтобы получить результаты</h5>
-                            <label class="popup-test__label">
-									<input type="text" class="popup-test__text" placeholder="Введите имя" required>
-									<input type="text" class="popup-test__text" placeholder="Введите номер телефона" required>
-								</label>
+                            <input type="text" class="popup-test__text" placeholder="Введите имя" required>
+                            <input type="text" class="popup-test__text" placeholder="Введите номер телефона" required>
                         </div>
                         <div class="popup-test__footer">
                             <button type="button" class="button-popup popup-test__button-back cost-test__button-back_7"><span>→</span> Назад</button>
@@ -877,9 +875,9 @@
     <aside class="popup" id="popup-tax">
         <div class="popup__body">
             <div class="popup__content popup-test tax-test">
-                <div class="popup__close close-popup">
+                <button type="button" class="popup__close close-popup">
                     <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
-                </div>
+                </button>
                 <form class="popup-test__form">
                     <div class="popup-test__header">
                         <h4 class="popup-test__main-title tax-test__main-title">Бесплатно рассчитать сумму налога при продаже квартиры</h4>
@@ -948,10 +946,10 @@
                     <div class="popup-test__container tax-test__container-4 hide">
                         <div class="popup-test__form-group">
                             <h5 class="popup-test__title">Я рассчитаю сумму налога, исходя из кадастровой стоимости, и свяжусь с Вами</h5>
-                            <label class="popup-test__label">
-								<input type="text" class="popup-test__text" placeholder="Введите имя" required>
-								<input type="text" class="popup-test__text" placeholder="Введите номер телефона" required>
-							</label>
+                            <div class="popup-test__label">
+                                <input type="text" class="popup-test__text" placeholder="Введите имя" required>
+                                <input type="text" class="popup-test__text" placeholder="Введите номер телефона" required>
+                            </div>
                         </div>
                         <div class="popup-test__footer">
                             <button type="button" class="button-popup popup-test__button-back tax-test__button-back_4"><span>→</span> Назад</button>
@@ -966,9 +964,9 @@
     <aside class="popup" id="popup-buy">
         <div class="popup__body">
             <div class="popup__content popup-buy">
-                <div class="popup__close close-popup">
+                <button type="button" class="popup__close close-popup">
                     <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
-                </div>
+                </button>
                 <form class="popup-buy__form">
                     <h4 class="popup-buy__title">Вы в шаге от своей мечты!</h4>
                     <div class="popup-buy__form-group">
@@ -987,10 +985,10 @@
                     <div class="popup-buy__form-group">
                         <label class="popup-buy__label">
 							<span class="popup-buy__name">Укажите площадь:</span>
-							<div class="popup-buy__container">
-								<input type="text" placeholder="от (м3)" class="popup-buy__size-apartment">
-								<input type="text" placeholder="до (м3)" class="popup-buy__size-apartment">
-							</div>
+							<span class="popup-buy__container">
+								<input type="text" placeholder="от (м3)" class="popup-buy__input-size">
+								<input type="text" placeholder="до (м3)" class="popup-buy__input-size">
+							</span>
 						</label>
                     </div>
                     <div class="popup-buy__form-group">
@@ -1066,21 +1064,23 @@
 						</label>
                     </div>
                     <div class="popup-buy__form-group">
-                        <label class="popup-buy__label">
-							<span class="popup-buy__name">Укажите стоимость:</span>
-							<div class="popup-buy__container">
-								<input type="text" placeholder="от (т.р.)" class="popup-buy__cost">
-								<input type="text" placeholder="до (т.р.)" class="popup-buy__cost">
-							</div>
-						</label>
+                        <div class="popup-buy__label">
+                            <span class="popup-buy__name">Укажите стоимость:</span>
+                            <span class="popup-buy__container">
+								<input type="text" placeholder="от (т.р.)" class="popup-buy__input-size">
+								<input type="text" placeholder="до (т.р.)" class="popup-buy__input-size">
+							</span>
+                        </div>
                     </div>
                     <div class="popup-buy__form-group">
-                        <label class="popup-buy__label">
-							<span class="popup-buy__name">Укажите контактные данные:</span>
-							<input type="text" placeholder="Ваш номер телефона*" class="popup-buy__contacts">
-							<input type="text" placeholder="Имя*" class="popup-buy__contacts">
-							<input type="text" placeholder="Ваш e-mail" class="popup-buy__contacts">
-						</label>
+                        <div class="popup-buy__label">
+                            <label>
+								<span class="popup-buy__name">Укажите контактные данные:</span>
+								<input type="text" placeholder="Ваш номер телефона*" class="popup-buy__contacts">
+							</label>
+                            <input type="text" placeholder="Имя*" class="popup-buy__contacts">
+                            <input type="text" placeholder="Ваш e-mail" class="popup-buy__contacts">
+                        </div>
                     </div>
                     <button type="submit" class="popup-buy__button button">Подобрать квартиру</button>
                 </form>

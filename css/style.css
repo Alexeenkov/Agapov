@@ -75,6 +75,7 @@ body {
 button {
   transition-duration: 0.3s !important;
   cursor: pointer;
+  background-color: unset;
 }
 button:focus {
   outline: none;
@@ -459,6 +460,7 @@ body.touch .arrow {
   font-size: 25px;
   color: #fff;
   overflow: hidden;
+  transition: all 0.3s ease 0s;
 }
 .button:hover {
   top: -5px;
@@ -796,57 +798,6 @@ body.touch .arrow {
   transition: opacity 0.5s ease 2s, top 0.5s ease 0s, box-shadow 0.3s ease 0s;
 }
 
-.popup {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  padding: 33px 15px;
-  width: 100%;
-  min-width: 320px;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  visibility: hidden;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transition: all 1.2s ease 0s;
-}
-.popup.open {
-  opacity: 1;
-  visibility: visible;
-}
-.popup.open .popup__content {
-  transform: translateY(0);
-  opacity: 1;
-}
-.popup__body {
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.popup__content {
-  position: relative;
-  background-color: #ffffff;
-  transition: all 1.2s ease 0s;
-  opacity: 0;
-  transform: perspective(600px) translateY(-200%) rotateX(45deg);
-}
-.popup__close {
-  position: absolute;
-  right: 0;
-  top: -40px;
-  width: 30px;
-  height: 30px;
-  background-image: url("../svg/form-x.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  fill: #e9411d;
-  cursor: pointer;
-}
-
 .popup-buy {
   max-width: 550px;
   margin-top: 10px;
@@ -855,6 +806,10 @@ body.touch .arrow {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.popup-buy input:focus,
+.popup-buy select:focus {
+  outline: 2px solid #e9411d;
 }
 .popup-buy::after {
   content: "";
@@ -903,45 +858,19 @@ body.touch .arrow {
   min-height: 40px;
   cursor: pointer;
 }
-.popup-buy__rooms:focus {
-  outline: 2px solid #e9411d;
-}
-.popup-buy__size-apartment {
+.popup-buy__input-size {
   padding: 10px;
   width: 47%;
   min-height: 40px;
-}
-.popup-buy__size-apartment:nth-child(n+2) {
-  margin-left: 20px;
-}
-.popup-buy__size-apartment:focus {
-  outline: 2px solid #e9411d;
 }
 .popup-buy__metro {
   padding: 10px;
   min-height: 40px;
   cursor: pointer;
 }
-.popup-buy__metro:focus {
-  outline: 2px solid #e9411d;
-}
-.popup-buy__cost {
-  padding: 10px;
-  width: 47%;
-  min-height: 40px;
-}
-.popup-buy__cost:nth-child(n+2) {
-  margin-left: 20px;
-}
-.popup-buy__cost:focus {
-  outline: 2px solid #e9411d;
-}
 .popup-buy__contacts {
   padding: 10px;
   min-height: 40px;
-}
-.popup-buy__contacts:focus {
-  outline: 2px solid #e9411d;
 }
 .popup-buy__contacts:nth-child(n+2) {
   margin-top: 10px;
@@ -1502,6 +1431,55 @@ body.touch .arrow {
   width: 90%;
 }
 
+.popup {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  padding: 33px 15px;
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 1.2s ease 0s;
+}
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+.popup.open .popup__content {
+  transform: translateY(0);
+  opacity: 1;
+}
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup__content {
+  position: relative;
+  background-color: #ffffff;
+  transition: all 1.2s ease 0s;
+  opacity: 0;
+  transform: perspective(600px) translateY(-200%) rotateX(45deg);
+}
+.popup__close {
+  position: absolute;
+  right: 0;
+  top: -40px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../svg/form-x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .popup-test {
   max-width: 1200px;
 }
@@ -1556,6 +1534,9 @@ body.touch .arrow {
 }
 .popup-test__form-box {
   display: flex;
+}
+.popup-test__form-box_indent {
+  margin-top: 10px;
 }
 .popup-test__form-box div:nth-child(2) {
   margin-left: 80px;
