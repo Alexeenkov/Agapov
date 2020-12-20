@@ -89,10 +89,6 @@ button:focus {
   clip: rect(1px, 1px, 1px, 1px);
 }
 
-.hide {
-  display: none;
-}
-
 .wrapper {
   min-height: 100%;
   opacity: 0;
@@ -1780,4 +1776,8 @@ body.touch .arrow {
 }
 .popup-buy__button:focus {
   outline: none;
+}
+
+.hide {
+  display: none;
 }
