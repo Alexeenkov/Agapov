@@ -26,14 +26,6 @@ new Swiper('.feedback-slider', {
         pageUpDown: false,
     },
 
-    // Управление колесом мыши
-    mousewheel: {
-        // Чувствительность колеса мыши
-        sensitivity: 1,
-        // Класс объекта на котором
-        // будет срабатывать прокрутка мышью.
-        //eventsTarget: ".image-slider"
-    },
     // Бесконечный слайдер
     loop: true,
     // Брейк поинты(адаптив)
@@ -82,15 +74,6 @@ new Swiper('.portfolio-slider', {
         // управление клавишами
         // pageUp, pageDown
         pageUpDown: false,
-    },
-
-    // Управление колесом мыши
-    mousewheel: {
-        // Чувствительность колеса мыши
-        sensitivity: 1,
-        // Класс объекта на котором
-        // будет срабатывать прокрутка мышью.
-        //eventsTarget: ".image-slider"
     },
 
     // Бесконечный слайдер

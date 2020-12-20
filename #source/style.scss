@@ -99,7 +99,12 @@ button {
     clip: rect(1px, 1px, 1px, 1px);
 }
 
-// !===========================!!! for all devices !!!================================
+.hide {
+    display: none;
+}
+
+// ?===========================!!! for all devices !!!================================
+// ! ------------ slider ------------------------------
 .wrapper {
     min-height: 100%;
     opacity: 0;
@@ -279,7 +284,7 @@ button {
     }
 }
 
-// ! --------------------- screen № 1 --------------------------------
+// ! --------------------- slide № 1 --------------------------------
 .main {
     display: flex;
     justify-content: space-between;
@@ -475,6 +480,32 @@ body.touch .arrow {
     }
 }
 
+.ad-cost {
+    color: #000;
+    padding: 20px 25px 0px 20px;
+    width: 650px;
+    background-image: url("../img/main/banner.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    &__title {
+        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+        font-size: 19px;
+        text-align: center;
+    }
+    &__subtitle {
+        margin-top: 10px;
+        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        text-align: center;
+    }
+    &__button {
+        margin: 30px auto 0 auto;
+        width: 350px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        font-size: 20px;
+    }
+}
+
 .button {
     position: relative;
     display: block;
@@ -492,6 +523,9 @@ body.touch .arrow {
     color: #fff;
     overflow: hidden;
     transition: all 0.3s ease 0s;
+    &_center {
+        margin: 0 auto;
+    }
     &:hover {
         top: -5px;
         box-shadow: 0 0 40px rgba(233, 65, 29, 0.7);
@@ -552,10 +586,10 @@ body.touch .arrow {
 }
 
 .button-cost {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin: 30px auto 0 auto;
     width: 300px;
     height: 70px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .button-tax {
@@ -720,7 +754,6 @@ body.touch .arrow {
     letter-spacing: 2px;
     text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
     &__buy {
-        display: block;
         position: absolute;
         z-index: 3;
         top: 30%;
@@ -733,7 +766,6 @@ body.touch .arrow {
         }
     }
     &__sale {
-        display: block;
         position: absolute;
         z-index: 3;
         top: 70%;
@@ -857,93 +889,6 @@ body.touch .arrow {
     }
 }
 
-.popup-buy {
-    max-width: 550px;
-    margin-top: 10px;
-    padding: 25px;
-    background-image: url("../img/3-screen/form-buy_bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    input,
-    select {
-        &:focus {
-            outline: 2px solid rgb(233, 65, 29);
-        }
-    }
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgb(0, 0, 0);
-        opacity: 0.5;
-    }
-    &:focus {
-        outline: none;
-    }
-    &__form {
-        position: relative;
-        z-index: 2;
-    }
-    &__title {
-        text-align: center;
-        font-size: 40px;
-        margin-bottom: 20px;
-        font-family: "Ustroke Regular", Arial, Helvetica, sans-serif;
-        color: #e6e6e6;
-    }
-    &__form-group {
-        margin-top: 20px;
-    }
-    &__label {
-        display: flex;
-        flex-direction: column;
-    }
-    &__name {
-        margin-bottom: 5px;
-        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
-        font-size: 25px;
-        color: #e6e6e6;
-        text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
-    }
-    &__container {
-        display: flex;
-        justify-content: space-between;
-    }
-    &__rooms {
-        padding: 10px;
-        min-height: 40px;
-        cursor: pointer;
-    }
-    &__input-size {
-        padding: 10px;
-        width: 47%;
-        min-height: 40px;
-    }
-    &__metro {
-        padding: 10px;
-        min-height: 40px;
-        cursor: pointer;
-    }
-    &__contacts {
-        padding: 10px;
-        min-height: 40px;
-        &:nth-child(n+2) {
-            margin-top: 10px;
-        }
-    }
-    &__button {
-        margin: 30px auto 0 auto;
-        cursor: pointer;
-        &:focus {
-            outline: none;
-        }
-    }
-}
-
 .sale {
     position: relative;
     z-index: 2;
@@ -952,6 +897,7 @@ body.touch .arrow {
     max-width: 1650px;
     &__main-title {
         position: relative;
+        margin: 0 auto;
         top: -400px;
         opacity: 0;
         font-family: "Trajan Pro", 'Times New Roman', Times, serif;
@@ -968,7 +914,7 @@ body.touch .arrow {
         position: relative;
         bottom: -850px;
         opacity: 0;
-        margin: 50px auto 0 auto;
+        margin: 30px auto;
         border: 3px solid rgb(233, 65, 29);
         border-radius: 15px;
         padding: 25px;
@@ -983,7 +929,7 @@ body.touch .arrow {
     &__title {
         text-align: center;
         font-family: "Ustroke Regular", Arial, Helvetica, sans-serif;
-        font-size: 35px;
+        font-size: 30px;
         color: rgb(233, 65, 29);
     }
     &__description {
@@ -1007,19 +953,16 @@ body.touch .arrow {
         }
     }
     &__button {
-        margin: 50px auto 0 auto;
         opacity: 0;
+        margin: 0 auto;
         width: 300px;
+        height: 70px;
         transition: opacity 0.5s ease 2s, box-shadow 0.3s ease 0s;
         &_active {
             opacity: 1;
             transition: opacity 0.5s ease 2s, top 0.5s ease 0s, box-shadow 0.3s ease 0s;
         }
     }
-}
-
-.hide {
-    display: none;
 }
 
 // ! --------------------- screen № 4 --------------------------------
@@ -1125,6 +1068,179 @@ body.touch .arrow {
     width: 90%;
 }
 
+// ! --------------------- screen № 5 --------------------------------
+.consultation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    color: #e6e6e6;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000000;
+        opacity: 0.2;
+    }
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+        text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+    }
+    &__title {
+        text-align: center;
+        font-size: 48px;
+    }
+    &__description {
+        font-size: 25px;
+        width: 50%;
+        margin: 10px auto 0 auto;
+        padding-left: 30px;
+        border-left: 3px solid #E94110;
+    }
+    &__list {
+        margin: 30px auto 0 auto;
+        width: 60%;
+        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    &__item {
+        position: relative;
+        &::before {
+            content: '';
+            display: inline-block;
+            margin-right: 10px;
+            width: 15px;
+            height: 15px;
+            border: 2px solid #E94110;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        &:nth-child(n+2) {
+            margin-top: 5px;
+        }
+    }
+    &__checkmark {
+        position: absolute;
+        top: -3px;
+        left: 1px;
+        width: 25px;
+        height: 25px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid #E94110;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+        text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        &_size {
+            margin: 20px auto 0 auto;
+            width: 80%;
+        }
+    }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    &__form-group {
+        width: 32%;
+    }
+    &__label {}
+    &__name {
+        font-size: 20px;
+    }
+    &__input {
+        display: block;
+        height: 40px;
+        width: 100%;
+        margin-top: 10px;
+        padding: 0 15px;
+        border-radius: 7px;
+        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.4);
+        transition: all 0.5s ease 0s;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+        &:focus {
+            background-color: rgb(255, 255, 255);
+            outline: none;
+        }
+    }
+    &__form-group-textarea {
+        width: 100%;
+    }
+    &__textarea {
+        display: block;
+        width: 100%;
+        height: 150px;
+        resize: none;
+        margin-top: 10px;
+        padding: 15px;
+        border-radius: 7px;
+        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        background-color: rgba(255, 255, 255, 0.4);
+        transition: all 0.5s ease 0s;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+        &:focus {
+            background-color: rgb(255, 255, 255);
+            outline: none;
+        }
+    }
+    &__button {
+        display: block;
+        align-self: center;
+        margin-top: 20px;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+    }
+     ::-webkit-scrollbar-button {
+        background-repeat: no-repeat;
+        width: 6px;
+        height: 0px;
+    }
+     ::-webkit-scrollbar-track {
+        background-color: #32312e;
+        box-shadow: 0px 0px 3px #000 inset;
+    }
+     ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: rgb(233, 65, 29);
+        box-shadow: 0px 1px 1px #fff inset;
+        background-image: url('https://yraaa.ru/_pu/24/59610063.png');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+     ::-webkit-resizer {
+        width: 7px;
+        height: 0px
+    }
+     ::-webkit-scrollbar {
+        width: 11px;
+    }
+}
+
 // ! --------------------- screen № 6 --------------------------------
 .feedback {
     position: relative;
@@ -1145,6 +1261,7 @@ body.touch .arrow {
     }
     &__wrapper {
         position: relative;
+        z-index: 3;
         display: flex;
         width: 85%;
         margin: 60px auto 0 auto;
@@ -1240,180 +1357,14 @@ body.touch .arrow {
     width: 90%;
 }
 
-// ! --------------------- screen № 5 --------------------------------
-.consultation {
+// ! --------------------- screen № 7 --------------------------------
+.partners {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     height: 100vh;
     color: #e6e6e6;
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #000000;
-        opacity: 0.2;
-    }
-    &__wrapper {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: 0 auto;
-        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
-        text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
-    }
-    &__title {
-        text-align: center;
-        font-size: 48px;
-    }
-    &__description {
-        font-size: 25px;
-        width: 50%;
-        margin: 10px auto 0 auto;
-        padding-left: 30px;
-        border-left: 3px solid #E94110;
-    }
-    &__list {
-        margin: 30px auto 0 auto;
-        width: 60%;
-        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
-        font-size: 18px;
-        letter-spacing: 2px;
-    }
-    &__item {
-        position: relative;
-        &::before {
-            content: '';
-            display: inline-block;
-            margin-right: 10px;
-            width: 15px;
-            height: 15px;
-            border: 2px solid #E94110;
-            border-radius: 50%;
-            vertical-align: middle;
-        }
-        &:nth-child(n+2) {
-            margin-top: 5px;
-        }
-    }
-    &__checkmark {
-        position: absolute;
-        top: -3px;
-        left: 1px;
-        width: 25px;
-        height: 25px;
-    }
-    &__form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 80%;
-        margin: 20px auto 0 auto;
-        padding: 30px;
-        border-radius: 15px;
-        border: 1px solid #E94110;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    &__container {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        width: 100%;
-    }
-    &__form-group {
-        width: 32%;
-    }
-    &__label {}
-    &__name {
-        font-size: 20px;
-    }
-    &__input {
-        display: block;
-        height: 40px;
-        width: 100%;
-        margin-top: 10px;
-        padding: 0 15px;
-        border-radius: 7px;
-        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        background-color: rgba(255, 255, 255, 0.4);
-        transition: all 0.5s ease 0s;
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.6);
-        }
-        &:focus {
-            background-color: rgb(255, 255, 255);
-            outline: none;
-        }
-    }
-    &__form-group-textarea {
-        width: 100%;
-    }
-    &__textarea {
-        display: block;
-        width: 100%;
-        height: 150px;
-        resize: none;
-        margin-top: 10px;
-        padding: 15px;
-        border-radius: 7px;
-        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        background-color: rgba(255, 255, 255, 0.4);
-        transition: all 0.5s ease 0s;
-        &:hover {
-            background-color: rgba(255, 255, 255, 0.6);
-        }
-        &:focus {
-            background-color: rgb(255, 255, 255);
-            outline: none;
-        }
-    }
-    &__button {
-        display: block;
-        align-self: center;
-        margin-top: 20px;
-        cursor: pointer;
-        &:focus {
-            outline: none;
-        }
-    }
-     ::-webkit-scrollbar-button {
-        background-repeat: no-repeat;
-        width: 6px;
-        height: 0px;
-    }
-     ::-webkit-scrollbar-track {
-        background-color: #32312e;
-        box-shadow: 0px 0px 3px #000 inset;
-    }
-     ::-webkit-scrollbar-thumb {
-        border-radius: 5px;
-        background-color: rgb(233, 65, 29);
-        box-shadow: 0px 1px 1px #fff inset;
-        background-image: url('https://yraaa.ru/_pu/24/59610063.png');
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-     ::-webkit-resizer {
-        background-image: url('');
-        background-repeat: no-repeat;
-        width: 7px;
-        height: 0px
-    }
-     ::-webkit-scrollbar {
-        width: 11px;
-    }
-}
-
-.partners {
-    position: relative;
-    padding-top: 100px;
+    padding-top: 160px;
     &::after {
         content: "";
         position: absolute;
@@ -1424,16 +1375,6 @@ body.touch .arrow {
         background-color: #000000;
         opacity: 0.4;
     }
-}
-
-// ! --------------------- screen № 6 --------------------------------
-.partners {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #e6e6e6;
     &__wrapper {
         position: relative;
         z-index: 2;
@@ -1460,7 +1401,7 @@ body.touch .arrow {
         justify-content: center;
         flex-basis: 25%;
         min-height: 200px;
-        padding: 35px;
+        padding: 2.5%;
         &:nth-child(n+6) {
             border-top: 1px solid rgb(233, 65, 29);
         }
@@ -1476,14 +1417,34 @@ body.touch .arrow {
         object-fit: contain;
         max-width: 100%;
     }
+    &__ad-sale {
+        margin-top: 30px;
+        z-index: 3;
+        border-radius: 20px;
+        border: 2px solid #E94110;
+        padding: 20px;
+        background-image: url("");
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #e6e6e6;
+        width: 50%;
+    }
+    &__ad-sale-title {
+        text-align: center;
+        font-size: 28px;
+        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+        text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+    }
+    &__button {
+        margin: 20px auto 0 auto;
+        width: 330px;
+        font-size: 20px;
+    }
 }
 
-// ! --------------------- screen № 7 --------------------------------
+// ! --------------------- screen № 8 --------------------------------
 .contacts {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     color: #e6e6e6;
     &::after {
@@ -1497,10 +1458,67 @@ body.touch .arrow {
         opacity: 0.2;
     }
     &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: relative;
+        padding-left: 50px;
+        padding-top: 80px;
         z-index: 2;
-        width: 90%;
+        width: 60%;
     }
+    &__main-title {
+        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+        text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        font-size: 40px;
+    }
+    &__subtitle {
+        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+        font-size: 26px;
+    }
+    &__form {
+        margin-top: 30px;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    &__button {
+        margin-top: 20px;
+    }
+    &__socials {
+        margin-top: 30px;
+    }
+    &__socials-link {
+        &:nth-child(n+2) {
+            margin-left: 50px;
+        }
+    }
+    &__socials-item {
+        width: 100px;
+        max-height: 100px;
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+    &__info {
+        position: absolute;
+        bottom: 50px;
+        right: 100px;
+        z-index: 3;
+        width: 650px;
+        text-align: center;
+        padding: 15px;
+        border: 1px solid #E94110;
+        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+        text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        font-size: 28px;
+        a {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    &__address {}
 }
 
 // ! --------------------- popup --------------------------------
@@ -1596,12 +1614,16 @@ body.touch .arrow {
         background-color: #E94110;
         transition: all 1s ease 0s;
     }
+    &__container {}
     &__form-group {
         display: flex;
         flex-direction: column;
         padding: 25px;
         min-height: 400px;
         font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+        &_height {
+            min-height: 0;
+        }
     }
     &__title {
         font-size: 25px;
@@ -1609,9 +1631,6 @@ body.touch .arrow {
     }
     &__form-box {
         display: flex;
-        &_indent {
-            margin-top: 10px;
-        }
         div:nth-child(2) {
             margin-left: 80px;
         }
@@ -1638,7 +1657,7 @@ body.touch .arrow {
         font-family: "Trajan Pro", 'Times New Roman', Times, serif;
         font-size: 20px;
         &_position {
-            margin: 0;
+            margin-top: 10px;
         }
         &:focus {
             outline: 1px solid #E94110;
@@ -1699,6 +1718,11 @@ body.touch .arrow {
             position: relative;
             top: 2px;
         }
+    }
+    &__image {
+        padding: 20px;
+        -o-object-fit: contain;
+        object-fit: contain;
     }
 }
 
@@ -1769,245 +1793,90 @@ body.touch .arrow {
     }
 }
 
-// * -------------------------------------------------!
-@media (max-width: 1630px) {
-    .header {
-        padding: 5px 20px;
-    }
-    .menu {
-        &__link {
-            font-size: 17px;
-            letter-spacing: 2px;
-            margin: 0px 20px 0px 0px;
+// ! --------------------- popup-buy --------------------------------
+.popup-buy {
+    max-width: 550px;
+    margin-top: 10px;
+    padding: 25px;
+    background-image: url("../img/buy-or-sale/form-buy_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    input,
+    select {
+        &:focus {
+            outline: 2px solid rgb(233, 65, 29);
         }
     }
-    .main {
-        &__wrapper {
-            padding-top: 50px;
-            max-width: 550px;
-        }
-        &__calculation {
-            padding: 70px 25px 25px 25px;
-            max-width: 450px;
-        }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.5;
     }
-    .logo {
-        &__name {
-            font-size: 46px;
-        }
-        &__subtitle {
-            font-size: 20px;
-            letter-spacing: 2px;
-        }
+    &:focus {
+        outline: none;
     }
-    .main-menu {
-        margin-top: 35px;
-        font-size: 20px;
-        letter-spacing: 2px;
-        &__list {
-            &>li:nth-child(n+2) {
-                margin-left: 26px;
-            }
-        }
+    &__form {
+        position: relative;
+        z-index: 2;
     }
-    .sub-menu {
-        &__list {
-            top: 20px;
-            padding: 10px;
-            min-width: 250px;
-            font-size: 15px;
-            li {
-                padding: 0 10px;
-            }
-            li:first-child {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            li:last-child {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-        }
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 20px;
+        font-family: "Ustroke Regular", Arial, Helvetica, sans-serif;
+        color: #e6e6e6;
     }
-    .description {
-        margin-bottom: 0;
-        &__title {
-            font-size: 40px;
-        }
-        &__subtitle {
-            letter-spacing: 4px;
-            font-size: 25px;
-        }
+    &__form-group {
+        margin-top: 20px;
     }
-    .calculation {
-        padding-top: 80px;
-        right: 50px;
-        &__title-cost {
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
-        &__title-tax {
-            margin-top: 100px;
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
-        &__sign {
-            text-align: center;
-            font-size: 13px;
-        }
+    &__label {
+        display: flex;
+        flex-direction: column;
     }
-    .button {
-        font-size: 20px;
+    &__name {
+        margin-bottom: 5px;
+        font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+        font-size: 25px;
+        color: #e6e6e6;
+        text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
     }
-    .button-cost {
-        margin-top: 10px;
-        width: 300px;
-        height: 60px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
     }
-    .button-tax {
-        margin: 10px 0;
-        width: 400px;
-        height: 85px;
+    &__rooms {
+        padding: 10px;
+        min-height: 40px;
+        cursor: pointer;
     }
-    .about {
-        &__wrapper {
-            padding-top: 100px;
-            padding: 100px 80px 0 80px;
-        }
-        &__block {
-            padding: 40px 15px 30px 25px;
-            width: 450px;
-            p {
-                font-size: 16px;
-            }
-        }
-        &__title {
-            font-size: 19px;
-        }
-        &__main-title {
-            font-size: 34px;
-        }
+    &__input-size {
+        padding: 10px;
+        width: 47%;
+        min-height: 40px;
     }
-    .offers {
-        &__block {
-            &:nth-child(n+2) {
-                margin-left: 20px;
-            }
-            p {
-                font-size: 15px;
-            }
-        }
-        &__title {
-            min-height: 42px;
-            font-size: 18px;
-        }
+    &__metro {
+        padding: 10px;
+        min-height: 40px;
+        cursor: pointer;
     }
-    .buy-or-sale {
-        &__buy {
-            top: 56%;
-        }
-    }
-    .questions {
-        font-size: 30px;
-        &__or {
-            font-size: 26px;
-        }
-    }
-    .buy {
-        &__main-title {
-            font-size: 28px;
-        }
-        &__container {
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-        &__block {
-            padding: 20px;
-        }
-        &__title {
-            font-size: 28px;
-        }
-        &__description {
+    &__contacts {
+        padding: 10px;
+        min-height: 40px;
+        &:nth-child(n+2) {
             margin-top: 10px;
-            font-size: 18px;
-        }
-        &__sign {
-            font-size: 22px;
-        }
-        &__button {
-            margin-top: 50px;
         }
     }
-    .sale {
-        padding-top: 60px;
-        max-width: 950px;
-        &__main-title {
-            font-size: 28px;
-        }
-        &__block {
-            margin-top: 20px;
-            padding: 20px;
-            width: 750px;
-        }
-        &__title {
-            font-size: 28px;
-        }
-        &__description {
-            margin-top: 10px;
-            font-size: 18px;
-        }
-        &__button {
-            margin-top: 25px;
-        }
-    }
-    .feedback {
-        &__wrapper {
-            margin: 20px auto;
-        }
-        &__main-title {
-            font-size: 38px;
-        }
-        &__card {
-            padding: 10px 15px 15px 15px;
-        }
-        &__quote {
-            width: 60px;
-            height: 60px;
-        }
-        &__foto {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 80px;
-            height: 80px;
-            border-radius: 0 0 20px 0;
-            -o-object-fit: cover;
-            object-fit: cover;
-            -o-object-position: top;
-            object-position: top;
-        }
-        &__title {
-            padding-left: 80px;
-            margin-bottom: 25px;
-        }
-        &__name {
-            font-size: 20px;
-            &::after {
-                margin: 3px 0 6px 0;
-            }
-        }
-        &__source {
-            font-size: 16px;
-        }
-        &__text {
-            font-size: 14px;
-        }
-        &__container {
-            margin: 0 auto;
-        }
-        &__instagram {
-            margin-top: 15px;
-            font-size: 25px;
+    &__button {
+        margin: 30px auto 0 auto;
+        cursor: pointer;
+        &:focus {
+            outline: none;
         }
     }
 }
