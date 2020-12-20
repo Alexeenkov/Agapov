@@ -99,10 +99,6 @@ button {
     clip: rect(1px, 1px, 1px, 1px);
 }
 
-.hide {
-    display: none;
-}
-
 // ?===========================!!! for all devices !!!================================
 // ! ------------ slider ------------------------------
 .wrapper {
@@ -1879,4 +1875,8 @@ body.touch .arrow {
             outline: none;
         }
     }
+}
+
+.hide {
+    display: none;
 }
