@@ -231,6 +231,7 @@ button:focus {
 .screen__content {
   position: relative;
   z-index: 2;
+  color: #e6e6e6;
 }
 .screen__body {
   position: absolute;
@@ -256,14 +257,15 @@ button:focus {
   object-fit: cover;
   object-position: top;
 }
+.screen__general {
+  display: flex;
+  height: 100vh;
+}
 
 .main {
-  display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  height: 100vh;
   max-width: 1800px;
-  color: #e6e6e6;
 }
 .main::after {
   content: "";
@@ -361,7 +363,6 @@ button:focus {
   border-top: 1px solid rgba(233, 65, 29, 0.7);
 }
 .sub-menu__link {
-  color: #e6e6e6;
   transition: all 0.5s ease 0s;
 }
 .sub-menu__link:hover {
@@ -543,11 +544,8 @@ body.touch .arrow {
 }
 
 .about {
-  position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
 }
 .about::after {
   content: "";
@@ -577,7 +575,6 @@ body.touch .arrow {
   border: 3px solid #e9411d;
   padding: 60px 25px 50px 25px;
   width: 500px;
-  color: #e6e6e6;
   font-family: "CCRickVeitch", Arial, Helvetica, sans-serif;
   line-height: 1.5;
   letter-spacing: 1px;
@@ -604,7 +601,6 @@ body.touch .arrow {
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
   font-size: 25px;
-  color: #fff;
 }
 .about__offers {
   margin: 0 auto 20px auto;
@@ -617,7 +613,6 @@ body.touch .arrow {
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
   font-size: 40px;
   letter-spacing: 2px;
-  color: #e6e6e6;
 }
 
 .offers {
@@ -633,7 +628,6 @@ body.touch .arrow {
   border-radius: 15px;
   border: 3px solid #eb6320;
   padding: 15px;
-  color: #e6e6e6;
 }
 .offers__block:nth-child(n+2) {
   margin-left: 20px;
@@ -660,9 +654,8 @@ body.touch .arrow {
 }
 
 .buy-or-sale {
-  position: relative;
-  height: 100vh;
-  color: #e6e6e6;
+  margin: 0 auto;
+  max-width: 1800px;
 }
 .buy-or-sale::after {
   content: "";
@@ -673,10 +666,6 @@ body.touch .arrow {
   bottom: 0;
   background-color: #000000;
   opacity: 0.4;
-}
-.buy-or-sale__wrapper {
-  margin: 0 auto;
-  max-width: 1800px;
 }
 .buy-or-sale__buy {
   position: absolute;
@@ -900,12 +889,8 @@ body.touch .arrow {
 }
 
 .portfolio {
-  position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  color: #e6e6e6;
 }
 .portfolio::after {
   content: "";
@@ -959,7 +944,6 @@ body.touch .arrow {
 }
 .portfolio__description {
   margin: 0 auto;
-  width: 95%;
   padding: 20px 20px 20px 20px;
 }
 
@@ -972,23 +956,23 @@ body.touch .arrow {
 .result__flex-container {
   display: flex;
 }
+.result__flex-container_position {
+  justify-content: space-between;
+}
 .result__title {
   font-family: "Trajan Pro", "Times New Roman", Times, serif;
-  font-size: 24px;
+  font-size: 22px;
   text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
 }
 .result__subtitle {
   font-family: "Avenir Next", Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
-.result__block {
-  position: relative;
-}
 .result__new-cost {
   margin-top: 20px;
 }
 .result__prev-cost {
-  margin-left: 10px;
+  margin-right: 35px;
 }
 .result__image {
   margin-right: 10px;
@@ -1002,11 +986,8 @@ body.touch .arrow {
 }
 
 .consultation {
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  color: #e6e6e6;
 }
 .consultation::after {
   content: "";
@@ -1173,12 +1154,8 @@ body.touch .arrow {
 }
 
 .feedback {
-  position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  color: #e6e6e6;
 }
 .feedback::after {
   content: "";
@@ -1286,11 +1263,8 @@ body.touch .arrow {
 }
 
 .partners {
-  display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  color: #e6e6e6;
   padding-top: 160px;
 }
 .partners::after {
@@ -1367,12 +1341,6 @@ body.touch .arrow {
   font-size: 20px;
 }
 
-.contacts {
-  position: relative;
-  display: flex;
-  height: 100vh;
-  color: #e6e6e6;
-}
 .contacts::after {
   content: "";
   position: absolute;

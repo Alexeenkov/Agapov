@@ -251,6 +251,7 @@ button {
     &__content {
         position: relative;
         z-index: 2;
+        color: #e6e6e6;
     }
     &__body {
         position: absolute;
@@ -278,16 +279,17 @@ button {
             object-position: top;
         }
     }
+    &__general {
+        display: flex;
+        height: 100vh;
+    }
 }
 
 // ! --------------------- slide № 1 --------------------------------
 .main {
-    display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    height: 100vh;
     max-width: 1800px;
-    color: #e6e6e6;
     &::after {
         content: "";
         position: absolute;
@@ -388,7 +390,6 @@ button {
         }
     }
     &__link {
-        color: #e6e6e6;
         transition: all 0.5s ease 0s;
         &:hover {
             color: #eb6320;
@@ -597,11 +598,8 @@ body.touch .arrow {
 
 // ! --------------------- screen № 2 --------------------------------
 .about {
-    position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
     &::after {
         content: "";
         position: absolute;
@@ -630,7 +628,6 @@ body.touch .arrow {
         border: 3px solid rgb(233, 65, 29);
         padding: 60px 25px 50px 25px;
         width: 500px;
-        color: #e6e6e6;
         font-family: "CCRickVeitch", Arial, Helvetica, sans-serif;
         line-height: 1.5;
         letter-spacing: 1px;
@@ -657,7 +654,6 @@ body.touch .arrow {
         font-family: "Trajan Pro", 'Times New Roman', Times, serif;
         text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
         font-size: 25px;
-        color: #fff;
     }
     &__offers {
         margin: 0 auto 20px auto;
@@ -670,7 +666,6 @@ body.touch .arrow {
         text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
         font-size: 40px;
         letter-spacing: 2px;
-        color: #e6e6e6;
     }
 }
 
@@ -686,7 +681,6 @@ body.touch .arrow {
         border-radius: 15px;
         border: 3px solid #eb6320;
         padding: 15px;
-        color: #e6e6e6;
         &:nth-child(n+2) {
             margin-left: 20px;
         }
@@ -715,9 +709,8 @@ body.touch .arrow {
 
 // ! --------------------- screen № 3 --------------------------------
 .buy-or-sale {
-    position: relative;
-    height: 100vh;
-    color: #e6e6e6;
+    margin: 0 auto;
+    max-width: 1800px;
     &::after {
         content: "";
         position: absolute;
@@ -728,10 +721,7 @@ body.touch .arrow {
         background-color: #000000;
         opacity: 0.4;
     }
-    &__wrapper {
-        margin: 0 auto;
-        max-width: 1800px;
-    }
+    &__wrapper {}
     &__questions {}
     &__buy {
         position: absolute;
@@ -963,12 +953,8 @@ body.touch .arrow {
 
 // ! --------------------- screen № 4 --------------------------------
 .portfolio {
-    position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    color: #e6e6e6;
     &::after {
         content: "";
         position: absolute;
@@ -1021,7 +1007,7 @@ body.touch .arrow {
     }
     &__description {
         margin: 0 auto;
-        width: 95%;
+        // width: 95%;
         padding: 20px 20px 20px 20px;
     }
 }
@@ -1033,24 +1019,24 @@ body.touch .arrow {
     background-color: rgba(0, 0, 0, 0.5);
     &__flex-container {
         display: flex;
+        &_position {
+            justify-content: space-between;
+        }
     }
     &__title {
         font-family: "Trajan Pro", 'Times New Roman', Times, serif;
-        font-size: 24px;
+        font-size: 22px;
         text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
     }
     &__subtitle {
         font-family: "Avenir Next", Arial, Helvetica, sans-serif;
         font-size: 14px;
     }
-    &__block {
-        position: relative;
-    }
     &__new-cost {
         margin-top: 20px;
     }
     &__prev-cost {
-        margin-left: 10px;
+        margin-right: 35px;
     }
     &__image {
         margin-right: 10px;
@@ -1066,11 +1052,8 @@ body.touch .arrow {
 
 // ! --------------------- screen № 5 --------------------------------
 .consultation {
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    color: #e6e6e6;
     &::after {
         content: "";
         position: absolute;
@@ -1239,12 +1222,8 @@ body.touch .arrow {
 
 // ! --------------------- screen № 6 --------------------------------
 .feedback {
-    position: relative;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
-    color: #e6e6e6;
     &::after {
         content: "";
         position: absolute;
@@ -1355,11 +1334,8 @@ body.touch .arrow {
 
 // ! --------------------- screen № 7 --------------------------------
 .partners {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    color: #e6e6e6;
     padding-top: 160px;
     &::after {
         content: "";
@@ -1439,10 +1415,6 @@ body.touch .arrow {
 
 // ! --------------------- screen № 8 --------------------------------
 .contacts {
-    position: relative;
-    display: flex;
-    height: 100vh;
-    color: #e6e6e6;
     &::after {
         content: "";
         position: absolute;
