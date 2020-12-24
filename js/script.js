@@ -69,7 +69,7 @@ let pageSlider = new Swiper('.page', {
     direction: 'vertical',
 
     // Количество слайдов для показа
-    slidesPerView: 'auto',
+    slidesPerView: '1',
 
     // Включаем параллакс
     parallax: true,
