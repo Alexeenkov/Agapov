@@ -1,82 +1,65 @@
-// ВОПРОСЫ КУПИТЬ ИЛИ ПРОДАТЬ КВАРТИРУ
-let buy = document.querySelector('.buy');
-let sale = document.querySelector('.sale');
-let questions__buy = document.querySelector('.questions__buy');
-let questions__sale = document.querySelector('.questions__sale');
-let buy__button = document.querySelector('.buy__button');
-let buy__sign = document.querySelector('.buy__sign');
-let buy__new = document.querySelector('.buy__new');
-let buy__old = document.querySelector('.buy__old');
-let buy__title = document.querySelector('.buy__main-title');
-let sale__title = document.querySelector('.sale__main-title');
-let to__slide_buy = document.querySelector('.go-to-slide-buy');
-let to__slide_sale = document.querySelector('.go-to-slide-sale');
-let sale__button = document.querySelector('.sale__button');
-let sale__block = document.querySelector('.sale__block');
-
-questions__buy.onclick = function() {
-    questions__buy.classList.add('close-to-left');
-    questions__sale.classList.add('close-to-right');
-    buy__button.classList.add('buy__button_active');
-    buy__sign.classList.add('buy__sign_active');
-    buy__new.classList.add('buy__new_active');
-    buy__old.classList.add('buy__old_active');
-    buy__title.classList.add('buy__main-title_active');
-    sale.classList.add('hide');
-}
-
-questions__sale.onclick = function() {
-    questions__buy.classList.add('close-to-left');
-    questions__sale.classList.add('close-to-right');
-    sale__title.classList.add('sale__main-title_active');
-    sale__button.classList.add('sale__button_active');
-    sale__block.classList.add('sale__block_active');
-    buy.classList.add('hide');
-}
-
-to__slide_buy.onclick = function() {
-    questions__buy.classList.add('close-to-left');
-    questions__sale.classList.add('close-to-right');
-    buy__button.classList.add('buy__button_active');
-    buy__sign.classList.add('buy__sign_active');
-    buy__new.classList.add('buy__new_active');
-    buy__old.classList.add('buy__old_active');
-    buy__title.classList.add('buy__main-title_active');
-    sale.classList.add('hide');
-    buy.classList.remove('hide');
-}
-
-to__slide_sale.onclick = function() {
-    questions__buy.classList.add('close-to-left');
-    questions__sale.classList.add('close-to-right');
-    sale__title.classList.add('sale__main-title_active');
-    sale__button.classList.add('sale__button_active');
-    sale__block.classList.add('sale__block_active');
-    buy.classList.add('hide');
-    sale.classList.remove('hide');
-}
-
-// СЛАЙДЕР СВАЙПЕР
-
-let wrapper = document.querySelector('.wrapper');
-
-let pageSlider = new Swiper('.page', {
-    // Свои классы
-    wrapperClass: "page__wrapper",
-    slideClass: "page__screen",
-
-    // Вертикальный слайдер
-    direction: 'vertical',
-
-    // Количество слайдов для показа
-    slidesPerView: '1',
-
-    // Включаем параллакс
-    parallax: true,
+// Инициализируем Swiper
+let myImageSlider = new Swiper('.image-slider', {
+    // Стрелки
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+    // Навигация 
+    // Буллеты, текущее положение, прогрессбар
+    pagination: {
+        el: '.swiper-pagination',
+        /*
+        // Буллеты
+        type: 'bullets',
+        clickable: true,
+        // Динамические буллеты
+        dynamicBullets: true,
+        // Кастомные буллеты
+        renderBullet: function (index, className) {
+        	return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+        */
+        /*
+        // Фракция
+        type: 'fraction',
+        // Кастомный вывод фракции
+        renderFraction: function (currentClass, totalClass) {
+        	return 'Фото <span class="' + currentClass + '"></span>' +
+        		' из ' +
+        		'<span class="' + totalClass + '"></span>';
+        },
+        */
+        // Прогрессбар
+        //type: 'progressbar'
+    },
+    // Скролл
+    /*
+    scrollbar: {
+    	el: '.swiper-scrollbar',
+    	// Возможность перетаскивать скролл
+    	draggable: true
+    },
+    */
 
     // Включение/отключение
     // перетаскивания на ПК
-    simulateTouch: false,
+    simulateTouch: true,
+    // Чувствительность свайпа
+    touchRatio: 1,
+    // Угол срабатывания свайпа/перетаскивания
+    touchAngle: 45,
+    // Курсор перетаскивания
+    grabCursor: true,
+
+    // Переключение при клике на слайд
+    slideToClickedSlide: false,
+
+    // Навигация по хешу
+    hashNavigation: {
+        // Отслеживать состояние
+        watchState: true,
+    },
 
     // Управление клавиатурой
     keyboard: {
@@ -101,12 +84,190 @@ let pageSlider = new Swiper('.page', {
         //eventsTarget: ".image-slider"
     },
 
+    // Автовысота
+    autoHeight: false,
+
+    // Количество слайдов для показа
+    slidesPerView: 3,
+
     // Отключение функционала
     // если слайдов меньше чем нужно
     watchOverflow: true,
 
+    // Отступ между слайдами
+    spaceBetween: 30,
+
+    // Количество пролистываемых слайдов
+    slidesPerGroup: 1,
+
+    // Активный слайд по центру
+    centeredSlides: false,
+
+    // Стартовый слайд.
+    initialSlide: 0,
+
+    // Мультирядность
+    slidesPerColumn: 1,
+
+    // Бесконечный слайдер
+    loop: false,
+
+    // Кол-во дублирующих слайдов
+    loopedSlides: 0,
+
+    // Свободный режим
+    freeMode: true,
+
+    // Автопрокрутка
+    /*
+    autoplay: {
+    	// Пауза между прокруткой
+    	delay: 1000,
+    	// Закончить на последнем слайде
+    	stopOnLastSlide: true,
+    	// Отключить после ручного переключения
+    	disableOnInteraction: false
+    },
+    */
+
     // Скорость
     speed: 800,
+
+    // Вертикальный слайдер
+    direction: 'horizontal',
+
+
+    // Эффекты переключения слайдов.
+    // Листание
+    effect: 'slide',
+
+    /*
+    // Эффекты переключения слайдов.
+    // Cмена прозрачности
+    effect: 'fade',
+
+    // Дополнение к fade
+    fadeEffect: {
+    	// Параллельная
+    	// смена прозрачности
+    	crossFade: true
+    },
+    */
+    /*
+    // Эффекты переключения слайдов.
+    // Переворот
+    effect: 'flip',
+
+    // Дополнение к flip
+    flipEffect: {
+    	// Тень
+    	slideShadows: true,
+    	// Показ только активного слайда
+    	limitRotation: true
+    },
+    */
+    /*
+    // Эффекты переключения слайдов.
+    // Куб
+    effect: 'cube',
+
+    // Дополнение к cube
+    cubeEffect: {
+    	// Настройки тени
+    	slideShadows: true,
+    	shadow: true,
+    	shadowOffset: 20,
+    	shadowScale: 0.94
+    },
+    */
+    /*
+    // Эффекты переключения слайдов.
+    // Эффект потока
+    effect: 'coverflow',
+
+    // Дополнение к coverflow
+    coverflowEffect: {
+    	// Угол
+    	rotate: 20,
+    	// Наложение
+    	stretch: 50,
+    	// Тень
+    	slideShadows: true,
+    },
+    */
+    /*
+    // Брейк поинты (адаптив)
+    // Ширина экрана
+    breakpoints: {
+    	320: {
+    		slidesPerView: 1,
+    	},
+    	480: {
+    		slidesPerView: 2,
+    	},
+    	992: {
+    		slidesPerView: 3,
+    	}
+    },
+    */
+    /*
+    // Брейк поинты (адаптив)
+    // Соотношение сторон
+    breakpoints: {
+    	'@0.75': {
+    		slidesPerView: 1,
+    	},
+    	'@1.00': {
+    		slidesPerView: 2,
+    	},
+    	'@1.50': {
+    		slidesPerView: 3,
+    	}
+    },
+    */
+
+    // Отключить предзагрузка картинок
+    preloadImages: false,
+    // Lazy Loading
+    // (подгрузка картинок)
+    lazy: {
+        // Подгружать на старте
+        // переключения слайда
+        loadOnTransitionStart: false,
+        // Подгрузить предыдущую
+        // и следующую картинки
+        loadPrevNext: false,
+    },
+    // Слежка за видимыми слайдами
+    watchSlidesProgress: true,
+    // Добавление класса видимым слайдам
+    watchSlidesVisibility: true,
+
+    // Зум картинки
+    zoom: {
+        // Макимальное увеличение
+        maxRatio: 5,
+        // Минимальное увеличение
+        minRatio: 1,
+    },
+
+    // Миниатюры (превью)
+    /*
+    thumbs: {
+    	// Свайпер с мениатюрами
+    	// и его настройки
+    	swiper: {
+    		el: '.image-mini-slider',
+    		slidesPerView: 5,
+    	}
+    },
+    */
+    /*
+    // Передача управления
+    controller: {
+    	control: myTextSlider
+    },
+    */
 
     // Обновить свайпер
     // при изменении элементов слайдера
@@ -122,137 +283,154 @@ let pageSlider = new Swiper('.page', {
     // элементов слайда
     observeSlideChildren: true,
 
-    // Навигация 
-    // Буллеты, текущее положение, прогрессбар
-    pagination: {
-        el: '.page__pagination',
-        type: 'bullets',
-        clickable: true,
-        bulletClass: "page__bullet",
-        bulletActiveClass: "page__bullet_active",
+    // Виртуальные слайды
+    // формирование слайдера
+    /*
+    virtual: {
+    	slides: (function () {
+    		let slide = []
+    		for (let i = 0; i < 500; i++) {
+    			slide.push(`<div class="image-slider__text">Слайд №${i}</div>`);
+    		}
+    		return slide;
+    	}()),
     },
-    // Скролл
-    scrollbar: {
-        el: '.page__scroll',
-        dragClass: "page__drag-scroll",
-        // Возможность перетаскивать скролл
-        draggable: true
+    */
+    /*
+    // Доступность
+    a11y: {
+    	// Включить/выключить
+    	enabled: true,
+    	// Сообщения
+    	prevSlideMessage: 'Previous slide',
+    	nextSlideMessage: 'Next slide',
+    	firstSlideMessage: 'This is the first slide',
+    	lastSlideMessage: 'This is the last slide',
+    	paginationBulletMessage: 'Go to slide {{index}}',
+    	notificationClass: 'swiper-notification',
+    	containerMessage: '',
+    	containerRoleDescriptionMessage: '',
+    	itemRoleDescriptionMessage: '',
+    	// и т.д.
     },
-
-    // Отключаем автоинициализацию
-    init: false,
-
+    */
+    /*
     // События
     on: {
-        // Событие инициализации
-        init: function() {
-            menuSlider();
-            setScrollType();
-            wrapper.classList.add('_loaded');
-        },
-        // Событие смены слайда
-        slideChange: function() {
-            menuSliderRemove();
-            menuLinks[pageSlider.realIndex].classList.add('_active');
-        },
-        resize: function() {
-            setScrollType();
-        }
+    	// Событие инициализации
+    	init: function () {
+    		console.log('Слайдер запущен!');
+    	},
+    	// Событие смены слайда
+    	slideChange: function () {
+    		console.log('Слайд переключен');
+    	}
     },
-    // Отключить предзагрузку картинок
-    preloadImages: false,
-    // Lazy Loading
-    // (подгрузка картинок)
-    lazy: {
-        // Подгрузить предыдущую
-        // и следующую картинки
-        loadPrevNext: true,
-    },
-    // Навигация по хэшу
-    hashNavigation: {
-        // Отслеживать состояние
-        watchState: true,
-    },
+    */
 });
 
-let menuLinks = document.querySelectorAll('.menu__link');
+/*
+// Слайдер в слайдере
+new Swiper('.image-in-slider', {
+	// Курсор перетаскивания
+	grabCursor: true,
+	// Навигация
+	// пагинация, текущее положение, прогрессбар
+	pagination: {
+		el: '.swiper-pagination',
+		// Буллеты
+		clickable: true,
+	},
+	// Корректная работа
+	// перетаскивания\свайпа
+	// для дочернего слайдера
+	nested: true,
+});
+*/
+/*
+// Еще один слайдер
+let myTextSlider = new Swiper('.text-slider', {
+	// Количество слайдов для показа
+	slidesPerView: 3,
+	// Отступ между слайдами
+	spaceBetween: 30,
+});
 
-function menuSlider() {
-    if (menuLinks.length > 0) {
-        menuLinks[pageSlider.realIndex].classList.add('_active');
-        for (let index = 0; index < menuLinks.length; index++) {
-            const menuLink = menuLinks[index];
-            menuLink.addEventListener("click", function(e) {
-                menuSliderRemove();
-                pageSlider.slideTo(index, 800);
-                menuLink.classList.add('_active');
-                e.preventDefault();
-            });
-        }
-    }
-}
+// Передача управления
+myImageSlider.controller.control = myTextSlider;
+myTextSlider.controller.control = myImageSlider;
+*/
 
-function menuSliderRemove() {
-    let menuLinkActive = document.querySelector('.menu__link._active');
-    if (menuLinkActive) {
-        menuLinkActive.classList.remove('_active');
-    }
-}
-
-function setScrollType() {
-    if (wrapper.classList.contains('_free')) {
-        wrapper.classList.remove('_free');
-        pageSlider.params.freeMode = false;
-    }
-    for (let index = 0; index < pageSlider.slides.length; index++) {
-        const pageSlide = pageSlider.slides[index];
-        const pageSlideContent = pageSlide.querySelector('.screen__content');
-        if (pageSlideContent) {
-            const pageSlideContentHeight = pageSlideContent.offsetHeight;
-            if (pageSlideContentHeight > window.innerHeight) {
-                wrapper.classList.add('_free');
-                pageSlider.params.freeMode = true;
-                break;
-            }
-        }
-    }
-}
-
-pageSlider.init();
-
-
-// Выпадающее меню
-
-let isMobile = {
-    Android: function() { return navigator.userAgent.match(/Android/i); },
-    BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); },
-    iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-    Opera: function() { return navigator.userAgent.match(/Opera Mini/i); },
-    Windows: function() { return navigator.userAgent.match(/IEMobile/i); },
-    any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
-};
-let body = document.querySelector('body');
-let subMenuLink = document.querySelector('.sub-menu_active');
-if (isMobile.any()) {
-    body.classList.add('touch');
-    let arrow = document.querySelectorAll('.arrow');
-    for (i = 0; i < arrow.length; i++) {
-        let thisLink = arrow[i].previousElementSibling;
-        let subMenu = arrow[i].nextElementSibling;
-        let thisArrow = arrow[i];
-
-        thisLink.classList.add('parent');
-        arrow[i].addEventListener('click', function() {
-            subMenu.classList.toggle('open');
-            thisArrow.classList.toggle('active');
-        });
-        subMenuLink.addEventListener('click', function() {
-            subMenu.classList.toggle('open');
-            thisArrow.classList.toggle('active');
-        });
+/*
+// Параллакс слайдер
+new Swiper('.parallax-slider', {
+	// Включаем параллакс
+	parallax: true,
+	// скорость переключения
+	speed: 2000,
+	// Стрелки
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	},
+});
+*/
 
 
-    }
-} else {
-    body.classList.add('mouse');
-}
+/*
+// Параметры
+// Получение
+let qSlides = myImageSlider.slides.length;
+
+// Изменение
+myImageSlider.params.speed = 3000;
+*/
+
+/*
+// Методы
+// Обновить слайдер
+myImageSlider.update();
+
+// Переключится на слайд 2, скорость 800
+myImageSlider.slideTo(2, 800);
+*/
+
+/*
+// События
+// Событие смены слайда
+myImageSlider.on('slideChange', function () {
+	console.log('Слайд переключен');
+});
+*/
+
+
+/*
+// Запуск автоппрокрутки при наведении
+let sliderBlock = document.querySelector('.image-slider');
+
+// myImageSlider  - это переменная которой присвоен слайдер
+
+sliderBlock.addEventListener("mouseenter", function (e) {
+	myImageSlider.params.autoplay.disableOnInteraction = false;
+	myImageSlider.params.autoplay.delay = 500;
+	myImageSlider.autoplay.start();
+});
+sliderBlock.addEventListener("mouseleave", function (e) {
+	myImageSlider.autoplay.stop();
+});
+
+*/
+
+
+/*
+// Фракция
+let mySliderAllSlides = document.querySelector('.image-slider__total');
+let mySliderCurrentSlide = document.querySelector('.image-slider__current');
+
+mySliderAllSlides.innerHTML = myImageSlider.slides.length;
+
+myImageSlider.on('slideChange', function () {
+	let currentSlide = ++myImageSlider.realIndex;
+	mySliderCurrentSlide.innerHTML = currentSlide;
+});
+*/
