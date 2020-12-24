@@ -146,6 +146,10 @@ button {
     &__connect {}
 }
 
+.header-mobile {
+    display: none;
+}
+
 .menu {
     display: flex;
     align-items: center;
@@ -307,15 +311,14 @@ button {
         flex-direction: column;
         justify-content: space-between;
         padding: 70px 25px 25px 25px;
-        max-width: 750px;
-        height: 100%;
+        max-width: 42%;
     }
     &__logo {
         font-family: "Ustroke Regular", Arial, Helvetica, sans-serif;
     }
     &__calculation {
-        padding: 90px 25px 25px 25px;
-        max-width: 650px;
+        padding: 70px 25px 25px 25px;
+        max-width: 36%;
     }
 }
 
@@ -352,14 +355,14 @@ button {
         &>li:nth-child(n+2) {
             margin-left: 30px;
         }
-        & li:hover {
-            color: #eb6320;
-            transition: all 0.5s ease 0s;
-        }
     }
     &__link {
         position: relative;
         z-index: 2;
+        &:hover {
+            color: #eb6320;
+            transition: all 0.5s ease 0s;
+        }
     }
 }
 
@@ -396,19 +399,22 @@ button {
             transition: all 0.5s ease 0s;
         }
     }
+    &__arrow {
+        display: none;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid #e6e6e6;
+        border-right: 7px solid transparent;
+        border-left: 7px solid transparent;
+        transition: all 0.5s ease 0s;
+    }
 }
 
 .arrow {
     display: none;
-    position: absolute;
-    top: 10px;
-    right: 0px;
-    width: 0;
-    height: 0;
-    border-top: 10px solid #e6e6e6;
-    border-right: 10px solid transparent;
-    border-left: 10px solid transparent;
-    transition: all 0.5s ease 0s;
 }
 
 body.mouse .main-menu {
@@ -462,10 +468,6 @@ body.touch .arrow {
     align-items: center;
     font-family: "Avenir Next";
     line-height: 1.1;
-    &__title-cost {
-        text-align: center;
-        font-size: 30px;
-    }
     &__title-tax {
         margin-top: 100px;
         text-align: center;
@@ -585,7 +587,6 @@ body.touch .arrow {
 .button-cost {
     margin: 30px auto 0 auto;
     width: 300px;
-    height: 70px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
@@ -593,7 +594,6 @@ body.touch .arrow {
     margin-top: 20px;
     margin-bottom: 10px;
     width: 500px;
-    height: 100px;
 }
 
 // ! --------------------- screen № 2 --------------------------------
@@ -810,14 +810,14 @@ body.touch .arrow {
         background-color: rgba(0, 0, 0, 0.6);
     }
     &__new {
-        left: -100%;
+        left: -200%;
         transition: all 0.5s ease 1.4s;
         &.buy__new.buy__new_active {
             left: 0;
         }
     }
     &__old {
-        right: -100%;
+        right: -200%;
         transition: all 0.5s ease 1.4s;
         &_active {
             right: 0;
@@ -878,12 +878,15 @@ body.touch .arrow {
 .sale {
     position: relative;
     z-index: 2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     padding-top: 120px;
-    max-width: 1650px;
     &__main-title {
         position: relative;
         margin: 0 auto;
+        padding: 0 25px;
         top: -400px;
         opacity: 0;
         font-family: "Trajan Pro", 'Times New Roman', Times, serif;
@@ -904,7 +907,7 @@ body.touch .arrow {
         border: 3px solid rgb(233, 65, 29);
         border-radius: 15px;
         padding: 25px;
-        width: 50%;
+        min-width: 50%;
         background-color: rgba(0, 0, 0, 0.6);
         transition: all 0.5s ease 1.4s;
         &_active {
@@ -942,7 +945,6 @@ body.touch .arrow {
         opacity: 0;
         margin: 0 auto;
         width: 300px;
-        height: 70px;
         transition: opacity 0.5s ease 2s, box-shadow 0.3s ease 0s;
         &_active {
             opacity: 1;
@@ -1007,7 +1009,6 @@ body.touch .arrow {
     }
     &__description {
         margin: 0 auto;
-        // width: 95%;
         padding: 20px 20px 20px 20px;
     }
 }
@@ -1086,11 +1087,14 @@ body.touch .arrow {
         border-left: 3px solid #E94110;
     }
     &__list {
-        margin: 30px auto 0 auto;
+        margin: 0 auto;
         width: 60%;
         font-family: "Avenir Next", Arial, Helvetica, sans-serif;
         font-size: 18px;
         letter-spacing: 2px;
+    }
+    &__box {
+        margin-top: 20px;
     }
     &__item {
         position: relative;
@@ -1193,6 +1197,9 @@ body.touch .arrow {
         &:focus {
             outline: none;
         }
+    }
+    &__mobile-button {
+        display: none;
     }
      ::-webkit-scrollbar-button {
         background-repeat: no-repeat;
@@ -1301,7 +1308,7 @@ body.touch .arrow {
             &::before {
                 content: "";
                 display: inline-block;
-                background-image: url("../img/4-screen/instagram_logo.png");
+                background-image: url("../img/feedback/instagram_logo.png");
                 background-size: contain;
                 width: 30px;
                 height: 30px;
@@ -1335,8 +1342,8 @@ body.touch .arrow {
 // ! --------------------- screen № 7 --------------------------------
 .partners {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding-top: 160px;
     &::after {
         content: "";
         position: absolute;
@@ -1541,7 +1548,7 @@ body.touch .arrow {
 
 // ! --------------------- popup-test --------------------------------
 .popup-test {
-    max-width: 1200px;
+    max-width: 95%;
     &__form {
         display: flex;
         flex-direction: column;
@@ -1851,4 +1858,2612 @@ body.touch .arrow {
 
 .hide {
     display: none;
+}
+
+// ? =================================================================
+// ? =========================== АДАПТИВ =============================
+// ? =================================================================
+@media (min-width: 1600px) and (max-width: 1900px) {
+    .menu {
+        &__link {
+            font-size: 18px;
+        }
+    }
+    // ! --------------------- slide № 1 --------------------------------
+    .main-menu {
+        margin-top: 25px;
+    }
+    .sub-menu {
+        &__list {
+            li {
+                padding: 0 15px;
+            }
+        }
+    }
+    .description {
+        margin-bottom: 20px;
+        &__title {
+            font-size: 46px;
+        }
+        &__subtitle {
+            font-size: 24px;
+        }
+    }
+    .calculation {
+        &__title-tax {
+            margin-top: 70px;
+            font-size: 20px;
+        }
+        &__sign {
+            font-size: 16px;
+        }
+    }
+    .ad-cost {
+        padding: 20px 25px 0px 20px;
+        width: 550px;
+        &__title {
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+            font-size: 19px;
+            text-align: center;
+        }
+        &__subtitle {
+            margin-top: 10px;
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+    .button {
+        font-size: 22px;
+    }
+    .button-cost {
+        margin: 15px auto 0 auto;
+        width: 280px;
+    }
+    .button-tax {
+        width: 450px;
+    }
+    // ! --------------------- screen № 2 --------------------------------
+    .about {
+        &__wrapper {
+            padding: 100px 80px 0 80px;
+        }
+        &__block {
+            padding: 50px 25px 30px 25px;
+            width: 470px;
+        }
+        p {
+            font-size: 18px;
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__offers {
+            margin: 0 auto 20px auto;
+        }
+    }
+    .offers {
+        &__block {
+            padding: 15px;
+            &:nth-child(n+2) {
+                margin-left: 15px;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+        &__title {
+            min-height: 42px;
+            font-size: 18px;
+        }
+    }
+    // ! --------------------- screen № 3 --------------------------------
+    .questions {
+        font-size: 40px;
+    }
+    .buy {
+        &__main-title {
+            font-size: 36px;
+        }
+        &__container {
+            margin-top: 70px;
+            margin-bottom: 30px;
+        }
+        &__block {
+            border: 2px solid rgb(233, 65, 29);
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__sign {
+            font-size: 26px;
+        }
+        &__button {
+            margin-top: 60px;
+        }
+    }
+    .sale {
+        padding-top: 100px;
+        &__main-title {
+            font-size: 38px;
+        }
+        &__button {
+            width: 280px;
+        }
+    }
+    // ! --------------------- screen № 4 --------------------------------
+    .portfolio {
+        &__wrapper {
+            position: relative;
+            margin: 50px auto 0 auto;
+            width: 90%;
+        }
+        &__main-title {
+            margin-bottom: 20px;
+            font-size: 34px;
+            text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        }
+        &__section {
+            min-height: 608px;
+        }
+        &__title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        }
+        &__content {
+            font-size: 16px;
+        }
+        &__image {
+            padding: 25% 0;
+        }
+        &__description {
+            padding: 15px;
+        }
+    }
+    .result {
+        &__title {
+            font-size: 18px;
+        }
+        &__new-cost {
+            margin-top: 15px;
+        }
+        &__prev-cost {
+            margin-right: 35px;
+        }
+        &__image {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    // ! --------------------- screen № 5 --------------------------------
+    .consultation {
+        &__title {
+            text-align: center;
+            font-size: 38px;
+        }
+        &__description {
+            font-size: 18px;
+            width: 60%;
+            margin: 10px auto 0 auto;
+            padding-left: 10px;
+            border-left: 2px solid #E94110;
+        }
+        &__list {
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin: 0 auto;
+        }
+        &__box {
+            margin-top: 20px;
+        }
+        &__item {
+            &:nth-child(n+2) {
+                margin-top: 2px;
+            }
+        }
+        &__form {
+            padding: 20px;
+        }
+        &__container {
+            margin-bottom: 15px;
+        }
+        &__name {
+            font-size: 18px;
+        }
+        &__input {
+            height: 35px;
+        }
+        &__textarea {
+            height: 100px;
+        }
+    }
+    // ! --------------------- screen № 6 --------------------------------
+    .feedback {
+        &__wrapper {
+            margin: 30px auto 0 auto;
+        }
+        &__main-title {
+            font-size: 38px;
+        }
+        &__section {
+            padding: 10px 10px 80px 10px;
+            border: 2px solid rgba(233, 65, 29, 1);
+        }
+        &__container {
+            padding: 10px auto;
+            border: 2px solid rgba(233, 65, 29, 0.6);
+        }
+        &__instagram {
+            font-size: 24px;
+        }
+        &__macromir {
+            font-size: 20px;
+        }
+    }
+    // ! --------------------- screen № 7 --------------------------------
+    .partners {
+        padding-top: 130px;
+        &__wrapper {
+            width: 80%;
+        }
+        &__title {
+            top: -70px;
+            font-size: 38px;
+        }
+        &__card {
+            min-height: 160px;
+        }
+        &__ad-sale {
+            margin-top: 20px;
+            border: 1px solid #E94110;
+            padding: 15px;
+        }
+        &__ad-sale-title {
+            font-size: 24px;
+        }
+        &__button {
+            font-size: 20px;
+        }
+    }
+    // ! --------------------- screen № 8 --------------------------------
+    .contacts {
+        &__wrapper {
+            padding-top: 80px;
+        }
+        &__main-title {
+            font-size: 36px;
+        }
+        &__subtitle {
+            font-size: 22px;
+        }
+        &__form {
+            margin-bottom: 30px;
+        }
+        &__socials {
+            margin-top: 20px;
+        }
+        &__socials-link {
+            &:nth-child(n+2) {
+                margin-left: 50px;
+            }
+        }
+        &__socials-item {
+            width: 80px;
+            max-height: 80px;
+        }
+        &__info {
+            bottom: 30px;
+            width: 34%;
+            font-size: 22px;
+        }
+    }
+}
+
+// ? =================================================================
+// ? =========================== АДАПТИВ =============================
+// ? =================================================================
+@media (min-width: 1400px) and (max-width: 1599px) {
+    // ! ------------ header ------------------------------
+    .header {
+        padding: 7px 15px;
+    }
+    .menu {
+        &__link {
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin: 0px 15px 0px 0px;
+        }
+    }
+    .connect {
+        span {
+            font-size: 17px;
+        }
+        &__link {
+            span {
+                font-size: 20px;
+            }
+        }
+        &__image {
+            width: 22px;
+            height: 22px;
+            &_position {
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+        }
+    }
+    // ! ------------------------ page scroll -------------------------
+    .page {
+        &__pagination {
+            right: 30px;
+            transform: translate(30px, -50%);
+        }
+        &__bullet {
+            width: 12px;
+            height: 12px;
+            margin: 6px 0;
+        }
+    }
+    // ! --------------------- slide № 1 --------------------------------
+    .main {
+        &__wrapper {
+            padding: 70px 25px 25px 25px;
+            max-width: 42%;
+        }
+        &__calculation {
+            padding: 70px 25px 25px 25px;
+        }
+    }
+    .logo {
+        &__name {
+            font-size: 50px;
+        }
+        &__subtitle {
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+        &__image {
+            width: 90px;
+        }
+    }
+    .main-menu {
+        margin-top: 30px;
+        font-size: 22px;
+        letter-spacing: 2px;
+        &__list {
+            &>li:nth-child(n+2) {
+                margin-left: 25px;
+            }
+        }
+    }
+    .sub-menu {
+        &__list {
+            top: 20px;
+            padding: 10px;
+            min-width: 355px;
+            font-size: 16px;
+            li {
+                padding: 0 10px;
+            }
+            li:first-child {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            li:nth-child(n+2) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-top: 1px solid rgba(233, 65, 29, 0.7);
+            }
+        }
+    }
+    .description {
+        margin-bottom: 0;
+        &__title {
+            font-size: 42px;
+        }
+        &__subtitle {
+            font-size: 24px;
+        }
+    }
+    .calculation {
+        &__title-tax {
+            margin-top: 40px;
+            font-size: 22px;
+        }
+        &__sign {
+            font-size: 18px;
+        }
+    }
+    .ad-cost {
+        padding: 15px;
+        width: 530px;
+        &__title {
+            font-size: 22px;
+        }
+        &__subtitle {
+            margin-top: 7px;
+            font-size: 16px;
+            text-align: center;
+        }
+    }
+    .button {
+        padding: 20px 15px;
+        font-size: 22px;
+    }
+    .button-cost {
+        margin: 15px auto 0 auto;
+        width: 270px;
+    }
+    .button-tax {
+        width: 430px;
+    }
+    // ! --------------------- screen № 2 --------------------------------
+    .about {
+        &__wrapper {
+            padding: 80px 80px 0 80px;
+        }
+        &__block {
+            padding: 60px 25px 25px 25px;
+            border: 2px solid rgb(233, 65, 29);
+        }
+        p {
+            font-size: 18px;
+        }
+        &__title {
+            font-size: 26px;
+        }
+        &__offers {
+            margin: 0 auto 20px auto;
+        }
+        &__main-title {
+            font-size: 34px;
+            letter-spacing: 1px;
+        }
+    }
+    .offers {
+        &__block {
+            padding: 15px;
+            &:nth-child(n+2) {
+                margin-left: 10px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        &__title {
+            min-height: 38px;
+            font-size: 17px;
+        }
+    }
+    // ! --------------------- screen № 3 --------------------------------
+    .questions {
+        font-size: 36px;
+    }
+    .buy {
+        &__main-title {
+            font-size: 34px;
+        }
+        &__container {
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        &__block {
+            border: 2px solid rgb(233, 65, 29);
+            width: 45%;
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__description {
+            font-size: 20px;
+            li {
+                &:nth-child(n+2) {
+                    margin-top: 7px;
+                }
+            }
+        }
+        &__sign {
+            font-size: 22px;
+        }
+        &__button {
+            margin-top: 30px;
+        }
+    }
+    .sale {
+        padding-top: 100px;
+        &__main-title {
+            font-size: 34px;
+        }
+        &__block {
+            margin: 20px auto;
+            border: 2px solid rgb(233, 65, 29);
+            padding: 20px;
+        }
+        &__title {
+            font-size: 30px;
+        }
+        &__description {
+            font-size: 20px;
+        }
+        &__button {
+            width: 280px;
+        }
+    }
+    // ! --------------------- screen № 4 --------------------------------
+    .portfolio {
+        &__wrapper {
+            position: relative;
+            margin: 50px auto 0 auto;
+            width: 90%;
+        }
+        &__main-title {
+            margin-bottom: 15px;
+            font-size: 34px;
+            text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        }
+        &__section {
+            min-height: 564px;
+        }
+        &__title {
+            font-size: 20px;
+            margin-bottom: 7px;
+            text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        }
+        &__content {
+            font-size: 17px;
+            line-height: 1.2;
+        }
+        &__image {
+            margin-top: 0;
+            padding: 20% 0;
+        }
+        &__description {
+            padding: 15px;
+            width: 90%;
+            min-height: 150px;
+        }
+    }
+    .result {
+        &__title {
+            font-size: 19px;
+        }
+        &__subtitle {
+            font-size: 15px;
+        }
+        &__new-cost {
+            margin-top: 15px;
+        }
+        &__prev-cost {
+            margin-right: 35px;
+        }
+        &__image {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    // ! --------------------- screen № 5 --------------------------------
+    .consultation {
+        &__title {
+            text-align: center;
+            font-size: 34px;
+        }
+        &__description {
+            font-size: 18px;
+            width: 50%;
+            margin: 10px auto 0 auto;
+            padding-left: 10px;
+            border-left: 2px solid #E94110;
+        }
+        &__list {
+            font-size: 16px;
+            letter-spacing: 1px;
+            width: auto;
+        }
+        &__box {
+            display: flex;
+            margin-top: 20px;
+            width: 65%;
+            margin: 15px auto 0 auto;
+        }
+        &__item {
+            &:nth-child(n+2) {
+                margin-top: 2px;
+            }
+        }
+        &__form {
+            padding: 20px;
+        }
+        &__container {
+            margin-bottom: 15px;
+        }
+        &__name {
+            font-size: 18px;
+        }
+        &__input {
+            height: 35px;
+        }
+        &__textarea {
+            padding: 10px;
+            height: 100px;
+        }
+    }
+    // ! --------------------- screen № 6 --------------------------------
+    .feedback {
+        &__wrapper {
+            margin: 10px auto 0 auto;
+        }
+        &__main-title {
+            font-size: 34px;
+        }
+        &__section {
+            padding: 10px;
+            border: 2px solid rgba(233, 65, 29, 1);
+        }
+        &__container {
+            margin: 15px auto 0 auto;
+            padding: 10px auto;
+            border: 2px solid rgba(233, 65, 29, 0.6);
+        }
+        &__instagram {
+            margin-top: 10px;
+            font-size: 20px;
+            a {
+                margin-left: 20px;
+                img {
+                    width: 170px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
+                &::before {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        &__macromir {
+            font-size: 20px;
+            a {
+                margin-left: 20px;
+                img {
+                    position: relative;
+                    top: 4px;
+                    width: 170px;
+                }
+            }
+        }
+    }
+    // ! --------------------- screen № 7 --------------------------------
+    .partners {
+        padding-top: 130px;
+        &__wrapper {
+            width: 80%;
+        }
+        &__title {
+            top: -50px;
+            font-size: 36px;
+        }
+        &__card {
+            min-height: 145px;
+        }
+        &__ad-sale {
+            margin-top: 20px;
+            border: 1px solid #E94110;
+            padding: 15px;
+        }
+        &__ad-sale-title {
+            font-size: 18px;
+        }
+        &__button {
+            font-size: 20px;
+        }
+    }
+    // ! --------------------- screen № 8 --------------------------------
+    .contacts {
+        &__wrapper {
+            padding-top: 50px;
+        }
+        &__main-title {
+            font-size: 34px;
+        }
+        &__subtitle {
+            font-size: 24px;
+        }
+        &__form {
+            margin: 15px 0;
+        }
+        &__socials {
+            margin-top: 10px;
+        }
+        &__socials-link {
+            &:nth-child(n+2) {
+                margin-left: 50px;
+            }
+        }
+        &__socials-item {
+            width: 70px;
+            max-height: 70px;
+        }
+        &__info {
+            right: 60px;
+            bottom: 15px;
+            width: 34%;
+            font-size: 20px;
+        }
+    }
+    // ! --------------------- popup-test --------------------------------
+    .popup {
+        padding: 45px 25px 0 25px;
+    }
+    .popup-test {
+        &__form-group {
+            min-height: 335px;
+        }
+        &__footer {
+            padding: 0 25px 15px 25px;
+        }
+    }
+}
+
+// ? =================================================================
+// ? =========================== АДАПТИВ =============================
+// ? =================================================================
+@media (min-width: 1200px) and (max-width: 1399px) {
+    // ! ------------ header ------------------------------
+    .header {
+        padding: 5px 10px;
+    }
+    .test {}
+    .menu {
+        &__link {
+            font-size: 14px;
+            letter-spacing: 0;
+            margin: 0px 10px 0px 0px;
+        }
+    }
+    .connect {
+        span {
+            font-size: 16px;
+        }
+        &__link {
+            span {
+                font-size: 18px;
+            }
+        }
+        &__image {
+            width: 18px;
+            height: 18px;
+            &_position {
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+        }
+    }
+    // ! ------------------------ page scroll -------------------------
+    .page {
+        &__pagination {
+            right: 30px;
+            transform: translate(30px, -50%);
+        }
+        &__bullet {
+            width: 12px;
+            height: 12px;
+            margin: 6px 0;
+        }
+    }
+    // ! --------------------- slide № 1 --------------------------------
+    .main {
+        &__wrapper {
+            padding: 50px 25px 25px 25px;
+            max-width: 42%;
+        }
+        &__calculation {
+            padding: 50px 25px 25px 25px;
+        }
+    }
+    .logo {
+        &__name {
+            font-size: 46px;
+        }
+        &__subtitle {
+            font-size: 20px;
+            letter-spacing: 2px;
+        }
+        &__image {
+            width: 80px;
+        }
+    }
+    .main-menu {
+        margin-top: 20px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        &__list {
+            &>li:nth-child(n+2) {
+                margin-left: 15px;
+            }
+        }
+    }
+    .sub-menu {
+        &__list {
+            top: 20px;
+            padding: 10px;
+            min-width: 355px;
+            font-size: 16px;
+            li {
+                padding: 0 10px;
+            }
+            li:first-child {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            li:nth-child(n+2) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-top: 1px solid rgba(233, 65, 29, 0.7);
+            }
+        }
+    }
+    .button-cost {
+        margin: 30px auto 0 auto;
+        width: 300px;
+    }
+    .button-tax {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 500px;
+    }
+    .description {
+        margin-bottom: 0;
+        &__title {
+            font-size: 36px;
+        }
+        &__subtitle {
+            font-size: 20px;
+        }
+    }
+    .calculation {
+        &__title-tax {
+            margin-top: 40px;
+            font-size: 20px;
+        }
+        &__sign {
+            font-size: 14px;
+        }
+    }
+    .ad-cost {
+        padding: 15px;
+        width: 470px;
+        &__title {
+            font-size: 18px;
+        }
+        &__subtitle {
+            margin-top: 7px;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+    .button {
+        padding: 15px 15px;
+        font-size: 20px;
+    }
+    .button-cost {
+        margin: 15px auto 0 auto;
+        width: 250px;
+    }
+    .button-tax {
+        width: 400px;
+    }
+    // ! --------------------- screen № 2 --------------------------------
+    .about {
+        &__wrapper {
+            padding: 80px 80px 0 80px;
+        }
+        &__block {
+            padding: 40px 15px 15px 15px;
+            border: 2px solid rgb(233, 65, 29);
+        }
+        p {
+            font-size: 14px;
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__offers {
+            margin: 0 auto 20px auto;
+        }
+        &__main-title {
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+    }
+    .offers {
+        &__block {
+            padding: 10px;
+            &:nth-child(n+2) {
+                margin-left: 7px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        &__title {
+            min-height: 38px;
+            font-size: 17px;
+        }
+    }
+    // ! --------------------- screen № 3 --------------------------------
+    .questions {
+        font-size: 32px;
+    }
+    .buy {
+        &__main-title {
+            font-size: 30px;
+        }
+        &__container {
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        &__block {
+            border: 2px solid rgb(233, 65, 29);
+            width: 45%;
+        }
+        &__title {
+            font-size: 26px;
+        }
+        &__description {
+            font-size: 18px;
+            li {
+                &:nth-child(n+2) {
+                    margin-top: 7px;
+                }
+            }
+        }
+        &__sign {
+            font-size: 22px;
+        }
+        &__button {
+            margin-top: 30px;
+        }
+    }
+    .sale {
+        padding-top: 70px;
+        &__main-title {
+            font-size: 30px;
+        }
+        &__block {
+            margin: 20px auto;
+            border: 2px solid rgb(233, 65, 29);
+            padding: 20px;
+        }
+        &__title {
+            font-size: 26px;
+        }
+        &__description {
+            font-size: 18px;
+        }
+        &__button {
+            width: 250px;
+        }
+    }
+    // ! --------------------- screen № 4 --------------------------------
+    .portfolio {
+        &__wrapper {
+            position: relative;
+            margin: 50px auto 0 auto;
+            width: 90%;
+        }
+        &__main-title {
+            margin-bottom: 5px;
+            font-size: 34px;
+            text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        }
+        &__section {
+            min-height: 526px;
+        }
+        &__title {
+            font-size: 18px;
+            margin-bottom: 7px;
+            text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        }
+        &__content {
+            font-size: 15px;
+            line-height: 1.2;
+        }
+        &__image {
+            margin-top: 0;
+            padding: 20% 0;
+        }
+        &__description {
+            padding: 15px;
+            width: 85%;
+            min-height: 150px;
+        }
+    }
+    .result {
+        &__title {
+            font-size: 18px;
+        }
+        &__new-cost {
+            margin-top: 15px;
+        }
+        &__prev-cost {
+            margin-right: 35px;
+        }
+        &__image {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    // ! --------------------- screen № 5 --------------------------------
+    .consultation {
+        &__title {
+            text-align: center;
+            font-size: 30px;
+        }
+        &__description {
+            font-size: 16px;
+            width: 60%;
+            margin: 10px auto 0 auto;
+            padding-left: 10px;
+            border-left: 2px solid #E94110;
+        }
+        &__list {
+            font-size: 14px;
+            letter-spacing: 1px;
+            width: auto;
+        }
+        &__box {
+            display: flex;
+            margin-top: 20px;
+            width: 70%;
+            margin: 15px auto 0 auto;
+        }
+        &__item {
+            &:nth-child(n+2) {
+                margin-top: 2px;
+            }
+        }
+        &__form {
+            padding: 15px;
+        }
+        &__container {
+            margin-bottom: 15px;
+        }
+        &__name {
+            font-size: 16px;
+        }
+        &__input {
+            height: 35px;
+        }
+        &__textarea {
+            padding: 10px;
+            height: 100px;
+        }
+    }
+    // ! --------------------- screen № 6 --------------------------------
+    .feedback {
+        &__wrapper {
+            margin: 10px auto 0 auto;
+        }
+        &__main-title {
+            font-size: 30px;
+        }
+        &__section {
+            padding: 10px;
+            border: 2px solid rgba(233, 65, 29, 1);
+        }
+        &__container {
+            margin: 15px auto 0 auto;
+            padding: 10px auto;
+            border: 2px solid rgba(233, 65, 29, 0.6);
+        }
+        &__instagram {
+            margin-top: 10px;
+            font-size: 20px;
+            a {
+                margin-left: 20px;
+                img {
+                    width: 170px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
+                &::before {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        &__macromir {
+            font-size: 20px;
+            a {
+                margin-left: 20px;
+                img {
+                    position: relative;
+                    top: 4px;
+                    width: 170px;
+                }
+            }
+        }
+    }
+    // ! --------------------- screen № 7 --------------------------------
+    .partners {
+        padding-top: 100px;
+        &__wrapper {
+            width: 80%;
+        }
+        &__title {
+            top: -50px;
+            font-size: 30px;
+        }
+        &__card {
+            min-height: 115px;
+        }
+        &__ad-sale {
+            margin-top: 10px;
+            border: 1px solid #E94110;
+            padding: 15px;
+        }
+        &__ad-sale-title {
+            font-size: 18px;
+        }
+        &__button {
+            font-size: 20px;
+        }
+    }
+    // ! --------------------- screen № 8 --------------------------------
+    .contacts {
+        &__wrapper {
+            padding-top: 50px;
+        }
+        &__main-title {
+            font-size: 30px;
+        }
+        &__subtitle {
+            font-size: 22px;
+        }
+        &__form {
+            margin: 15px 0;
+        }
+        &__socials {
+            margin-top: 10px;
+        }
+        &__socials-link {
+            &:nth-child(n+2) {
+                margin-left: 50px;
+            }
+        }
+        &__socials-item {
+            width: 50px;
+            max-height: 50px;
+        }
+        &__info {
+            right: 60px;
+            bottom: 15px;
+            width: 34%;
+            font-size: 20px;
+        }
+    }
+    // ! --------------------- popup-test --------------------------------
+    .popup {
+        padding: 45px 25px 0 25px;
+    }
+    .popup-test {
+        &__form-group {
+            min-height: 335px;
+        }
+        &__footer {
+            padding: 0 25px 15px 25px;
+        }
+    }
+}
+
+// ? =================================================================
+// ? =========================== АДАПТИВ =============================
+// ? =================================================================
+@media (min-width: 900px) and (max-width: 1199px) {
+    // ! ------------ header ------------------------------
+    .header {
+        padding: 5px 10px;
+    }
+    .menu {
+        &__link {
+            font-size: 14px;
+            letter-spacing: 0;
+            margin: 0px 10px 0px 0px;
+        }
+    }
+    .connect {
+        span {
+            display: none;
+            font-size: 16px;
+        }
+        &__link {
+            span {
+                display: inline;
+                font-size: 18px;
+            }
+        }
+        &__image {
+            width: 18px;
+            height: 18px;
+            &_position {
+                margin-right: 5px;
+                margin-left: 5px;
+            }
+        }
+    }
+    // ! ------------------------ page scroll -------------------------
+    .page {
+        &__pagination {
+            right: 30px;
+            transform: translate(30px, -50%);
+        }
+        &__bullet {
+            width: 12px;
+            height: 12px;
+            margin: 6px 0;
+        }
+    }
+    // ! --------------------- slide № 1 --------------------------------
+    .main {
+        &__wrapper {
+            padding: 50px 25px 25px 25px;
+            max-width: 50%;
+        }
+        &__calculation {
+            padding: 50px 25px 25px 25px;
+        }
+    }
+    .logo {
+        &__name {
+            font-size: 39px;
+        }
+        &__subtitle {
+            font-size: 17px;
+            letter-spacing: 2px;
+        }
+        &__image {
+            width: 60px;
+        }
+    }
+    .main-menu {
+        margin-top: 30px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        &__list {
+            &>li:nth-child(n+2) {
+                margin-left: 10px;
+            }
+        }
+    }
+    .sub-menu {
+        &__list {
+            top: 20px;
+            padding: 10px;
+            min-width: 355px;
+            font-size: 16px;
+            li {
+                padding: 0 10px;
+            }
+            li:first-child {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            li:nth-child(n+2) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-top: 1px solid rgba(233, 65, 29, 0.7);
+            }
+        }
+    }
+    .button-cost {
+        margin: 30px auto 0 auto;
+        width: 300px;
+    }
+    .button-tax {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 500px;
+        min-height: 68px;
+    }
+    .description {
+        margin-bottom: 0;
+        &__title {
+            font-size: 36px;
+        }
+        &__subtitle {
+            font-size: 20px;
+        }
+    }
+    .calculation {
+        &__title-tax {
+            margin-top: 100px;
+            font-size: 18px;
+        }
+        &__sign {
+            font-size: 14px;
+        }
+    }
+    .ad-cost {
+        padding: 15px;
+        width: 440px;
+        &__title {
+            font-size: 18px;
+        }
+        &__subtitle {
+            margin-top: 7px;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+    .button {
+        padding: 15px 15px;
+        font-size: 18px;
+    }
+    .button-cost {
+        margin: 15px auto 0 auto;
+        width: 230px;
+    }
+    .button-tax {
+        width: 360px;
+    }
+    // ! --------------------- screen № 2 --------------------------------
+    .about {
+        &__wrapper {
+            padding: 80px 80px 0 80px;
+        }
+        &__block {
+            padding: 40px 15px 15px 15px;
+            border: 2px solid rgb(233, 65, 29);
+        }
+        p {
+            font-size: 12px;
+            letter-spacing: 0;
+        }
+        &__title {
+            font-size: 18px;
+        }
+        &__offers {
+            margin: 0 auto 20px auto;
+        }
+        &__main-title {
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+    }
+    .offers {
+        &__block {
+            padding: 10px;
+            &:nth-child(n+2) {
+                margin-left: 5px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+        &__title {
+            min-height: 38px;
+            font-size: 14px;
+        }
+    }
+    // ! --------------------- screen № 3 --------------------------------
+    .questions {
+        font-size: 24px;
+    }
+    .buy {
+        &__main-title {
+            font-size: 24px;
+        }
+        &__container {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        &__block {
+            border: 2px solid rgb(233, 65, 29);
+            width: 45%;
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__description {
+            font-size: 16px;
+            li {
+                &:nth-child(n+2) {
+                    margin-top: 5px;
+                }
+            }
+        }
+        &__sign {
+            font-size: 18px;
+        }
+        &__button {
+            margin-top: 30px;
+        }
+    }
+    .sale {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 50px 20px 0 20px;
+        &__main-title {
+            font-size: 24px;
+        }
+        &__block {
+            margin: 20px auto;
+            border: 2px solid rgb(233, 65, 29);
+            padding: 20px;
+            width: 70%;
+        }
+        &__title {
+            font-size: 22px;
+        }
+        &__description {
+            font-size: 16px;
+        }
+        &__button {
+            width: 250px;
+        }
+    }
+    // ! --------------------- screen № 4 --------------------------------
+    .portfolio {
+        &__wrapper {
+            position: relative;
+            z-index: 2;
+            margin: 50px auto 0 auto;
+            width: 90%;
+            transform: translateY(10%);
+        }
+        &__main-title {
+            margin-bottom: 5px;
+            font-size: 34px;
+            text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        }
+        &__section {
+            min-height: 526px;
+        }
+        &__title {
+            font-size: 18px;
+            margin-bottom: 7px;
+            text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+        }
+        &__content {
+            font-size: 15px;
+            line-height: 1.2;
+        }
+        &__image {
+            margin-top: 0;
+            padding: 20% 0;
+        }
+        &__description {
+            transform: translateY(-100%);
+            padding: 15px;
+            width: 100%;
+            // min-height: 150px;
+        }
+    }
+    .result {
+        &__title {
+            font-size: 14px;
+        }
+        &__subtitle {
+            font-size: 12px;
+        }
+        &__new-cost {
+            margin-top: 15px;
+        }
+        &__prev-cost {
+            margin-right: 35px;
+        }
+        &__image {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    // ! --------------------- screen № 5 --------------------------------
+    .consultation {
+        &__title {
+            text-align: center;
+            font-size: 24px;
+        }
+        &__description {
+            font-size: 14px;
+            width: 60%;
+            margin: 10px auto 0 auto;
+            padding-left: 10px;
+            border-left: 2px solid #E94110;
+        }
+        &__list {
+            font-size: 12px;
+            letter-spacing: 1px;
+            width: auto;
+        }
+        &__box {
+            display: flex;
+            margin-top: 20px;
+            width: 85%;
+            margin: 15px auto 0 auto;
+        }
+        &__item {
+            &:nth-child(n+2) {
+                margin-top: 2px;
+            }
+        }
+        &__form {
+            padding: 15px;
+        }
+        &__container {
+            margin-bottom: 15px;
+        }
+        &__name {
+            font-size: 14px;
+        }
+        &__input {
+            height: 35px;
+        }
+        &__textarea {
+            padding: 10px;
+            height: 80px;
+        }
+    }
+    // ! --------------------- screen № 6 --------------------------------
+    .feedback {
+        &__wrapper {
+            margin: 10px auto 0 auto;
+        }
+        &__main-title {
+            font-size: 30px;
+        }
+        &__section {
+            padding: 10px;
+            border: 2px solid rgba(233, 65, 29, 1);
+        }
+        &__container {
+            margin: 15px auto 0 auto;
+            padding: 10px auto;
+            border: 2px solid rgba(233, 65, 29, 0.6);
+        }
+        &__instagram {
+            margin-top: 10px;
+            font-size: 20px;
+            a {
+                margin-left: 20px;
+                img {
+                    width: 170px;
+                    height: 20px;
+                    vertical-align: middle;
+                }
+                &::before {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        &__macromir {
+            font-size: 20px;
+            a {
+                margin-left: 20px;
+                img {
+                    position: relative;
+                    top: 4px;
+                    width: 170px;
+                }
+            }
+        }
+    }
+    // ! --------------------- screen № 7 --------------------------------
+    .partners {
+        padding-top: 100px;
+        &__wrapper {
+            width: 80%;
+        }
+        &__title {
+            top: -50px;
+            font-size: 24px;
+        }
+        &__card {
+            min-height: 90px;
+        }
+        &__ad-sale {
+            margin-top: 10px;
+            border: 1px solid #E94110;
+            padding: 15px;
+        }
+        &__ad-sale-title {
+            font-size: 18px;
+        }
+        &__button {
+            font-size: 20px;
+        }
+    }
+    // ! --------------------- screen № 8 --------------------------------
+    .contacts {
+        &__wrapper {
+            padding-top: 50px;
+        }
+        &__main-title {
+            font-size: 24px;
+        }
+        &__subtitle {
+            font-size: 18px;
+        }
+        &__form {
+            margin: 15px 0;
+        }
+        &__socials {
+            margin-top: 7px;
+        }
+        &__socials-link {
+            &:nth-child(n+2) {
+                margin-left: 50px;
+            }
+        }
+        &__socials-item {
+            width: 50px;
+            max-height: 50px;
+        }
+        &__info {
+            right: 60px;
+            bottom: 15px;
+            width: 33.3%;
+            font-size: 16px;
+        }
+    }
+    // ! --------------------- popup-test --------------------------------
+    .popup {
+        padding: 45px 25px 0 25px;
+    }
+    .popup-test {
+        &__form-group {
+            min-height: 335px;
+        }
+        &__footer {
+            padding: 0 25px 15px 25px;
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #eb6320;
+            padding: 15px 25px;
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+        &__title {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+    }
+    .cost-test {
+        &__main-title {
+            margin-right: 350px;
+        }
+    }
+    .tax-test {
+        &__main-title {
+            margin-right: 60px;
+        }
+    }
+}
+
+// * =================================================================
+// * =========================== АДАПТИВ =============================
+// * =================================================================
+@media (max-width: 600px) {
+    body {
+        max-width: 600px;
+    }
+    // ! ------------ header ------------------------------
+    .header {
+        display: none;
+    }
+    .header-mobile {
+        display: block;
+    }
+    // ! --------------- burger -----------------------------
+    body.burger-lock {
+        overflow: hidden;
+    }
+    .header-mobile {
+        &__burger {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 20px;
+            z-index: 15;
+            cursor: pointer;
+            span {
+                position: absolute;
+                background-color: #E94110;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.5s ease 0s;
+            }
+            &::after,
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                background-color: #E94110;
+                transition: all 0.5s ease 0s;
+            }
+            &::after {
+                bottom: 0;
+            }
+            &::before {
+                top: 0;
+            }
+            &.active span {
+                transform: scale(0);
+            }
+            &.active::before {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            &.active::after {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+        }
+        &__menu {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            transition: all 0.5s ease 0s;
+            background-image: url("../img/main/burger_bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #000000;
+                opacity: 0.5;
+            }
+            &.active {
+                top: 0;
+            }
+        }
+        &__list {
+            position: relative;
+            z-index: 6;
+            color: #cbcbcb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: inherit;
+        }
+        &__item {
+            width: 100vw;
+            border-bottom: 1px solid #E94110;
+            text-align: center;
+            padding: 10px 0;
+            font-family: "City Nova Regular", Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            font-size: 20px;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+        &__link {}
+    }
+    .logo-dekstop {
+        display: none;
+    }
+    .logo {
+        position: fixed;
+        top: 7px;
+        left: 0px;
+        z-index: 10;
+        color: #e6e6e6;
+        padding-left: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #E94110;
+        width: 100vw;
+        &__link {
+            &>div {
+                order: 1;
+            }
+        }
+        &__name {
+            font-size: 25px;
+        }
+        &__subtitle {
+            font-size: 13px;
+            letter-spacing: 0;
+        }
+        &__image {
+            margin-left: 0;
+            margin-right: 10px;
+            width: 50px;
+        }
+    }
+    // ! ------------------------ page scroll -------------------------
+    .page {
+        &__pagination {
+            display: none;
+        }
+        &__scroll {
+            width: 4px;
+        }
+    }
+    // ! --------------------- slide № 1 --------------------------------
+    .main {
+        margin: 0 auto;
+        max-width: auto;
+        &__wrapper {
+            position: static;
+            padding: 0 15px;
+            max-width: 100%;
+        }
+    }
+    .main-menu {
+        display: none;
+    }
+    .description {
+        margin-bottom: 30px;
+        &__title {
+            font-size: 23px;
+            line-height: 1.5;
+        }
+        &__subtitle {
+            margin-top: 10px;
+            letter-spacing: 2px;
+            font-size: 18px;
+        }
+    }
+    .calculation {
+        display: none;
+    }
+    .button {
+        font-size: 20px;
+        padding: 15px;
+    }
+    // ! --------------------- screen № 2 --------------------------------
+    .about {
+        &__wrapper {
+            flex-direction: column;
+            width: 100%;
+            padding: 90px 15px 0 15px;
+        }
+        &__block {
+            border: 1px solid rgb(233, 65, 29);
+            padding: 10px;
+            width: 100%;
+            line-height: 1.3;
+            letter-spacing: 0;
+            &:last-child {
+                margin: 15px 0 0 0;
+            }
+        }
+        p {
+            font-size: 12px;
+        }
+        &__title {
+            top: -23px;
+            padding: 5px 10px;
+            border-radius: 7px;
+            font-size: 14px;
+            &_left {
+                left: 0;
+            }
+            &_right {
+                left: auto;
+                right: 0;
+            }
+        }
+        &__offers {
+            margin: 0 0 15px 0;
+        }
+        &__main-title {
+            font-size: 16px;
+            letter-spacing: 0;
+        }
+    }
+    .offers {
+        flex-direction: column;
+        padding: 0 15px;
+        &__block {
+            border-radius: 10px;
+            border: 1px solid #eb6320;
+            padding: 5px 0px;
+            &:first-child {
+                font-size: 5px;
+            }
+            &:nth-child(n+2) {
+                margin: 4px 0 0 0;
+            }
+            p {
+                margin-top: 6px;
+                font-size: 12px;
+            }
+        }
+        &__title {
+            display: block;
+            text-align: center;
+            min-height: 0;
+            margin: 0 auto;
+            font-size: 12px;
+            color: #cbcbcb;
+            &_width {
+                max-width: 80%;
+            }
+            &::before,
+            &::after {
+                content: '';
+                width: 8px;
+                height: 2px;
+                background-color: #cbcbcb;
+                position: absolute;
+                top: 10px;
+                transition: all 0.3s ease 0s;
+            }
+            &::before {
+                transform: rotate(40deg);
+                left: 10px;
+            }
+            &::after {
+                transform: rotate(-40deg);
+                left: 16px;
+            }
+            &.active::before,
+            &.active::after {
+                background-color: #eb6320;
+            }
+            &.active::before {
+                transform: rotate(-40deg);
+            }
+            &.active::after {
+                transform: rotate(40deg);
+            }
+            &.active {
+                color: #eb6320;
+            }
+        }
+        &__text {
+            display: none;
+        }
+    }
+    // ! --------------------- screen № 3 --------------------------------
+    .questions {
+        text-align: center;
+        font-size: 20px;
+    }
+    .buy {
+        &__main-title {
+            top: auto;
+            left: -400px;
+            font-size: 16px;
+            &_active {
+                left: 0;
+            }
+        }
+        &__container {
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 100%;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+        &__block {
+            border: 1px solid rgb(233, 65, 29);
+            padding: 10px;
+            width: 100%;
+            &:last-child {
+                margin-top: 5px;
+            }
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__description {
+            margin-top: 5px;
+            font-size: 14px;
+            li {
+                &:nth-child(n+2) {
+                    margin-top: 5px;
+                }
+            }
+        }
+        &__sign {
+            font-size: 14px;
+        }
+        &__button {
+            right: 200px;
+            margin-top: 10px;
+            width: 270px;
+            &_active {
+                right: 0px;
+            }
+        }
+    }
+    .sale {
+        padding: 70px 15px 0 15px;
+        &__main-title {
+            top: auto;
+            right: -200px;
+            font-size: 18px;
+            &_active {
+                top: auto;
+                right: 0;
+            }
+        }
+        &__block {
+            bottom: auto;
+            left: -200px;
+            margin: 15px auto;
+            border: 1px solid rgb(233, 65, 29);
+            border-radius: 15px;
+            padding: 15px;
+            width: 100%;
+            &_active {
+                bottom: auto;
+                left: 0;
+            }
+        }
+        &__title {
+            font-size: 20px;
+        }
+        &__description {
+            margin-top: 10px;
+            font-size: 14px;
+            & li:nth-child(n+2) {
+                margin-top: 5px;
+            }
+        }
+        &__button {
+            width: 250px;
+        }
+    }
+    // ! --------------------- screen № 4 --------------------------------
+    .portfolio {
+        &__wrapper {
+            z-index: 4;
+            margin: 50px auto 0 auto;
+            width: 90%;
+            transform: translateY(10%);
+        }
+        &__main-title {
+            margin-bottom: 15px;
+            padding-bottom: 7px;
+            font-size: 22px;
+            border: none;
+        }
+        &__section {
+            min-height: 528px;
+        }
+        &__title {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        &__content {
+            font-size: 13px;
+        }
+        &__image {
+            margin-top: 15px;
+            padding: 30% 0;
+        }
+        &__description {
+            margin: 0 auto;
+            padding: 10px;
+        }
+    }
+    .result {
+        border: 1px solid #E94110;
+        border-radius: 10px;
+        transform: translateY(-100%);
+        &__title {
+            font-size: 16px;
+        }
+        &__subtitle {
+            font-size: 10px;
+        }
+        &__new-cost {
+            margin-top: 20px;
+        }
+        &__prev-cost {
+            margin-right: 35px;
+        }
+        &__image {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .portfolio-slider {
+        position: relative;
+        width: 90%;
+    }
+    // ! --------------------- screen № 5 --------------------------------
+    .consultation {
+        &::after {
+            opacity: 0.4;
+        }
+        &__wrapper {
+            width: 100%;
+            padding: 0 15px;
+        }
+        &__title {
+            font-size: 21px;
+        }
+        &__description {
+            font-size: 14px;
+            width: 90%;
+            margin: 20px auto 0 auto;
+            padding-left: 10px;
+            border-left: 2px solid #E94110;
+        }
+        &__list {
+            width: 100%;
+            font-size: 14px;
+            letter-spacing: 0px;
+        }
+        &__box {
+            margin-top: 20px;
+        }
+        &__item {
+            &::before {
+                border: 2px solid rgba(233, 65, 29, 0.7);
+            }
+            &:nth-child(n+2) {
+                margin-top: 5px;
+            }
+        }
+        &__checkmark {
+            top: -4px;
+        }
+        &__form {
+            display: none;
+        }
+        &__mobile-button {
+            display: block;
+            margin: 20px auto 0 auto;
+            text-shadow: none;
+            width: 260px;
+        }
+    }
+    // ! --------------------- screen № 6 --------------------------------
+    .feedback {
+        &__wrapper {
+            width: 90%;
+            margin: 15px auto 0 auto;
+        }
+        &__main-title {
+            font-size: 22px;
+        }
+        &__section {
+            border-radius: 15px;
+            padding: 10px 2px 10px 2px;
+            border: 2px solid rgb(233, 65, 29);
+        }
+        &__container {
+            margin: 10px auto 0 auto;
+            padding: 10px 15px 15px 15px;
+            width: 90%;
+            border: 1px solid rgba(233, 65, 29, 0.6);
+            border-radius: 15px;
+        }
+        &__instagram {
+            flex-direction: column;
+            margin-top: 15px;
+            font-size: 16px;
+            text-shadow: none;
+            a {
+                margin-left: 0;
+                margin-top: 10px;
+                img {
+                    width: 180px;
+                    height: 22px;
+                }
+                &::before {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        &__macromir {
+            flex-direction: column;
+            font-size: 16px;
+            text-shadow: none;
+            text-align: center;
+            a {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+    }
+    // ! --------------------- screen № 7 --------------------------------
+    .partners {
+        padding-top: 100px;
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgb(233, 65, 29);
+        }
+        &__title {
+            top: -40px;
+            font-size: 20px;
+        }
+        &__card {
+            flex-basis: 50%;
+            min-height: 0;
+            padding: 10px;
+            &:nth-child(n+6) {
+                border-top: none;
+            }
+            &:nth-child(2n+3) {
+                border-left: none;
+            }
+            &:nth-child(4n+4) {
+                border-left: none;
+            }
+            &:nth-child(2n+3) {
+                border-left: 1px solid rgb(233, 65, 29);
+            }
+        }
+        &__ad-sale {
+            margin-top: 10px;
+            border-radius: 15px;
+            border: 1px solid #E94110;
+            padding: 10px;
+            width: 90%;
+        }
+        &__ad-sale-title {
+            font-size: 16px;
+        }
+        &__button {
+            margin: 10px auto 0 auto;
+            width: 260px;
+            font-size: 16px;
+        }
+    }
+    .ad-cost__subtitle {
+        font-size: 14px;
+        text-align: left;
+    }
+    // ! --------------------- screen № 8 --------------------------------
+    .contacts {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding-left: 0;
+            padding-top: 80px;
+            z-index: 2;
+            width: 100%;
+        }
+        &__main-title {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 20px;
+        }
+        &__subtitle {
+            font-size: 18px;
+        }
+        &__form {
+            margin-top: 30px;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+        &__button {
+            margin-top: 20px;
+        }
+        &__socials {
+            margin-top: 30px;
+        }
+        &__socials-link {
+            &:nth-child(n+2) {
+                margin-left: 25px;
+            }
+        }
+        &__socials-item {
+            width: 40px;
+            max-height: 40px;
+            -o-object-fit: contain;
+            object-fit: contain;
+        }
+        &__info {
+            position: absolute;
+            bottom: 10px;
+            left: 2.515%;
+            width: 95%;
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #E94110;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+            text-shadow: 0 0 1px #999, 1px 1px 1px #888, 2px 2px 1px #777, 3px 3px 1px #666, 4px 4px 1px #555, 5px 5px 1px #444;
+            font-size: 16px;
+            a {
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+        &__address {}
+    }
+    // ! --------------------- popup --------------------------------
+    .popup {
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        padding: 33px 15px;
+        width: 100%;
+        min-width: 320px;
+        height: 100%;
+        background-color: rgba(00, 00, 00, 0.7);
+        opacity: 0;
+        visibility: hidden;
+        overflow-y: auto;
+        overflow-x: hidden;
+        transition: all 1.2s ease 0s;
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        &.open .popup__content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        &__body {
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__content {
+            position: relative;
+            background-color: #ffffff;
+            transition: all 1.2s ease 0s;
+            opacity: 0;
+            transform: perspective(600px) translateY(-200%) rotateX(45deg);
+        }
+        &__close {
+            position: absolute;
+            right: 0;
+            top: -40px;
+            width: 30px;
+            height: 30px;
+            background-image: url("../svg/form-x.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+    // ! --------------------- popup-test --------------------------------
+    .popup-test {
+        max-width: 95%;
+        &__form {
+            display: flex;
+            flex-direction: column;
+        }
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #eb6320;
+            padding: 25px;
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+        &__main-title {
+            &::before {
+                content: "";
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                background-image: url("../svg/documents.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+        &__page {
+            display: inline-block;
+            width: 30px;
+        }
+        &__progress {
+            width: 100%;
+            height: 7px;
+            background-color: #cbcbcb;
+        }
+        &__progress-value {
+            height: 100%;
+            width: 0%;
+            background-color: #E94110;
+            transition: all 1s ease 0s;
+        }
+        &__container {}
+        &__form-group {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            min-height: 400px;
+            font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+            &_height {
+                min-height: 0;
+            }
+        }
+        &__title {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+        &__form-box {
+            display: flex;
+            div:nth-child(2) {
+                margin-left: 80px;
+            }
+        }
+        &__label {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+            padding-left: 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        &__radio {
+            position: absolute;
+            &:checked~.popup-test__point::before {
+                background-image: url("../svg/form-circle.svg");
+            }
+        }
+        &__text {
+            margin-top: 30px;
+            padding: 10px 20px;
+            border-bottom: 1px solid #E94110;
+            font-family: "Trajan Pro", 'Times New Roman', Times, serif;
+            font-size: 20px;
+            &_position {
+                margin-top: 10px;
+            }
+            &:focus {
+                outline: 1px solid #E94110;
+                border: 0;
+            }
+        }
+        &__point {
+            position: relative;
+            &::before {
+                content: "";
+                position: relative;
+                top: 3px;
+                display: inline-block;
+                margin-right: 10px;
+                width: 20px;
+                height: 20px;
+                background-image: url("../svg/form-empty-circle.svg");
+                background-size: contain;
+                transition: all 0.3s ease 0s;
+            }
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px;
+        }
+        &__button-back {
+            span {
+                position: relative;
+                top: 2px;
+                display: inline-block;
+                transform: rotate(180deg);
+            }
+        }
+        &__button-up {
+            margin-left: auto;
+            &::after {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 200px;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 100%);
+                position: absolute;
+                left: -80px;
+                top: -50px;
+                z-index: 1;
+                transform: rotate(45deg);
+                -webkit-animation-name: slideme;
+                animation-name: slideme;
+                -webkit-animation-duration: 5s;
+                animation-duration: 5s;
+                -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+                -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+            }
+            span {
+                position: relative;
+                top: 2px;
+            }
+        }
+        &__image {
+            padding: 20px;
+            -o-object-fit: contain;
+            object-fit: contain;
+        }
+    }
+    .button-popup {
+        position: relative;
+        display: block;
+        width: 170px;
+        height: 60px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        border-radius: 35px;
+        background: linear-gradient(to left, #E94110, #Eb6320);
+        font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+        font-size: 22px;
+        color: #fff;
+        overflow: hidden;
+        &_size {
+            width: 280px;
+        }
+        &:hover {
+            box-shadow: 0 0 20px rgba(233, 65, 29, 0.7);
+        }
+        &:active {
+            top: 3px;
+        }
+    }
+    .cost-test {
+        &__main-title {
+            margin-right: 500px;
+        }
+        &__progress-value {
+            &_2 {
+                width: 16.67%;
+            }
+            &_3 {
+                width: 33.34%;
+            }
+            &_4 {
+                width: 50%;
+            }
+            &_5 {
+                width: 66.68%;
+            }
+            &_6 {
+                width: 83.35%;
+            }
+            &_end {
+                width: 100%;
+            }
+        }
+    }
+    .tax-test {
+        &__main-title {
+            margin-right: 300px;
+        }
+        &__progress-value {
+            &_2 {
+                width: 33.33%;
+            }
+            &_3 {
+                width: 66.67%;
+            }
+            &_end {
+                width: 100%;
+            }
+        }
+    }
 }

@@ -90,13 +90,13 @@
 }
 
 :root {
-    --swiper-navigation-size: 50px
+    --swiper-navigation-size: 30px
 }
 
 .swiper-button-next,
 .swiper-button-prev {
     position: absolute;
-    top: 50%;
+    top: 43%;
     width: calc(var(--swiper-navigation-size)/ 44 * 27);
     height: var(--swiper-navigation-size);
     margin-top: calc(-1 * var(--swiper-navigation-size)/ 2);
@@ -128,7 +128,7 @@
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
     position: absolute;
-    left: 0;
+    left: -10px;
     right: auto
 }
 
@@ -139,7 +139,7 @@
 
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-    right: 0;
+    right: -10px;
     left: auto
 }
 

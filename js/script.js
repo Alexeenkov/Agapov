@@ -232,6 +232,7 @@ let isMobile = {
     any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
 };
 let body = document.querySelector('body');
+let subMenuLink = document.querySelector('.sub-menu_active');
 if (isMobile.any()) {
     body.classList.add('touch');
     let arrow = document.querySelectorAll('.arrow');
@@ -245,6 +246,12 @@ if (isMobile.any()) {
             subMenu.classList.toggle('open');
             thisArrow.classList.toggle('active');
         });
+        subMenuLink.addEventListener('click', function() {
+            subMenu.classList.toggle('open');
+            thisArrow.classList.toggle('active');
+        });
+
+
     }
 } else {
     body.classList.add('mouse');

@@ -16,25 +16,72 @@
 
 <body class="body">
     <div class="wrapper">
-        <header class="header lock-padding">
-            <nav class="header__menu menu">
-                <a href="" class="menu__link">главная</a>
-                <a href="" class="menu__link">обо мне</a>
-                <a href="" class="menu__link">купить/продать</a>
-                <a href="" class="menu__link">портфолио</a>
-                <a href="" class="menu__link">консультация</a>
-                <a href="" class="menu__link">отзывы</a>
-                <a href="" class="menu__link">партнёры</a>
-                <a href="" class="menu__link">контакты</a>
-            </nav>
-            <div class="header__connect connect">
-                <span>Есть вопрос? Свяжитесь со мной!</span>
-                <a href="tel:+79522491494" class="connect__link">
-                    <img src="svg/phone.svg" alt="Трубка телефонная" class="connect__image connect__image_position">
-                    <span>+7 (952) 249-14-94</span>
-                </a>
+        <header class="lock-padding">
+            <div class="header">
+                <nav class="header__menu menu">
+                    <a href="" class="menu__link">главная</a>
+                    <a href="" class="menu__link">обо мне</a>
+                    <a href="" class="menu__link">купить/продать</a>
+                    <a href="" class="menu__link">портфолио</a>
+                    <a href="" class="menu__link">консультация</a>
+                    <a href="" class="menu__link">отзывы</a>
+                    <a href="" class="menu__link">партнёры</a>
+                    <a href="" class="menu__link">контакты</a>
+                </nav>
+                <div class="header__connect connect">
+                    <span>Есть вопрос? Свяжитесь со мной!</span>
+                    <a href="tel:+79522491494" class="connect__link">
+                        <img src="svg/phone.svg" alt="Трубка телефонная" class="connect__image connect__image_position">
+                        <span>+7 (952) 249-14-94</span>
+                    </a>
+                </div>
+            </div>
+            <div class="header-mobile">
+                <div class="header-mobile__burger">
+                    <span></span>
+                </div>
+                <nav class="header-mobile__menu">
+                    <ul class="header-mobile__list">
+                        <li class="header-mobile__item">
+                            <a href="#0" class="header-mobile__link">главная</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a href="/#slide-2" class="header-mobile__link">обо мне</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a href="#0" class="header-mobile__link">купить квартиру</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a href="#0" class="header-mobile__link">продать квартиру</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a href="#0" class="header-mobile__link">моё портфолио</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a href="#0" class="header-mobile__link">бесплатная консультация</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a href="#0" class="header-mobile__link">отзывы обо мне</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a href="#0" class="header-mobile__link">партнёры</a>
+                        </li>
+                        <li class="header-mobile__item">
+                            <a href="#0" class="header-mobile__link">мои контакты</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
+        <div class="main__logo logo">
+            <a href="#0" class="logo__link">
+                <div>
+                    <h1 class="logo__name">Агапов Иван</h1>
+                    <div class="logo__subtitle">Недвижимость – просто!</div>
+                </div>
+                <img src="img/main/macromir-logo.png" alt="Логотип компании макромир" class="logo__image">
+            </a>
+        </div>
         <main class="page">
             <div class="page__wrapper">
                 <div data-hash="slide-1" class="page__screen screen">
@@ -42,7 +89,7 @@
                         <div class="main screen__general">
                             <div class="main__wrapper">
                                 <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                                    <div class="main__logo logo">
+                                    <div class="main__logo logo logo-dekstop">
                                         <a href="#0" class="logo__link">
                                             <div>
                                                 <h1 class="logo__name">Агапов Иван</h1>
@@ -55,7 +102,7 @@
                                         <ul class="main-menu__list">
                                             <li><a href="/Agapov/#slide-2" class="main-menu__link">обо мне</a></li>
                                             <li>
-                                                <a href="#0" class="main-menu__link">услуги</a>
+                                                <a href="#0" class="main-menu__link sub-menu sub-menu_active">услуги</a>
                                                 <span class="sub-menu__arrow arrow"></span>
                                                 <ul class="sub-menu__list">
                                                     <li>
@@ -108,35 +155,35 @@
                         <div class="about screen__general">
                             <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000" class="about__wrapper">
                                 <div class="about__block">
-                                    <h4 class="about__title">Мой выбор</h4>
+                                    <h4 class="about__title about__title_left">Мой выбор</h4>
                                     <p>Открытость и индивидуальный подход - мои клиенты становятся моими <span>друзьями</span></p>
                                 </div>
                                 <div class="about__block">
-                                    <h4 class="about__title">Моя задача</h4>
+                                    <h4 class="about__title about__title_right">Моя задача</h4>
                                     <p>Выявить истинную потребность <span>каждого</span> клиента и доставить Вас из точки А в точку Б в решении Вашего квартирного вопроса</p>
                                 </div>
                             </div>
                             <h3 data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900" class="about__main-title">Преимущества работы со мной</h3>
-                            <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800" class="about__offers offers">
+                            <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800" class="about__offers offers one">
                                 <div class="offers__block">
-                                    <h4 class="offers__title">Продам квартиру по максимальной цене</h4>
-                                    <p>Только качественная презентация Вашей квартиры более чем на 120 сайтах и соц. сетях! О ней узнает максимальное число покупателей!</p>
+                                    <h4 class="offers__title offers__title_width">Продам квартиру по максимальной цене</h4>
+                                    <p class="offers__text">Только качественная презентация Вашей квартиры более чем на 120 сайтах и соц. сетях! О ней узнает максимальное число покупателей!</p>
                                 </div>
                                 <div class="offers__block">
                                     <h4 class="offers__title">Безопасные сделки</h4>
-                                    <p>Подбираю максимально комфортный и безопасный способ взаиморасчётов, помогаю с выбором банка и согласую прочие условия сделки. У клиента только достоверная информация!</p>
+                                    <p class="offers__text">Подбираю максимально комфортный и безопасный способ взаиморасчётов, помогаю с выбором банка и согласую прочие условия сделки. У клиента только достоверная информация!</p>
                                 </div>
                                 <div class="offers__block">
                                     <h4 class="offers__title">Никакой предоплаты</h4>
-                                    <p>Оплату за свои услуги я получаю только тогда, когда вся работа выполнена, а Вы довольны результатом!</p>
+                                    <p class="offers__text">Оплату за свои услуги я получаю только тогда, когда вся работа выполнена, а Вы довольны результатом!</p>
                                 </div>
                                 <div class="offers__block">
                                     <h4 class="offers__title">Максимальная экономия</h4>
-                                    <p>При покупке квартиры в новостройке подберу для Вас лучший вариант по цене застройщика, а комиссия составит 0%</p>
+                                    <p class="offers__text">При покупке квартиры в новостройке подберу для Вас лучший вариант по цене застройщика, а комиссия составит 0%</p>
                                 </div>
                                 <div class="offers__block">
                                     <h4 class="offers__title">Сохраню ваше время и нервы</h4>
-                                    <p>Вы получаете юридически чистый объект на все 100%, так как ни один подводный камень не спрячется от моих проверок!</p>
+                                    <p class="offers__text">Вы получаете юридически чистый объект на все 100%, так как ни один подводный камень не спрячется от моих проверок!</p>
                                 </div>
                             </div>
                         </div>
@@ -153,8 +200,8 @@
                         <div class="buy-or-sale screen__general">
                             <div class="buy-or-sale__wrapper">
                                 <div class="buy-or-sale__questions questions">
-                                    <div class="questions__buy"> Хочу купить квартиру</div>
-                                    <div class="questions__sale">Хочу продать квартиру</div>
+                                    <div class="questions__buy"> Купить квартиру</div>
+                                    <div class="questions__sale">Продать квартиру</div>
                                 </div>
                                 <div class="buy-or-sale__buy buy">
                                     <h3 class="buy__main-title">Все пожелания будут учтены и в результате Вы станете счастливым обладателем своей мечты!</h3>
@@ -179,7 +226,7 @@
                                     <div class="buy__sign">Одобрение ипотеки для <span>Вac!</span></div>
                                     <a href="#popup-buy" class="buy__button popup-link button">подобрать квартиру</a>
                                 </div>
-                                <div class="buy-or-sale__sale sale">
+                                <div class="buy-or-sale__sale sale screen__general">
                                     <h3 class="sale__main-title">
                                         Продавцу квартиры важно, чтобы сделка прошла быстро, а её денежный результат соответствовал ожиданиям
                                     </h3>
@@ -190,7 +237,7 @@
                                                 <li>По максимальной цене</li>
                                                 <li>Знаю все секреты продаж недвижимости</li>
                                                 <li>Никакой предоплаты, оплата только за результат</li>
-                                                <li>Рассмотрю всех покупателей с любой формы оплаты и выберу лучшего</li>
+                                                <li>Рассмотрю всех покупателей с любой формой оплаты и выберу лучшего</li>
                                             </ul>
                                         </div>
                                         <a href="#popup-cost" class="sale__button popup-link button">узнать стоимость</a>
@@ -530,14 +577,18 @@
                                 <div class="consultation__description" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="500">
                                     Кратко опишите свой вопрос и получите ответ в ближайшее время
                                 </div>
-                                <ul class="consultation__list" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="700">
-                                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Проверка объектов на всевозможные риски</li>
-                                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Составление договоров любой сложности</li>
-                                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Помощь в получении ипотеки</li>
-                                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Сопровождение сделки</li>
-                                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Страхование</li>
-                                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Аренда </li>
-                                </ul>
+                                <div class="consultation__box">
+                                    <ul class="consultation__list" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="700">
+                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Проверка объектов на всевозможные риски</li>
+                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Составление договоров любой сложности</li>
+                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Помощь в получении ипотеки</li>
+                                    </ul>
+                                    <ul class="consultation__list">
+                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Сопровождение сделки</li>
+                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Страхование</li>
+                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Аренда </li>
+                                    </ul>
+                                </div>
                                 <form class="consultation__form consultation__form_size" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
                                     <div class="consultation__container">
                                         <div class="consultation__form-group">
@@ -567,6 +618,7 @@
                                     </div>
                                     <button type="submit" class="consultation__button button">отправить</button>
                                 </form>
+                                <a href="#0" class="popup-link button consultation__mobile-button">задать вопрос</a>
                             </div>
                         </div>
                     </div>
@@ -677,7 +729,7 @@
                             </div>
                             <div class="partners__ad-sale" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1200">
                                 <h4 class="partners__ad-sale-title">Разместите объявление о продаже квартиры сейчас</h4>
-                                <div class="ad-cost__subtitle">и Вашу квартиру увидят 1000 заинтересованнных покупателей уже сегодня!</div>
+                                <div class="ad-cost__subtitle">Вашу квартиру увидят 1000 заинтересованнных покупателей уже сегодня!</div>
                                 <a href="#popup-ad" class="partners__button popup-link button">разместить объявление на 60 площадках</a>
                             </div>
                         </div>
@@ -695,6 +747,7 @@
                             <div class="contacts__wrapper" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
                                 <h3 class="contacts__main-title">У Вас остались вопросы?</h3>
                                 <div class="contacts__subtitle">задайте их мне!</div>
+                                <a href="#0" class="popup-link button consultation__mobile-button">задать вопрос</a>
                                 <form class="consultation__form contacts__form">
                                     <div class="consultation__container" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
                                         <div class="consultation__form-group">
@@ -1229,8 +1282,11 @@
             </div>
         </div>
     </aside>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/burger.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/test.js"></script>
+    <script src="js/spoiler.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/popups.js"></script>
     <script src="js/script.js"></script>

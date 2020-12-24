@@ -33,12 +33,15 @@ new Swiper('.feedback-slider', {
     breakpoints: {
         520: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         790: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
         },
-        1400: {
+        1550: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
         }
     },
     // Корректная работа перетаскивания/свайпа для дочернего слайдера
@@ -83,13 +86,17 @@ new Swiper('.portfolio-slider', {
     breakpoints: {
         520: {
             slidesPerView: 1,
+            slidesPerGroup: 1,
         },
         790: {
             slidesPerView: 2,
+            slidesPerGroup: 2,
         },
-        1400: {
+        1544: {
             slidesPerView: 3,
+            slidesPerGroup: 3,
         }
+
     },
 
     // Корректная работа перетаскивания/свайпа для дочернего слайдера
