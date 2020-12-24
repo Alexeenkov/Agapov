@@ -147,17 +147,17 @@ let pageSlider = new Swiper('.page', {
         // Событие инициализации
         init: function() {
             menuSlider();
-            setScrollType();
+            // setScrollType();
             wrapper.classList.add('_loaded');
         },
         // Событие смены слайда
         slideChange: function() {
-            menuSliderRemove();
-            menuLinks[pageSlider.realIndex].classList.add('_active');
-        },
-        resize: function() {
-            setScrollType();
-        }
+                menuSliderRemove();
+                menuLinks[pageSlider.realIndex].classList.add('_active');
+            } //,
+            // resize: function() {
+            //     setScrollType();
+            // }
     },
     // Отключить предзагрузку картинок
     preloadImages: false,
@@ -173,8 +173,6 @@ let pageSlider = new Swiper('.page', {
         // Отслеживать состояние
         watchState: true,
     },
-    // Свободный режим
-    freeMode: false,
 });
 
 let menuLinks = document.querySelectorAll('.menu__link');
@@ -201,24 +199,24 @@ function menuSliderRemove() {
     }
 }
 
-function setScrollType() {
-    if (wrapper.classList.contains('_free')) {
-        wrapper.classList.remove('_free');
-        pageSlider.params.freeMode = false;
-    }
-    for (let index = 0; index < pageSlider.slides.length; index++) {
-        const pageSlide = pageSlider.slides[index];
-        const pageSlideContent = pageSlide.querySelector('.screen__content');
-        if (pageSlideContent) {
-            const pageSlideContentHeight = pageSlideContent.offsetHeight;
-            if (pageSlideContentHeight > window.innerHeight) {
-                wrapper.classList.add('_free');
-                pageSlider.params.freeMode = true;
-                break;
-            }
-        }
-    }
-}
+// function setScrollType() {
+//     if (wrapper.classList.contains('_free')) {
+//         wrapper.classList.remove('_free');
+//         pageSlider.params.freeMode = false;
+//     }
+//     for (let index = 0; index < pageSlider.slides.length; index++) {
+//         const pageSlide = pageSlider.slides[index];
+//         const pageSlideContent = pageSlide.querySelector('.screen__content');
+//         if (pageSlideContent) {
+//             const pageSlideContentHeight = pageSlideContent.offsetHeight;
+//             if (pageSlideContentHeight > window.innerHeight) {
+//                 wrapper.classList.add('_free');
+//                 pageSlider.params.freeMode = true;
+//                 break;
+//             }
+//         }
+//     }
+// }
 
 pageSlider.init();
 
