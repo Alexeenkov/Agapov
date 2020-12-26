@@ -177,6 +177,7 @@ let pageSlider = new Swiper('.page', {
         watchState: true,
     },
     longSwipesRatio: 0.1,
+    followFinger: false,
 });
 
 let menuLinks = document.querySelectorAll('.menu__link');
