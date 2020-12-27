@@ -228,3 +228,81 @@ cost_buttonBack_7.onclick = function() {
         element.textContent = element.textContent.replace('', '6/6');
     });
 };
+
+// ! ============================= buy-test ========================================
+
+let buy_buttonUp_1 = document.querySelector('.buy-test__button-up_1');
+let buy_buttonBack_2 = document.querySelector('.buy-test__button-back_2');
+let buy_buttonUp_2 = document.querySelector('.buy-test__button-up_2');
+let buy_buttonBack_3 = document.querySelector('.buy-test__button-back_3');
+let buy_buttonUp_3 = document.querySelector('.buy-test__button-up_3');
+let buy_buttonBack_4 = document.querySelector('.buy-test__button-back_4');
+let buy_container_1 = document.querySelector('.buy-test__container-1');
+let buy_container_2 = document.querySelector('.buy-test__container-2');
+let buy_container_3 = document.querySelector('.buy-test__container-3');
+let buy_container_4 = document.querySelector('.buy-test__container-4');
+let buy_progressValue = document.querySelector('.buy-test__progress-value');
+
+buy_buttonUp_1.onclick = function() {
+    buy_container_1.classList.add('hide');
+    buy_container_2.classList.remove('hide');
+    buy_progressValue.classList.add('tax-test__progress-value_2');
+    const elements = document.querySelectorAll('span.buy-test__page');
+    elements.forEach((element) => {
+        element.textContent = element.textContent.replace('1/3', '2/3');
+    });
+};
+
+buy_buttonUp_2.onclick = function() {
+    buy_container_2.classList.add('hide');
+    buy_container_3.classList.remove('hide');
+    buy_progressValue.classList.add('tax-test__progress-value_3');
+    buy_progressValue.classList.remove('tax-test__progress-value_2');
+    const elements = document.querySelectorAll('span.buy-test__page');
+    elements.forEach((element) => {
+        element.textContent = element.textContent.replace('2/3', '3/3');
+    });
+};
+
+buy_buttonBack_2.onclick = function() {
+    buy_container_1.classList.remove('hide');
+    buy_container_2.classList.add('hide');
+    buy_progressValue.classList.remove('tax-test__progress-value_2');
+    const elements = document.querySelectorAll('span.buy-test__page');
+    elements.forEach((element) => {
+        element.textContent = element.textContent.replace('2/3', '1/3');
+    });
+};
+
+buy_buttonUp_3.onclick = function() {
+    buy_container_3.classList.add('hide');
+    buy_container_4.classList.remove('hide');
+    buy_progressValue.classList.add('tax-test__progress-value_end');
+    buy_progressValue.classList.remove('tax-test__progress-value_3');
+    const elements = document.querySelectorAll('span.buy-test__page');
+    elements.forEach((element) => {
+        element.textContent = element.textContent.replace('3/3', '');
+    });
+};
+
+buy_buttonBack_3.onclick = function() {
+    buy_container_2.classList.remove('hide');
+    buy_container_3.classList.add('hide');
+    buy_progressValue.classList.remove('tax-test__progress-value_3');
+    buy_progressValue.classList.add('tax-test__progress-value_2');
+    const elements = document.querySelectorAll('span.buy-test__page');
+    elements.forEach((element) => {
+        element.textContent = element.textContent.replace('3/3', '2/3');
+    });
+};
+
+buy_buttonBack_4.onclick = function() {
+    buy_container_3.classList.remove('hide');
+    buy_container_4.classList.add('hide');
+    buy_progressValue.classList.remove('tax-test__progress-value_end');
+    buy_progressValue.classList.add('tax-test__progress-value_3');
+    const elements = document.querySelectorAll('span.buy-test__page');
+    elements.forEach((element) => {
+        element.textContent = element.textContent.replace('', '3/3');
+    });
+};

@@ -90,13 +90,13 @@
 }
 
 :root {
-    --swiper-navigation-size: 30px
+    --swiper-navigation-size: 50px
 }
 
 .swiper-button-next,
 .swiper-button-prev {
     position: absolute;
-    top: 43%;
+    top: 50%;
     width: calc(var(--swiper-navigation-size)/ 44 * 27);
     height: var(--swiper-navigation-size);
     margin-top: calc(-1 * var(--swiper-navigation-size)/ 2);
@@ -159,4 +159,14 @@
 
 .swiper-scrollbar-lock {
     display: none
+}
+
+@media (max-width: 600px) {
+     :root {
+        --swiper-navigation-size: 30px
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 43%;
+    }
 }

@@ -1,6 +1,3 @@
-//определяем единицу vh для мобильных браузеров
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
 // ВОПРОСЫ КУПИТЬ ИЛИ ПРОДАТЬ КВАРТИРУ
 let buy = document.querySelector('.buy');
 let sale = document.querySelector('.sale');
