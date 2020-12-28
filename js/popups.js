@@ -1,6 +1,6 @@
 const popupLinks = document.querySelectorAll('.popup-link');
 const body1 = document.querySelector('body');
-const lockPadding = document.querySelectorAll(".lock-padding");
+const lockPadding = document.querySelectorAll('.lock-padding');
 
 let unlock = true;
 

@@ -3342,7 +3342,7 @@ body.touch .arrow {
     height: 100%;
     z-index: 10;
     transition: all 0.5s ease 0s;
-    background-image: url("../img/main/burger_bg.jpg");
+    background-image: url("../img/main/burger_bg-tablet.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -4061,14 +4061,22 @@ body.touch .arrow {
 
   .header-mobile__burger {
     position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 70px;
+    height: 60px;
+    z-index: 15;
+    cursor: pointer;
+  }
+  .header-mobile__icon {
+    position: absolute;
     top: 20px;
     right: 20px;
     width: 30px;
     height: 20px;
-    z-index: 15;
-    cursor: pointer;
+    z-index: 10;
   }
-  .header-mobile__burger span {
+  .header-mobile__icon span {
     position: absolute;
     background-color: #E94110;
     left: 0;
@@ -4077,7 +4085,7 @@ body.touch .arrow {
     top: 9px;
     transition: all 0.5s ease 0s;
   }
-  .header-mobile__burger::after, .header-mobile__burger::before {
+  .header-mobile__icon::after, .header-mobile__icon::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -4086,20 +4094,20 @@ body.touch .arrow {
     background-color: #E94110;
     transition: all 0.5s ease 0s;
   }
-  .header-mobile__burger::after {
+  .header-mobile__icon::after {
     bottom: 0;
   }
-  .header-mobile__burger::before {
+  .header-mobile__icon::before {
     top: 0;
   }
-  .header-mobile__burger.active span {
+  .header-mobile__icon.active span {
     transform: scale(0);
   }
-  .header-mobile__burger.active::before {
+  .header-mobile__icon.active::before {
     transform: rotate(45deg);
     top: 9px;
   }
-  .header-mobile__burger.active::after {
+  .header-mobile__icon.active::after {
     transform: rotate(-45deg);
     bottom: 9px;
   }
@@ -4111,7 +4119,7 @@ body.touch .arrow {
     height: 100%;
     z-index: 10;
     transition: all 0.5s ease 0s;
-    background-image: url("../img/main/burger_bg.jpg");
+    background-image: url("../img/main/burger_bg-mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;

@@ -3561,7 +3561,7 @@ body.touch .arrow {
             height: 100%;
             z-index: 10;
             transition: all 0.5s ease 0s;
-            background-image: url("../img/main/burger_bg.jpg");
+            background-image: url("../img/main/burger_bg-tablet.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top;
@@ -4309,12 +4309,20 @@ body.touch .arrow {
     .header-mobile {
         &__burger {
             position: fixed;
+            top: 0px;
+            right: 0px;
+            width: 70px;
+            height: 60px;
+            z-index: 15;
+            cursor: pointer;
+        }
+        &__icon {
+            position: absolute;
             top: 20px;
             right: 20px;
             width: 30px;
             height: 20px;
-            z-index: 15;
-            cursor: pointer;
+            z-index: 10;
             span {
                 position: absolute;
                 background-color: #E94110;
@@ -4360,7 +4368,7 @@ body.touch .arrow {
             height: 100%;
             z-index: 10;
             transition: all 0.5s ease 0s;
-            background-image: url("../img/main/burger_bg.jpg");
+            background-image: url("../img/main/burger_bg-mobile.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: top;
