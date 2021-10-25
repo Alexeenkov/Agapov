@@ -2,1343 +2,1341 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Значки favicon для сайта -->
-    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Предзагрузка шрифтов -->
-    <link rel="preload" href="fonts/Avenir-Next.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/CCRickVeitch.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/City-Nova-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/TrajanPro-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="fonts/Ustroke-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <!-- Подключение файлов CSS -->
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Агапов Иван. Недвижимость - просто!</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Значки favicon для сайта -->
+  <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <!-- Предзагрузка шрифтов -->
+  <link rel="preload" href="fonts/Avenir-Next.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/CCRickVeitch.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/City-Nova-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/TrajanPro-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Ustroke-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- Подключение файлов CSS -->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Агапов Иван. Недвижимость - просто!</title>
 </head>
 
 <body class="body">
-    <div class="wrapper">
-        <header class="lock-padding">
-            <div class="header">
-                <nav class="header__menu menu">
-                    <a href="" class="menu__link">главная</a>
-                    <a href="" class="menu__link">обо мне</a>
-                    <a href="" class="menu__link">купить/продать</a>
-                    <a href="" class="menu__link">портфолио</a>
-                    <a href="" class="menu__link">консультация</a>
-                    <a href="" class="menu__link">отзывы</a>
-                    <a href="" class="menu__link">партнёры</a>
-                    <a href="" class="menu__link">контакты</a>
-                </nav>
-                <div class="header__connect connect">
-                    <span>Есть вопрос? Свяжитесь со мной!</span>
-                    <a href="tel:+79522491494" class="connect__link">
-                        <img src="svg/phone.svg" alt="Трубка телефонная" class="connect__image connect__image_position">
-                        <span>+7 (952) 249-14-94</span>
-                    </a>
-                </div>
-            </div>
-            <div class="header-mobile">
-                <div class="header-mobile__burger">
-                    <div class="header-mobile__icon">
-                        <span></span>
-                    </div>
-                </div>
-                <nav class="header-mobile__menu">
-                    <ul class="header-mobile__list">
-                        <li class="header-mobile__item">
-                            <a href="/#slide-1" class="header-mobile__link">главная</a>
-                        </li>
-                        <li class="header-mobile__item">
-                            <a href="/#slide-2" class="header-mobile__link">обо мне</a>
-                        </li>
-                        <li class="header-mobile__item">
-                            <a href="/#slide-3" class="header-mobile__link go-to-slide-buy">купить квартиру</a>
-                        </li>
-                        <li class="header-mobile__item">
-                            <a href="/#slide-3" class="header-mobile__link go-to-slide-sale">продать квартиру</a>
-                        </li>
-                        <li class="header-mobile__item">
-                            <a href="/#slide-4" class="header-mobile__link">моё портфолио</a>
-                        </li>
-                        <li class="header-mobile__item">
-                            <a href="/#slide-5" class="header-mobile__link">бесплатная консультация</a>
-                        </li>
-                        <li class="header-mobile__item">
-                            <a href="/#slide-6" class="header-mobile__link">отзывы обо мне</a>
-                        </li>
-                        <li class="header-mobile__item">
-                            <a href="/#slide-7" class="header-mobile__link">партнёры</a>
-                        </li>
-                        <li class="header-mobile__item">
-                            <a href="/#slide-8" class="header-mobile__link">мои контакты</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <div class="main__logo logo">
-            <a href="/index.html" class="logo__link">
-                <div>
-                    <h1 class="logo__name">Агапов Иван</h1>
-                    <div class="logo__subtitle">Недвижимость – просто!</div>
-                </div>
-                <img src="img/main/macromir-logo.png" alt="Логотип компании макромир" class="logo__image">
-            </a>
+  <div class="wrapper">
+    <header class="lock-padding">
+      <div class="header">
+        <nav class="header__menu menu">
+          <a href="" class="menu__link">главная</a>
+          <a href="" class="menu__link">обо мне</a>
+          <a href="" class="menu__link">купить/продать</a>
+          <a href="" class="menu__link">портфолио</a>
+          <a href="" class="menu__link">консультация</a>
+          <a href="" class="menu__link">отзывы</a>
+          <a href="" class="menu__link">партнёры</a>
+          <a href="" class="menu__link">контакты</a>
+        </nav>
+        <div class="header__connect connect">
+          <span>Есть вопрос? Свяжитесь со мной!</span>
+          <a href="tel:+79522491494" class="connect__link">
+            <img src="svg/phone.svg" alt="Трубка телефонная" class="connect__image connect__image_position">
+            <span>+7 (952) 249-14-94</span>
+          </a>
         </div>
-        <main class="page">
-            <div class="page__wrapper">
-                <div data-hash="slide-1" class="page__screen screen">
-                    <div class="screen__content">
-                        <div class="main screen__general">
-                            <div class="main__wrapper">
-                                <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                                    <div class="main__logo logo logo-dekstop">
-                                        <a href="/index.html" class="logo__link">
-                                            <div>
-                                                <h1 class="logo__name">Агапов Иван</h1>
-                                                <div class="logo__subtitle">Недвижимость – просто!</div>
-                                            </div>
-                                            <img src="img/main/macromir-logo.png" alt="Логотип компании макромир" class="logo__image">
-                                        </a>
-                                    </div>
-                                    <nav class="main-menu">
-                                        <ul class="main-menu__list">
-                                            <li><a href="/#slide-2" class="main-menu__link">обо мне</a></li>
-                                            <li>
-                                                <a href="#0" class="main-menu__link sub-menu sub-menu_active">услуги</a>
-                                                <span class="sub-menu__arrow arrow"></span>
-                                                <ul class="sub-menu__list">
-                                                    <li>
-                                                        <a href="/#slide-3" class="sub-menu__link go-to-slide-buy-desktop">купить квартиру</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/#slide-3" class="sub-menu__link go-to-slide-sale-desktop">продать квартиру</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="/#slide-5" class="sub-menu__link">бесплатная консультация</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#popup-ad" class="sub-menu__link popup-link">подать объявление о продаже квартиры на 60 сайтов</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#slide-7" class="main-menu__link">партнёры</a></li>
-                                            <li><a href="#slide-8" class="main-menu__link">контакты</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                                <div class="description" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900">
-                                    <h2 class="description__title">Продаю и подбираю недвижимость <br>в Санкт-Петербурге</h2>
-                                    <div class="description__subtitle">для счастливой жизни!</div>
-                                </div>
-                            </div>
-                            <div class="main__calculation calculation" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800">
-                                <div class="ad-cost">
-                                    <h4 class="ad-cost__title">Ответьте на 6 вопросов и узнайте, сколько стоит Ваша квартира</h4>
-                                    <div class="ad-cost__subtitle">Воспользуйтесь бесплатным сервисом за 1 минуту</div>
-                                    <a href="#popup-cost" class="button-cost popup-link button">узнать стоимость</a>
-                                </div>
-                                <div class="calculation__title-tax">
-                                    Всё, что касается вопросов налогообложения - очень важно, но зачастую запутанно и непонятно
-                                </div>
-                                <a href="#popup-tax" class="button-tax popup-link button">бесплатно рассчитать сумму налога при продаже квартиры</a>
-                                <div class="calculation__sign">Пройдите краткий опрос и получите ответ</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screen__body">
-                        <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <picture>
-                                <source media="(max-width: 599px)" data-srcset="img/main/main_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/main/main_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 900px)" data-srcset="img/main/main_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <img data-src="img/main/main_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
-                            </picture>
-                        </div>
-                    </div>
+      </div>
+      <div class="header-mobile">
+        <div class="header-mobile__burger">
+          <div class="header-mobile__icon">
+            <span></span>
+          </div>
+        </div>
+        <nav class="header-mobile__menu">
+          <ul class="header-mobile__list">
+            <li class="header-mobile__item">
+              <a href="#slide-1" class="header-mobile__link">главная</a>
+            </li>
+            <li class="header-mobile__item">
+              <a href="#slide-2" class="header-mobile__link">обо мне</a>
+            </li>
+            <li class="header-mobile__item">
+              <a href="#slide-3" class="header-mobile__link go-to-slide-buy">купить квартиру</a>
+            </li>
+            <li class="header-mobile__item">
+              <a href="#slide-3" class="header-mobile__link go-to-slide-sale">продать квартиру</a>
+            </li>
+            <li class="header-mobile__item">
+              <a href="#slide-4" class="header-mobile__link">моё портфолио</a>
+            </li>
+            <li class="header-mobile__item">
+              <a href="#slide-5" class="header-mobile__link">бесплатная консультация</a>
+            </li>
+            <li class="header-mobile__item">
+              <a href="#slide-6" class="header-mobile__link">отзывы обо мне</a>
+            </li>
+            <li class="header-mobile__item">
+              <a href="#slide-7" class="header-mobile__link">партнёры</a>
+            </li>
+            <li class="header-mobile__item">
+              <a href="#slide-8" class="header-mobile__link">мои контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="main__logo logo">
+      <a href="index.html" class="logo__link">
+        <div>
+          <h1 class="logo__name">Агапов Иван</h1>
+          <div class="logo__subtitle">Недвижимость – просто!</div>
+        </div>
+        <img src="img/main/macromir-logo.png" alt="Логотип компании макромир" class="logo__image">
+      </a>
+    </div>
+    <main class="page">
+      <div class="page__wrapper">
+        <div data-hash="slide-1" class="page__screen screen">
+          <div class="screen__content">
+            <div class="main screen__general">
+              <div class="main__wrapper">
+                <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+                  <div class="main__logo logo logo-dekstop">
+                    <a href="index.html" class="logo__link">
+                      <div>
+                        <h1 class="logo__name">Агапов Иван</h1>
+                        <div class="logo__subtitle">Недвижимость – просто!</div>
+                      </div>
+                      <img src="img/main/macromir-logo.png" alt="Логотип компании макромир" class="logo__image">
+                    </a>
+                  </div>
+                  <nav class="main-menu">
+                    <ul class="main-menu__list">
+                      <li><a href="#slide-2" class="main-menu__link">обо мне</a></li>
+                      <li>
+                        <a href="#0" class="main-menu__link sub-menu sub-menu_active">услуги</a>
+                        <span class="sub-menu__arrow arrow"></span>
+                        <ul class="sub-menu__list">
+                          <li>
+                            <a href="#slide-3" class="sub-menu__link go-to-slide-buy-desktop">купить квартиру</a>
+                          </li>
+                          <li>
+                            <a href="#slide-3" class="sub-menu__link go-to-slide-sale-desktop">продать квартиру</a>
+                          </li>
+                          <li>
+                            <a href="#slide-5" class="sub-menu__link">бесплатная консультация</a>
+                          </li>
+                          <li>
+                            <a href="#popup-ad" class="sub-menu__link popup-link">подать объявление о продаже квартиры на 60 сайтов</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#slide-7" class="main-menu__link">партнёры</a></li>
+                      <li><a href="#slide-8" class="main-menu__link">контакты</a></li>
+                    </ul>
+                  </nav>
                 </div>
-
-                <div data-hash="slide-2" class="page__screen screen">
-                    <div class="screen__content">
-                        <div class="about screen__general">
-                            <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000" class="about__wrapper">
-                                <div class="about__block">
-                                    <h4 class="about__title about__title_left">Мой выбор</h4>
-                                    <p>Открытость и индивидуальный подход - мои клиенты становятся моими <span>друзьями</span></p>
-                                </div>
-                                <div class="about__block">
-                                    <h4 class="about__title about__title_right">Моя задача</h4>
-                                    <p>Выявить истинную потребность <span>каждого</span> клиента и доставить Вас из точки А в точку Б в решении Вашего квартирного вопроса</p>
-                                </div>
-                            </div>
-                            <h3 data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900" class="about__main-title">Преимущества работы со мной</h3>
-                            <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800" class="about__offers offers one">
-                                <div class="offers__block">
-                                    <h4 class="offers__title offers__title_width">Продам квартиру по максимальной цене</h4>
-                                    <p class="offers__text">Только качественная презентация Вашей квартиры более чем на 120 сайтах и соц. сетях! О ней узнает максимальное число покупателей!</p>
-                                </div>
-                                <div class="offers__block">
-                                    <h4 class="offers__title">Безопасные сделки</h4>
-                                    <p class="offers__text">Подбираю максимально комфортный и безопасный способ взаиморасчётов, помогаю с выбором банка и согласую прочие условия сделки. У клиента только достоверная информация!</p>
-                                </div>
-                                <div class="offers__block">
-                                    <h4 class="offers__title">Никакой предоплаты</h4>
-                                    <p class="offers__text">Оплату за свои услуги я получаю только тогда, когда вся работа выполнена, а Вы довольны результатом!</p>
-                                </div>
-                                <div class="offers__block">
-                                    <h4 class="offers__title">Максимальная экономия</h4>
-                                    <p class="offers__text">При покупке квартиры в новостройке подберу для Вас лучший вариант по цене застройщика, а комиссия составит 0%</p>
-                                </div>
-                                <div class="offers__block">
-                                    <h4 class="offers__title">Сохраню ваше время и нервы</h4>
-                                    <p class="offers__text">Вы получаете юридически чистый объект на все 100%, так как ни один подводный камень не спрячется от моих проверок!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screen__body">
-                        <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <picture>
-                                <source media="(max-width: 599px)" data-srcset="img/about/about_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/about/about_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 900px)" data-srcset="img/about/about_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <img data-src="img/about/about_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
-                            </picture>
-                        </div>
-                    </div>
+                <div class="description" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900">
+                  <h2 class="description__title">Продаю и подбираю недвижимость <br>в Санкт-Петербурге</h2>
+                  <div class="description__subtitle">для счастливой жизни!</div>
                 </div>
-
-                <div data-hash="slide-3" class="page__screen screen">
-                    <div class="screen__content">
-                        <div class="buy-or-sale screen__general">
-                            <div class="buy-or-sale__wrapper">
-                                <div class="buy-or-sale__questions questions">
-                                    <div class="questions__buy"> Купить квартиру</div>
-                                    <div class="questions__sale">Продать квартиру</div>
-                                </div>
-                                <div class="buy-or-sale__buy buy">
-                                    <h3 class="buy__main-title">Все пожелания будут учтены и в результате Вы станете счастливым обладателем своей мечты!</h3>
-                                    <div class="buy__container">
-                                        <div class="buy__block buy__new">
-                                            <h4 class="buy__title">Новостройка</h4>
-                                            <ul class="buy__description">
-                                                <li>Бесплатный каталог новостроек</li>
-                                                <li>Цены застройщиков</li>
-                                                <li>Приёмка квартиры в подарок</li>
-                                            </ul>
-                                        </div>
-                                        <div class="buy__block buy__old">
-                                            <h4 class="buy__title">Вторичка</h4>
-                                            <ul class="buy__description">
-                                                <li>100% юридическая чистота Вашей будущей квартиры</li>
-                                                <li>Юридическое заключение с печатью</li>
-                                                <li>Безопасная сделка</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="buy__sign">Одобрение ипотеки для <span>Вac!</span></div>
-                                    <a href="#popup-buy" class="buy__button popup-link button">подобрать квартиру</a>
-                                </div>
-                                <div class="buy-or-sale__sale sale screen__general">
-                                    <h3 class="sale__main-title">
-                                        Продавцу квартиры важно, чтобы сделка прошла быстро, а её денежный результат соответствовал ожиданиям
-                                    </h3>
-                                    <div class="sale__container">
-                                        <div class="sale__block">
-                                            <h4 class="sale__title">Продам Вашу квартиру за 30 дней</h4>
-                                            <ul class="sale__description">
-                                                <li>По максимальной цене</li>
-                                                <li>Знаю все секреты продаж недвижимости</li>
-                                                <li>Никакой предоплаты, оплата только за результат</li>
-                                                <li>Рассмотрю всех покупателей с любой формой оплаты и выберу лучшего</li>
-                                            </ul>
-                                        </div>
-                                        <a href="#popup-cost" class="sale__button popup-link button">узнать стоимость</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screen__body">
-                        <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <picture>
-                                <source media="(max-width: 599px)" data-srcset="img/buy-or-sale/buy-or-sale_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/buy-or-sale/buy-or-sale_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 900px)" data-srcset="img/buy-or-sale/buy-or-sale_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <img data-src="img/buy-or-sale/buy-or-sale_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
-                            </picture>
-                        </div>
-                    </div>
+              </div>
+              <div class="main__calculation calculation" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800">
+                <div class="ad-cost">
+                  <h4 class="ad-cost__title">Ответьте на 6 вопросов и узнайте, сколько стоит Ваша квартира</h4>
+                  <div class="ad-cost__subtitle">Воспользуйтесь бесплатным сервисом за 1 минуту</div>
+                  <a href="#popup-cost" class="button-cost popup-link button">узнать стоимость</a>
                 </div>
-
-                <div data-hash="slide-4" class="page__screen screen">
-                    <div class="screen__content">
-                        <div class="portfolio screen__general">
-                            <div class="portfolio__wrapper">
-                                <h3 data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000" class="portfolio__main-title">Моё портфолио</h3>
-                                <div class="portfolio-slider swiper-container" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900">
-                                    <div class="swiper-wrapper">
-                                        <section class="portfolio__section swiper-slide">
-                                            <div>
-                                                <h4 class="portfolio__title">Продажа квартиры в ЖК "АСТРИД"</h4>
-                                                <div class="portfolio__content">
-                                                    <p>Собственник обратился ко мне по рекомендации. Для реализации квартиры мы согласовали традиционный способ продажи. Покупатель был найден через закрытую рассылку между партнерами МАКРОМИРА</p>
-                                                    <p>Продажа с первого показа</p>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div data-background="img/portfolio/1.jpg" class="portfolio__image swiper-lazy">
-                                                    <div class="swiper-lazy-preloader"></div>
-                                                    <span class="visually-hidden">Продажа квартиры с первого показа</span>
-                                                </div>
-                                                <div class="portfolio__description result">
-                                                    <div class="result__flex-container result__flex-container_position">
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/calendar.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">7 дней</p>
-                                                                <p class="result__subtitle">Срок поиска покупателя</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/alarm.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">4 млн</p>
-                                                                <p class="result__subtitle">Рыночная стоимость</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="result__flex-container result__new-cost">
-                                                        <img src="svg/sold.svg" alt="" class="result__image">
-                                                        <div>
-                                                            <p class="result__title">4,3 млн</p>
-                                                            <p class="result__subtitle">Цена продажи</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section class="portfolio__section swiper-slide">
-                                            <div>
-                                                <h4 class="portfolio__title">Продажа 2-х комнат в самом сердце Петроградского района</h4>
-                                                <div class="portfolio__content">
-                                                    <p>Собственник искал покупателя на протяжении нескольких лет, обращаясь в разные агентства Петербурга. После - обратился ко мне. Была произведена качественная предпродажная подготовка, грамотное определение
-                                                        рыночной стоимости. Были выявлены истинная мотивация и причина продажи. В итоге собственник решил свой вопрос и переехал с молодой женой в 1 комнатную квартиру в новостройке.</p>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div data-background="img/portfolio/2.jpg" class="portfolio__image swiper-lazy">
-                                                    <div class="swiper-lazy-preloader"></div>
-                                                    <span class="visually-hidden">Продажа квартиры с первого показа</span>
-                                                </div>
-                                                <div class="portfolio__description result">
-                                                    <div class="result__flex-container result__flex-container_position">
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/calendar.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">45 дней</p>
-                                                                <p class="result__subtitle">Срок поиска покупателя</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/alarm.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">2,3 млн</p>
-                                                                <p class="result__subtitle">Рыночная стоимость</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="result__flex-container result__new-cost">
-                                                        <img src="svg/sold.svg" alt="" class="result__image">
-                                                        <div>
-                                                            <p class="result__title">2,4 млн</p>
-                                                            <p class="result__subtitle">Цена продажи</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section class="portfolio__section swiper-slide">
-                                            <div>
-                                                <h4 class="portfolio__title">Сопровождение покупки земельного участка под постройку жилого дома для жизни</h4>
-                                                <div class="portfolio__content">
-                                                    <p>Клиент поставил задачу найти земельный участок для постройки на нём трёх этажного дома для будующего проживания с семьё. Нашли, сопроводили и купили объект на 20% дешевле рыночной стоимости на торгах
-                                                        по реализации имущества должников.</p>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div data-background="img/portfolio/3.jpg" class="portfolio__image swiper-lazy">
-                                                    <div class="swiper-lazy-preloader"></div>
-                                                    <span class="visually-hidden">Продажа квартиры с первого показа</span>
-                                                </div>
-                                                <div class="portfolio__description result">
-                                                    <div class="result__flex-container result__flex-container_position">
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/calendar.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">28 дней</p>
-                                                                <p class="result__subtitle">Срок поиска объекта</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/alarm.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">3 млн</p>
-                                                                <p class="result__subtitle">Рыночная стоимость</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="result__flex-container result__new-cost">
-                                                        <img src="svg/sold.svg" alt="" class="result__image">
-                                                        <div>
-                                                            <p class="result__title">2,4 млн</p>
-                                                            <p class="result__subtitle">Цена покупки</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section class="portfolio__section swiper-slide">
-                                            <div>
-                                                <h4 class="portfolio__title">Поиск арендатора на 1 комнатную квартиру в Приморском районе</h4>
-                                                <div class="portfolio__content">
-                                                    <p>Собственник в течение трёх лет сдавал квартиру по ставке 16 000 руб. После съезда арендаторов обратился за поиском новых к знакомому риелтору, но за 2 недели не увидел результата. После - обратился ко
-                                                        мне.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div data-background="img/portfolio/4.jpg" class="portfolio__image swiper-lazy">
-                                                    <div class="swiper-lazy-preloader"></div>
-                                                    <span class="visually-hidden">Продажа квартиры с первого показа</span>
-                                                </div>
-                                                <div class="portfolio__description result">
-                                                    <div class="result__flex-container result__flex-container_position">
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/calendar.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">1 день</p>
-                                                                <p class="result__subtitle">Срок поиска арендатора</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/alarm.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">16 тыс</p>
-                                                                <p class="result__subtitle">Предыдущая ставка аренды</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="result__flex-container result__new-cost">
-                                                        <img src="svg/sold.svg" alt="" class="result__image">
-                                                        <div>
-                                                            <p class="result__title">20 тыс</p>
-                                                            <p class="result__subtitle">Новая ставка аренды</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section class="portfolio__section swiper-slide">
-                                            <div>
-                                                <h4 class="portfolio__title">Продажа 3 комнатной квартиры в ЖК «Skandi Klubb»</h4>
-                                                <div class="portfolio__content">
-                                                    <p>Собственники объекта были вынуждены продать свою квартиру в максимально кратчайшие сроки и готовы были за бесценок продать объект, лишь бы быстрее получить деньги. Я провёл работу, переговоры с клиентами,
-                                                        успокоил их и сэкономил колоссальную сумму денег для них. </p>
-                                                    <p>Был согласован аукционный метод продажи.</p>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div data-background="img/portfolio/5.jpg" class="portfolio__image swiper-lazy">
-                                                    <div class="swiper-lazy-preloader"></div>
-                                                    <span class="visually-hidden">Продажа квартиры с первого показа</span>
-                                                </div>
-                                                <div class="portfolio__description result">
-                                                    <div class="result__flex-container result__flex-container_position">
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/calendar.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">21 день</p>
-                                                                <p class="result__subtitle">Срок поиска покупателя</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/alarm.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">18 млн</p>
-                                                                <p class="result__subtitle">Стартовая цена</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="result__flex-container result__new-cost">
-                                                        <img src="svg/sold.svg" alt="" class="result__image">
-                                                        <div>
-                                                            <p class="result__title">24 млн</p>
-                                                            <p class="result__subtitle">Цена продажи</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section class="portfolio__section swiper-slide">
-                                            <div>
-                                                <h4 class="portfolio__title">Продажа 3 комнатной квартиры на вторичном рынке на улице Сикейроса 7к1</h4>
-                                                <div class="portfolio__content">
-                                                    <p>Жители Москвы обратились ко мне по вопросу продажи квартиры в Санкт-Петербурге. Необходимо было всё сделать удалённо, так как собственник не мог приехать в Санкт-Петербург. Был согласован классический
-                                                        метод продажи квартиры. Собственник сэкономил время и деньги на поездки в Санкт-Петербург!</p>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div data-background="img/portfolio/6.jpg" class="portfolio__image swiper-lazy">
-                                                    <div class="swiper-lazy-preloader"></div>
-                                                    <span class="visually-hidden">Удалённая сделака по продаже квартиры в Санкт-Петербурге</span>
-                                                </div>
-                                                <div class="portfolio__description result">
-                                                    <div class="result__flex-container result__flex-container_position">
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/calendar.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">5 дней</p>
-                                                                <p class="result__subtitle">Срок поиска покупателя</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/alarm.svg" alt="" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">6,5 млн</p>
-                                                                <p class="result__subtitle">Стартовая цена</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="result__flex-container result__new-cost">
-                                                        <img src="svg/sold.svg" alt="" class="result__image">
-                                                        <div>
-                                                            <p class="result__title">6,3 млн</p>
-                                                            <p class="result__subtitle">Цена продажи</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                        <section class="portfolio__section swiper-slide">
-                                            <div>
-                                                <h4 class="portfolio__title">Продажа студии в ЖК «GreenЛандия 2» и одновременная покупка 2 комнатной квартиры</h4>
-                                                <div class="portfolio__content">
-                                                    <p>Клиентка обратилась к мне с целью продать студию и купить квартиру для жизни в другом районе. Провели две сделки по покупке и одновременной продаже в один день.</p>
-                                                    <p>Одобрили ипотеку на самых выгодных условиях! Срок альтернативной сделки - 40 дней</p>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <div data-background="img/portfolio/7.jpg" class="portfolio__image swiper-lazy">
-                                                    <div class="swiper-lazy-preloader"></div>
-                                                    <span class="visually-hidden">Альтернативная сделака по продаже и одновременной покупке квартиры в Санкт-Петербурге</span>
-                                                </div>
-                                                <div class="portfolio__description result">
-                                                    <div class="result__flex-container result__flex-container_position">
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/alarm.svg" alt="Будильник" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">3,2 млн</p>
-                                                                <p class="result__subtitle">Стартовая цена продажи</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="result__flex-container ">
-                                                            <img src="svg/alarm.svg" alt="Будильник" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">5,2 млн</p>
-                                                                <p class="result__subtitle">Стартовая цена покупки</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="result__flex-container result__new-cost result__flex-container_position">
-                                                        <div class="result__flex-container">
-                                                            <img src="svg/sold.svg" alt="Молоток аукционера" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">3,2 млн</p>
-                                                                <p class="result__subtitle">Цена продажи</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="result__flex-container result__prev-cost">
-                                                            <img src="svg/sold.svg" alt="Молоток аукционера" class="result__image">
-                                                            <div>
-                                                                <p class="result__title">5 млн</p>
-                                                                <p class="result__subtitle">Цена покупки</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-prev portfolio__button-prev" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900">
-                                    <span class="visually-hidden">Стрелочка. Пролистывание слайдера влево</span>
-                                </div>
-                                <div class="swiper-button-next portfolio__button-next" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900">
-                                    <span class="visually-hidden">Стрелочка. Пролистывание слайдера вправо</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screen__body">
-                        <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <picture>
-                                <source media="(max-width: 599px)" data-srcset="img/portfolio/portfolio_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/portfolio/portfolio_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 900px)" data-srcset="img/portfolio/portfolio_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <img data-src="img/portfolio/portfolio_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
-                            </picture>
-                        </div>
-                    </div>
+                <div class="calculation__title-tax">
+                  Всё, что касается вопросов налогообложения - очень важно, но зачастую запутанно и непонятно
                 </div>
+                <a href="#popup-tax" class="button-tax popup-link button">бесплатно рассчитать сумму налога при продаже квартиры</a>
+                <div class="calculation__sign">Пройдите краткий опрос и получите ответ</div>
+              </div>
+            </div>
+          </div>
+          <div class="screen__body">
+            <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+              <picture>
+                <source media="(max-width: 599px)" data-srcset="img/main/main_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/main/main_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 900px)" data-srcset="img/main/main_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <img data-src="img/main/main_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
 
-                <div data-hash="slide-5" class="page__screen screen">
-                    <div class="screen__content">
-                        <div class="consultation screen__general">
-                            <div class="consultation__wrapper">
-                                <h3 class="consultation__title" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="500">Первичная бесплатная консультация</h3>
-                                <div class="consultation__description" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="500">
-                                    Кратко опишите свой вопрос и получите ответ в ближайшее время
-                                </div>
-                                <div class="consultation__box">
-                                    <ul class="consultation__list" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="700">
-                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Проверка объектов на всевозможные риски</li>
-                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Составление договоров любой сложности</li>
-                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Помощь в получении ипотеки</li>
-                                    </ul>
-                                    <ul class="consultation__list">
-                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Сопровождение сделки</li>
-                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Страхование</li>
-                                        <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Аренда </li>
-                                    </ul>
-                                </div>
-                                <form action="php/sendmail-1.php" method="POST" class="consultation__form consultation__form_size" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                                    <div class="consultation__container">
-                                        <div class="consultation__form-group">
-                                            <label class="consultation__label">
+        <div data-hash="slide-2" class="page__screen screen">
+          <div class="screen__content">
+            <div class="about screen__general">
+              <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000" class="about__wrapper">
+                <div class="about__block">
+                  <h4 class="about__title about__title_left">Мой выбор</h4>
+                  <p>Открытость и индивидуальный подход - мои клиенты становятся моими <span>друзьями</span></p>
+                </div>
+                <div class="about__block">
+                  <h4 class="about__title about__title_right">Моя задача</h4>
+                  <p>Выявить истинную потребность <span>каждого</span> клиента и доставить Вас из точки А в точку Б в решении Вашего квартирного вопроса</p>
+                </div>
+              </div>
+              <h3 data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900" class="about__main-title">Преимущества работы со мной</h3>
+              <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800" class="about__offers offers one">
+                <div class="offers__block">
+                  <h4 class="offers__title offers__title_width">Продам квартиру по максимальной цене</h4>
+                  <p class="offers__text">Только качественная презентация Вашей квартиры более чем на 120 сайтах и соц. сетях! О ней узнает максимальное число покупателей!</p>
+                </div>
+                <div class="offers__block">
+                  <h4 class="offers__title">Безопасные сделки</h4>
+                  <p class="offers__text">Подбираю максимально комфортный и безопасный способ взаиморасчётов, помогаю с выбором банка и согласую прочие условия сделки. У клиента только достоверная информация!</p>
+                </div>
+                <div class="offers__block">
+                  <h4 class="offers__title">Никакой предоплаты</h4>
+                  <p class="offers__text">Оплату за свои услуги я получаю только тогда, когда вся работа выполнена, а Вы довольны результатом!</p>
+                </div>
+                <div class="offers__block">
+                  <h4 class="offers__title">Максимальная экономия</h4>
+                  <p class="offers__text">При покупке квартиры в новостройке подберу для Вас лучший вариант по цене застройщика, а комиссия составит 0%</p>
+                </div>
+                <div class="offers__block">
+                  <h4 class="offers__title">Сохраню ваше время и нервы</h4>
+                  <p class="offers__text">Вы получаете юридически чистый объект на все 100%, так как ни один подводный камень не спрячется от моих проверок!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="screen__body">
+            <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+              <picture>
+                <source media="(max-width: 599px)" data-srcset="img/about/about_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/about/about_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 900px)" data-srcset="img/about/about_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <img data-src="img/about/about_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div data-hash="slide-3" class="page__screen screen">
+          <div class="screen__content">
+            <div class="buy-or-sale screen__general">
+              <div class="buy-or-sale__wrapper">
+                <div class="buy-or-sale__questions questions">
+                  <div class="questions__buy"> Купить квартиру</div>
+                  <div class="questions__sale">Продать квартиру</div>
+                </div>
+                <div class="buy-or-sale__buy buy">
+                  <h3 class="buy__main-title">Все пожелания будут учтены и в результате Вы станете счастливым обладателем своей мечты!</h3>
+                  <div class="buy__container">
+                    <div class="buy__block buy__new">
+                      <h4 class="buy__title">Новостройка</h4>
+                      <ul class="buy__description">
+                        <li>Бесплатный каталог новостроек</li>
+                        <li>Цены застройщиков</li>
+                        <li>Приёмка квартиры в подарок</li>
+                      </ul>
+                    </div>
+                    <div class="buy__block buy__old">
+                      <h4 class="buy__title">Вторичка</h4>
+                      <ul class="buy__description">
+                        <li>100% юридическая чистота Вашей будущей квартиры</li>
+                        <li>Юридическое заключение с печатью</li>
+                        <li>Безопасная сделка</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="buy__sign">Одобрение ипотеки для <span>Вac!</span></div>
+                  <a href="#popup-buy" class="buy__button popup-link button">подобрать квартиру</a>
+                </div>
+                <div class="buy-or-sale__sale sale screen__general">
+                  <h3 class="sale__main-title">
+                    Продавцу квартиры важно, чтобы сделка прошла быстро, а её денежный результат соответствовал ожиданиям
+                  </h3>
+                  <div class="sale__container">
+                    <div class="sale__block">
+                      <h4 class="sale__title">Продам Вашу квартиру за 30 дней</h4>
+                      <ul class="sale__description">
+                        <li>По максимальной цене</li>
+                        <li>Знаю все секреты продаж недвижимости</li>
+                        <li>Никакой предоплаты, оплата только за результат</li>
+                        <li>Рассмотрю всех покупателей с любой формой оплаты и выберу лучшего</li>
+                      </ul>
+                    </div>
+                    <a href="#popup-cost" class="sale__button popup-link button">узнать стоимость</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="screen__body">
+            <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+              <picture>
+                <source media="(max-width: 599px)" data-srcset="img/buy-or-sale/buy-or-sale_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/buy-or-sale/buy-or-sale_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 900px)" data-srcset="img/buy-or-sale/buy-or-sale_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <img data-src="img/buy-or-sale/buy-or-sale_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div data-hash="slide-4" class="page__screen screen">
+          <div class="screen__content">
+            <div class="portfolio screen__general">
+              <div class="portfolio__wrapper">
+                <h3 data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000" class="portfolio__main-title">Моё портфолио</h3>
+                <div class="portfolio-slider swiper-container" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900">
+                  <div class="swiper-wrapper">
+                    <section class="portfolio__section swiper-slide">
+                      <div>
+                        <h4 class="portfolio__title">Продажа квартиры в ЖК "АСТРИД"</h4>
+                        <div class="portfolio__content">
+                          <p>Собственник обратился ко мне по рекомендации. Для реализации квартиры мы согласовали традиционный способ продажи. Покупатель был найден через закрытую рассылку между партнерами МАКРОМИРА</p>
+                          <p>Продажа с первого показа</p>
+                        </div>
+                      </div>
+                      <div>
+                        <div data-background="img/portfolio/1.jpg" class="portfolio__image swiper-lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                          <span class="visually-hidden">Продажа квартиры с первого показа</span>
+                        </div>
+                        <div class="portfolio__description result">
+                          <div class="result__flex-container result__flex-container_position">
+                            <div class="result__flex-container">
+                              <img src="svg/calendar.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">7 дней</p>
+                                <p class="result__subtitle">Срок поиска покупателя</p>
+                              </div>
+                            </div>
+                            <div class="result__flex-container">
+                              <img src="svg/alarm.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">4 млн</p>
+                                <p class="result__subtitle">Рыночная стоимость</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="result__flex-container result__new-cost">
+                            <img src="svg/sold.svg" alt="" class="result__image">
+                            <div>
+                              <p class="result__title">4,3 млн</p>
+                              <p class="result__subtitle">Цена продажи</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="portfolio__section swiper-slide">
+                      <div>
+                        <h4 class="portfolio__title">Продажа 2-х комнат в самом сердце Петроградского района</h4>
+                        <div class="portfolio__content">
+                          <p>Собственник искал покупателя на протяжении нескольких лет, обращаясь в разные агентства Петербурга. После - обратился ко мне. Была произведена качественная предпродажная подготовка, грамотное определение рыночной стоимости. Были
+                            выявлены истинная мотивация и причина продажи. В итоге собственник решил свой вопрос и переехал с молодой женой в 1 комнатную квартиру в новостройке.</p>
+                        </div>
+                      </div>
+                      <div>
+                        <div data-background="img/portfolio/2.jpg" class="portfolio__image swiper-lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                          <span class="visually-hidden">Продажа квартиры с первого показа</span>
+                        </div>
+                        <div class="portfolio__description result">
+                          <div class="result__flex-container result__flex-container_position">
+                            <div class="result__flex-container">
+                              <img src="svg/calendar.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">45 дней</p>
+                                <p class="result__subtitle">Срок поиска покупателя</p>
+                              </div>
+                            </div>
+                            <div class="result__flex-container">
+                              <img src="svg/alarm.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">2,3 млн</p>
+                                <p class="result__subtitle">Рыночная стоимость</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="result__flex-container result__new-cost">
+                            <img src="svg/sold.svg" alt="" class="result__image">
+                            <div>
+                              <p class="result__title">2,4 млн</p>
+                              <p class="result__subtitle">Цена продажи</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="portfolio__section swiper-slide">
+                      <div>
+                        <h4 class="portfolio__title">Сопровождение покупки земельного участка под постройку жилого дома для жизни</h4>
+                        <div class="portfolio__content">
+                          <p>Клиент поставил задачу найти земельный участок для постройки на нём трёх этажного дома для будующего проживания с семьё. Нашли, сопроводили и купили объект на 20% дешевле рыночной стоимости на торгах по реализации имущества должников.</p>
+                        </div>
+                      </div>
+                      <div>
+                        <div data-background="img/portfolio/3.jpg" class="portfolio__image swiper-lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                          <span class="visually-hidden">Продажа квартиры с первого показа</span>
+                        </div>
+                        <div class="portfolio__description result">
+                          <div class="result__flex-container result__flex-container_position">
+                            <div class="result__flex-container">
+                              <img src="svg/calendar.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">28 дней</p>
+                                <p class="result__subtitle">Срок поиска объекта</p>
+                              </div>
+                            </div>
+                            <div class="result__flex-container">
+                              <img src="svg/alarm.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">3 млн</p>
+                                <p class="result__subtitle">Рыночная стоимость</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="result__flex-container result__new-cost">
+                            <img src="svg/sold.svg" alt="" class="result__image">
+                            <div>
+                              <p class="result__title">2,4 млн</p>
+                              <p class="result__subtitle">Цена покупки</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="portfolio__section swiper-slide">
+                      <div>
+                        <h4 class="portfolio__title">Поиск арендатора на 1 комнатную квартиру в Приморском районе</h4>
+                        <div class="portfolio__content">
+                          <p>Собственник в течение трёх лет сдавал квартиру по ставке 16 000 руб. После съезда арендаторов обратился за поиском новых к знакомому риелтору, но за 2 недели не увидел результата. После - обратился ко мне.
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <div data-background="img/portfolio/4.jpg" class="portfolio__image swiper-lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                          <span class="visually-hidden">Продажа квартиры с первого показа</span>
+                        </div>
+                        <div class="portfolio__description result">
+                          <div class="result__flex-container result__flex-container_position">
+                            <div class="result__flex-container">
+                              <img src="svg/calendar.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">1 день</p>
+                                <p class="result__subtitle">Срок поиска арендатора</p>
+                              </div>
+                            </div>
+                            <div class="result__flex-container">
+                              <img src="svg/alarm.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">16 тыс</p>
+                                <p class="result__subtitle">Предыдущая ставка аренды</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="result__flex-container result__new-cost">
+                            <img src="svg/sold.svg" alt="" class="result__image">
+                            <div>
+                              <p class="result__title">20 тыс</p>
+                              <p class="result__subtitle">Новая ставка аренды</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="portfolio__section swiper-slide">
+                      <div>
+                        <h4 class="portfolio__title">Продажа 3 комнатной квартиры в ЖК «Skandi Klubb»</h4>
+                        <div class="portfolio__content">
+                          <p>Собственники объекта были вынуждены продать свою квартиру в максимально кратчайшие сроки и готовы были за бесценок продать объект, лишь бы быстрее получить деньги. Я провёл работу, переговоры с клиентами, успокоил их и сэкономил
+                            колоссальную сумму денег для них. </p>
+                          <p>Был согласован аукционный метод продажи.</p>
+                        </div>
+                      </div>
+                      <div>
+                        <div data-background="img/portfolio/5.jpg" class="portfolio__image swiper-lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                          <span class="visually-hidden">Продажа квартиры с первого показа</span>
+                        </div>
+                        <div class="portfolio__description result">
+                          <div class="result__flex-container result__flex-container_position">
+                            <div class="result__flex-container">
+                              <img src="svg/calendar.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">21 день</p>
+                                <p class="result__subtitle">Срок поиска покупателя</p>
+                              </div>
+                            </div>
+                            <div class="result__flex-container">
+                              <img src="svg/alarm.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">18 млн</p>
+                                <p class="result__subtitle">Стартовая цена</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="result__flex-container result__new-cost">
+                            <img src="svg/sold.svg" alt="" class="result__image">
+                            <div>
+                              <p class="result__title">24 млн</p>
+                              <p class="result__subtitle">Цена продажи</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="portfolio__section swiper-slide">
+                      <div>
+                        <h4 class="portfolio__title">Продажа 3 комнатной квартиры на вторичном рынке на улице Сикейроса 7к1</h4>
+                        <div class="portfolio__content">
+                          <p>Жители Москвы обратились ко мне по вопросу продажи квартиры в Санкт-Петербурге. Необходимо было всё сделать удалённо, так как собственник не мог приехать в Санкт-Петербург. Был согласован классический метод продажи квартиры.
+                            Собственник сэкономил время и деньги на поездки в Санкт-Петербург!</p>
+                        </div>
+                      </div>
+                      <div>
+                        <div data-background="img/portfolio/6.jpg" class="portfolio__image swiper-lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                          <span class="visually-hidden">Удалённая сделака по продаже квартиры в Санкт-Петербурге</span>
+                        </div>
+                        <div class="portfolio__description result">
+                          <div class="result__flex-container result__flex-container_position">
+                            <div class="result__flex-container">
+                              <img src="svg/calendar.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">5 дней</p>
+                                <p class="result__subtitle">Срок поиска покупателя</p>
+                              </div>
+                            </div>
+                            <div class="result__flex-container">
+                              <img src="svg/alarm.svg" alt="" class="result__image">
+                              <div>
+                                <p class="result__title">6,5 млн</p>
+                                <p class="result__subtitle">Стартовая цена</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="result__flex-container result__new-cost">
+                            <img src="svg/sold.svg" alt="" class="result__image">
+                            <div>
+                              <p class="result__title">6,3 млн</p>
+                              <p class="result__subtitle">Цена продажи</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="portfolio__section swiper-slide">
+                      <div>
+                        <h4 class="portfolio__title">Продажа студии в ЖК «GreenЛандия 2» и одновременная покупка 2 комнатной квартиры</h4>
+                        <div class="portfolio__content">
+                          <p>Клиентка обратилась к мне с целью продать студию и купить квартиру для жизни в другом районе. Провели две сделки по покупке и одновременной продаже в один день.</p>
+                          <p>Одобрили ипотеку на самых выгодных условиях! Срок альтернативной сделки - 40 дней</p>
+                        </div>
+                      </div>
+                      <div>
+                        <div data-background="img/portfolio/7.jpg" class="portfolio__image swiper-lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                          <span class="visually-hidden">Альтернативная сделака по продаже и одновременной покупке квартиры в Санкт-Петербурге</span>
+                        </div>
+                        <div class="portfolio__description result">
+                          <div class="result__flex-container result__flex-container_position">
+                            <div class="result__flex-container">
+                              <img src="svg/alarm.svg" alt="Будильник" class="result__image">
+                              <div>
+                                <p class="result__title">3,2 млн</p>
+                                <p class="result__subtitle">Стартовая цена продажи</p>
+                              </div>
+                            </div>
+                            <div class="result__flex-container ">
+                              <img src="svg/alarm.svg" alt="Будильник" class="result__image">
+                              <div>
+                                <p class="result__title">5,2 млн</p>
+                                <p class="result__subtitle">Стартовая цена покупки</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="result__flex-container result__new-cost result__flex-container_position">
+                            <div class="result__flex-container">
+                              <img src="svg/sold.svg" alt="Молоток аукционера" class="result__image">
+                              <div>
+                                <p class="result__title">3,2 млн</p>
+                                <p class="result__subtitle">Цена продажи</p>
+                              </div>
+                            </div>
+                            <div class="result__flex-container result__prev-cost">
+                              <img src="svg/sold.svg" alt="Молоток аукционера" class="result__image">
+                              <div>
+                                <p class="result__title">5 млн</p>
+                                <p class="result__subtitle">Цена покупки</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <div class="swiper-button-prev portfolio__button-prev" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900">
+                  <span class="visually-hidden">Стрелочка. Пролистывание слайдера влево</span>
+                </div>
+                <div class="swiper-button-next portfolio__button-next" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="900">
+                  <span class="visually-hidden">Стрелочка. Пролистывание слайдера вправо</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="screen__body">
+            <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+              <picture>
+                <source media="(max-width: 599px)" data-srcset="img/portfolio/portfolio_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/portfolio/portfolio_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 900px)" data-srcset="img/portfolio/portfolio_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <img data-src="img/portfolio/portfolio_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div data-hash="slide-5" class="page__screen screen">
+          <div class="screen__content">
+            <div class="consultation screen__general">
+              <div class="consultation__wrapper">
+                <h3 class="consultation__title" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="500">Первичная бесплатная консультация</h3>
+                <div class="consultation__description" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="500">
+                  Кратко опишите свой вопрос и получите ответ в ближайшее время
+                </div>
+                <div class="consultation__box">
+                  <ul class="consultation__list" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="700">
+                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Проверка объектов на всевозможные риски</li>
+                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Составление договоров любой сложности</li>
+                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Помощь в получении ипотеки</li>
+                  </ul>
+                  <ul class="consultation__list">
+                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Сопровождение сделки</li>
+                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Страхование</li>
+                    <li class="consultation__item"><img src="svg/checkmark.svg" alt="" class="consultation__checkmark">Аренда </li>
+                  </ul>
+                </div>
+                <form action="php/sendmail-1.php" method="POST" class="consultation__form consultation__form_size" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+                  <div class="consultation__container">
+                    <div class="consultation__form-group">
+                      <label class="consultation__label">
 												<span class="consultation__name">Ваше имя:</span>
 												<input name="name" type="text" class="consultation__input" required>
 											</label>
-                                        </div>
-                                        <div class="consultation__form-group">
-                                            <label class="consultation__label">
+                    </div>
+                    <div class="consultation__form-group">
+                      <label class="consultation__label">
 												<span class="consultation__name">Ваш E-mail:</span>
 												<input name="email" type="email" class="consultation__input" required>
 											</label>
-                                        </div>
-                                        <div class="consultation__form-group">
-                                            <label class="consultation__label">
+                    </div>
+                    <div class="consultation__form-group">
+                      <label class="consultation__label">
 												<span class="consultation__name">Номер телефона:</span>
 												<input name="telNumber" type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="consultation__input" required>
 											</label>
-                                        </div>
-                                    </div>
-                                    <div class="consultation__form-group-textarea">
-                                        <label class="consultation__label">
+                    </div>
+                  </div>
+                  <div class="consultation__form-group-textarea">
+                    <label class="consultation__label">
 											<span class="consultation__name">Введите Ваш вопрос:</span>
 											<textarea name="question" class="consultation__textarea" required></textarea>
 										</label>
-                                    </div>
-                                    <div class="privacy">
-                                        <label>
-                                        	<input type="checkbox" class="privacy__checkbox" required>
-                                        	<span class="privacy__text">Согласен с <a href="/files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
+                  </div>
+                  <div class="privacy">
+                    <label>
+                      <input type="checkbox" class="privacy__checkbox" required>
+                      <span class="privacy__text">Согласен с <a href="/files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
 										</label>
-                                    </div>
-                                    <button type="submit" class="consultation__button button">отправить</button>
-                                </form>
-                                <a href="#popup-question" class="popup-link button consultation__mobile-button">задать вопрос</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screen__body">
-                        <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <picture>
-                                <source media="(max-width: 599px)" data-srcset="img/consultation/consultation_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/consultation/consultation_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 900px)" data-srcset="img/consultation/consultation_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <img data-src="img/consultation/consultation_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
+                  </div>
+                  <button type="submit" class="consultation__button button">отправить</button>
+                </form>
+                <a href="#popup-question" class="popup-link button consultation__mobile-button">задать вопрос</a>
+              </div>
+            </div>
+          </div>
+          <div class="screen__body">
+            <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+              <picture>
+                <source media="(max-width: 599px)" data-srcset="img/consultation/consultation_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/consultation/consultation_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 900px)" data-srcset="img/consultation/consultation_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <img data-src="img/consultation/consultation_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
 
-                <div data-hash="slide-6" class="page__screen screen">
-                    <div class="screen__content">
-                        <div class="feedback screen__general">
-                            <h3 class="feedback__main-title" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800">Что обо мне говорят</h3>
-                            <div class="feedback__wrapper" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800">
-                                <div class="feedback-slider swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <section class="feedback__section swiper-slide">
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <img data-src="img/feedback/feed_8.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
-                                        </section>
-                                        <section data-background="img/feedback/image_4.jpg" class="feedback__section feedback__image swiper-slide swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <span class="visually-hidden">Успешное заключение сделки по покупке квартиры</span>
-                                        </section>
-                                        <section class="feedback__section swiper-slide">
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <img data-src="img/feedback/feed_1.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
-                                        </section>
-                                        <section data-background="img/feedback/image_1.jpg" class="feedback__section feedback__image swiper-slide swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <span class="visually-hidden">Успешное заключение сделки по покупке квартиры</span>
-                                        </section>
-                                        <section class="feedback__section swiper-slide">
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <img data-src="img/feedback/feed_2.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
-                                        </section>
-                                        <section data-background="img/feedback/image_2.jpg" class="feedback__section feedback__image swiper-slide swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <span class="visually-hidden">Успешная покупка квартиры</span>
-                                        </section>
-                                        <section class="feedback__section swiper-slide">
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <img data-src="img/feedback/feed_3.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
-                                        </section>
-                                        <section data-background="img/feedback/image_3.jpg" class="feedback__section feedback__image swiper-slide swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <span class="visually-hidden">Успешное заключение сделки по покупке квартиры</span>
-                                        </section>
-                                        <section class="feedback__section swiper-slide">
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <img data-src="img/feedback/feed_7.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
-                                        </section>
-                                        <section class="feedback__section swiper-slide">
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <img data-src="img/feedback/feed_4.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
-                                        </section>
-                                        <section class="feedback__section swiper-slide">
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <img data-src="img/feedback/feed_5.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
-                                        </section>
-                                        <section class="feedback__section swiper-slide">
-                                            <h4 class="visually-hidden">Отзыв клиента</h4>
-                                            <img data-src="img/feedback/feed_6.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
-                                        </section>
-                                    </div>
-                                </div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
-                            </div>
-                            <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1200" class="feedback__container">
-                                <div class="feedback__macromir">
-                                    Показаны отзывы из моего профиля
-                                    <a href="https://spb.mmir.pro/agents/19210" target="_blank">
-                                        <img src="img/feedback/Macromir_logo.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="feedback__instagram">
-                                    Больше отзывов в Instagram
-                                    <a href="https://www.instagram.com/iwan_agapov/" target="_blank">
-                                        <img src="img/feedback/instagram_name.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screen__body">
-                        <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <picture>
-                                <source media="(max-width: 599px)" data-srcset="img/feedback/feedback_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/feedback/feedback_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 900px)" data-srcset="img/feedback/feedback_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <img data-src="img/feedback/feedback_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
-                            </picture>
-                        </div>
-                    </div>
+        <div data-hash="slide-6" class="page__screen screen">
+          <div class="screen__content">
+            <div class="feedback screen__general">
+              <h3 class="feedback__main-title" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800">Что обо мне говорят</h3>
+              <div class="feedback__wrapper" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="800">
+                <div class="feedback-slider swiper-container">
+                  <div class="swiper-wrapper">
+                    <section class="feedback__section swiper-slide">
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <img data-src="img/feedback/feed_8.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
+                    </section>
+                    <section data-background="img/feedback/image_4.jpg" class="feedback__section feedback__image swiper-slide swiper-lazy">
+                      <div class="swiper-lazy-preloader"></div>
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <span class="visually-hidden">Успешное заключение сделки по покупке квартиры</span>
+                    </section>
+                    <section class="feedback__section swiper-slide">
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <img data-src="img/feedback/feed_1.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
+                    </section>
+                    <section data-background="img/feedback/image_1.jpg" class="feedback__section feedback__image swiper-slide swiper-lazy">
+                      <div class="swiper-lazy-preloader"></div>
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <span class="visually-hidden">Успешное заключение сделки по покупке квартиры</span>
+                    </section>
+                    <section class="feedback__section swiper-slide">
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <img data-src="img/feedback/feed_2.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
+                    </section>
+                    <section data-background="img/feedback/image_2.jpg" class="feedback__section feedback__image swiper-slide swiper-lazy">
+                      <div class="swiper-lazy-preloader"></div>
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <span class="visually-hidden">Успешная покупка квартиры</span>
+                    </section>
+                    <section class="feedback__section swiper-slide">
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <img data-src="img/feedback/feed_3.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
+                    </section>
+                    <section data-background="img/feedback/image_3.jpg" class="feedback__section feedback__image swiper-slide swiper-lazy">
+                      <div class="swiper-lazy-preloader"></div>
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <span class="visually-hidden">Успешное заключение сделки по покупке квартиры</span>
+                    </section>
+                    <section class="feedback__section swiper-slide">
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <img data-src="img/feedback/feed_7.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
+                    </section>
+                    <section class="feedback__section swiper-slide">
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <img data-src="img/feedback/feed_4.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
+                    </section>
+                    <section class="feedback__section swiper-slide">
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <img data-src="img/feedback/feed_5.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
+                    </section>
+                    <section class="feedback__section swiper-slide">
+                      <h4 class="visually-hidden">Отзыв клиента</h4>
+                      <img data-src="img/feedback/feed_6.png" src="img/1x1.png" alt="" class="feedback__text swiper-lazy">
+                    </section>
+                  </div>
                 </div>
-
-                <div data-hash="slide-7" class="page__screen screen">
-                    <div class="screen__content">
-                        <div class="partners screen__general">
-                            <div class="partners__wrapper" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                                <h3 class="partners__title">Партнёры</h3>
-                                <div class="partners__card">
-                                    <img data-src="img/feedback/Macromir_logo.png" src="img/1x1.png" alt="Макромир" class="partners__logo swiper-lazy">
-                                </div>
-                                <div class="partners__card">
-                                    <img data-src="img/partners/Sber.svg" src="img/1x1.png" alt="Сбер" class="partners__logo swiper-lazy">
-                                </div>
-                                <div class="partners__card">
-                                    <img data-src="img/partners/vtb.svg" src="img/1x1.png" alt="ВТБ" class="partners__logo swiper-lazy">
-                                </div>
-                                <div class="partners__card">
-                                    <img data-src="img/partners/cian.png" src="img/1x1.png" alt="ЦИАН" class="partners__logo swiper-lazy">
-                                </div>
-                                <div class="partners__card">
-                                    <img data-src="img/partners/DomClick.svg" src="img/1x1.png" alt="ДомКлик" class="partners__logo swiper-lazy">
-                                </div>
-                                <div class="partners__card">
-                                    <img data-src="img/partners/avito.svg" src="img/1x1.png" alt="Авито" class="partners__logo swiper-lazy">
-                                </div>
-                                <div class="partners__card">
-                                    <img data-src="img/partners/trend.png" src="img/1x1.png" alt="Тренд" class="partners__logo swiper-lazy">
-                                </div>
-                                <div class="partners__card">
-                                    <img data-src="img/partners/n-market.png" src="img/1x1.png" alt="Н-Маркет" class="partners__logo swiper-lazy">
-                                </div>
-                            </div>
-                            <div class="partners__ad-sale" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1200">
-                                <h4 class="partners__ad-sale-title">Разместите объявление о продаже квартиры сейчас</h4>
-                                <div class="ad-cost__subtitle">Вашу квартиру увидят 1000 заинтересованнных покупателей уже сегодня!</div>
-                                <a href="#popup-ad" class="partners__button popup-link button">разместить объявление на 60 площадках</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screen__body">
-                        <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <picture>
-                                <source media="(max-width: 599px)" data-srcset="img/partners/partners_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/partners/partners_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 900px)" data-srcset="img/partners/partners_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <img data-src="img/partners/partners_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
-                            </picture>
-                        </div>
-                    </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1200" class="feedback__container">
+                <div class="feedback__macromir">
+                  Показаны отзывы из моего профиля
+                  <a href="https://spb.mmir.pro/agents/19210" target="_blank">
+                    <img src="img/feedback/Macromir_logo.png" alt="">
+                  </a>
                 </div>
+                <div class="feedback__instagram">
+                  Больше отзывов в Instagram
+                  <a href="https://www.instagram.com/iwan_agapov/" target="_blank">
+                    <img src="img/feedback/instagram_name.png" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="screen__body">
+            <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+              <picture>
+                <source media="(max-width: 599px)" data-srcset="img/feedback/feedback_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/feedback/feedback_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 900px)" data-srcset="img/feedback/feedback_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <img data-src="img/feedback/feedback_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
 
-                <div data-hash="slide-8" class="page__screen screen">
-                    <div class="screen__content">
-                        <div class="contacts screen__general">
-                            <div class="contacts__wrapper" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                                <h3 class="contacts__main-title">У Вас остались вопросы?</h3>
-                                <div class="contacts__subtitle">задайте их мне!</div>
-                                <a href="#popup-question" class="popup-link button consultation__mobile-button">задать вопрос</a>
-                                <form action="php/sendmail-2.php" method="POST" class="consultation__form contacts__form">
-                                    <div class="consultation__container" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                                        <div class="consultation__form-group">
-                                            <label class="consultation__label">
+        <div data-hash="slide-7" class="page__screen screen">
+          <div class="screen__content">
+            <div class="partners screen__general">
+              <div class="partners__wrapper" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+                <h3 class="partners__title">Партнёры</h3>
+                <div class="partners__card">
+                  <img data-src="img/feedback/Macromir_logo.png" src="img/1x1.png" alt="Макромир" class="partners__logo swiper-lazy">
+                </div>
+                <div class="partners__card">
+                  <img data-src="img/partners/Sber.svg" src="img/1x1.png" alt="Сбер" class="partners__logo swiper-lazy">
+                </div>
+                <div class="partners__card">
+                  <img data-src="img/partners/vtb.svg" src="img/1x1.png" alt="ВТБ" class="partners__logo swiper-lazy">
+                </div>
+                <div class="partners__card">
+                  <img data-src="img/partners/cian.png" src="img/1x1.png" alt="ЦИАН" class="partners__logo swiper-lazy">
+                </div>
+                <div class="partners__card">
+                  <img data-src="img/partners/DomClick.svg" src="img/1x1.png" alt="ДомКлик" class="partners__logo swiper-lazy">
+                </div>
+                <div class="partners__card">
+                  <img data-src="img/partners/avito.svg" src="img/1x1.png" alt="Авито" class="partners__logo swiper-lazy">
+                </div>
+                <div class="partners__card">
+                  <img data-src="img/partners/trend.png" src="img/1x1.png" alt="Тренд" class="partners__logo swiper-lazy">
+                </div>
+                <div class="partners__card">
+                  <img data-src="img/partners/n-market.png" src="img/1x1.png" alt="Н-Маркет" class="partners__logo swiper-lazy">
+                </div>
+              </div>
+              <div class="partners__ad-sale" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1200">
+                <h4 class="partners__ad-sale-title">Разместите объявление о продаже квартиры сейчас</h4>
+                <div class="ad-cost__subtitle">Вашу квартиру увидят 1000 заинтересованнных покупателей уже сегодня!</div>
+                <a href="#popup-ad" class="partners__button popup-link button">разместить объявление на 60 площадках</a>
+              </div>
+            </div>
+          </div>
+          <div class="screen__body">
+            <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+              <picture>
+                <source media="(max-width: 599px)" data-srcset="img/partners/partners_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/partners/partners_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 900px)" data-srcset="img/partners/partners_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <img data-src="img/partners/partners_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+
+        <div data-hash="slide-8" class="page__screen screen">
+          <div class="screen__content">
+            <div class="contacts screen__general">
+              <div class="contacts__wrapper" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+                <h3 class="contacts__main-title">У Вас остались вопросы?</h3>
+                <div class="contacts__subtitle">задайте их мне!</div>
+                <a href="#popup-question" class="popup-link button consultation__mobile-button">задать вопрос</a>
+                <form action="php/sendmail-2.php" method="POST" class="consultation__form contacts__form">
+                  <div class="consultation__container" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+                    <div class="consultation__form-group">
+                      <label class="consultation__label">
 												<span class="consultation__name">Ваше имя:</span>
 												<input type="text" name="name-2" class="consultation__input" required>
 											</label>
-                                        </div>
-                                        <div class="consultation__form-group">
-                                            <label class="consultation__label">
+                    </div>
+                    <div class="consultation__form-group">
+                      <label class="consultation__label">
 												<span class="consultation__name">Ваш E-mail:</span>
 												<input type="email" name="email-2" class="consultation__input" required>
 											</label>
-                                        </div>
-                                        <div class="consultation__form-group">
-                                            <label class="consultation__label">
+                    </div>
+                    <div class="consultation__form-group">
+                      <label class="consultation__label">
 												<span class="consultation__name">Номер телефона:</span>
 												<input type="tel" name="telNumber-2" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="consultation__input" required>
 											</label>
-                                        </div>
-                                    </div>
-                                    <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="700" class="consultation__form-group-textarea">
-                                        <label class="consultation__label">
+                    </div>
+                  </div>
+                  <div data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="700" class="consultation__form-group-textarea">
+                    <label class="consultation__label">
 											<span class="consultation__name">Введите Ваш вопрос:</span>
 											<textarea name="question-2" class="consultation__textarea" required></textarea>
 										</label>
-                                    </div>
-                                    <div class="privacy">
-                                        <label>
-                                        	<input type="checkbox" class="privacy__checkbox" required>
-                                        	<span class="privacy__text">Согласен с <a href="/files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
+                  </div>
+                  <div class="privacy">
+                    <label>
+                      <input type="checkbox" class="privacy__checkbox" required>
+                      <span class="privacy__text">Согласен с <a href="/files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
 										</label>
-                                    </div>
-                                    <button type="submit" class="contacts__button button">задать вопрос</button>
-                                </form>
-                                <h3 class="contacts__main-title">Ещё больше обо мне:</h3>
-                                <div class="contacts__socials" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1500">
-                                    <a href="https://vk.com/iwan_agapov" target="_blank" class="contacts__socials-link">
-                                        <img data-src="img/contacts/vk.png" src="img/1x1.png" alt="VK" class="contacts__socials-item swiper-lazy">
-                                    </a>
-                                    <a href="https://www.instagram.com/iwan_agapov/" target="_blank" class="contacts__socials-link">
-                                        <img data-src="img/contacts/instagram.png" src="img/1x1.png" alt="Instagram" class="contacts__socials-item swiper-lazy">
-                                    </a>
-                                    <a href="https://spb.mmir.pro/agents/19210" target="_blank" class="contacts__socials-link">
-                                        <img data-src="img/main/macromir-logo.png" src="img/1x1.png" alt="MacroMir" class="contacts__socials-item swiper-lazy">
-                                    </a>
-                                    <a href="https://wa.me/message/6C4RVMYLMX54F1" target="_blank" class="contacts__socials-link">
-                                        <img data-src="img/contacts/whats.png" src="img/1x1.png" alt="VK" class="contacts__socials-item swiper-lazy">
-                                    </a>
-                                    <a href="https://t.me/Ivanrealty198" target="_blank" class="contacts__socials-link">
-                                        <img data-src="img/contacts/telegram.png" src="img/1x1.png" alt="VK" class="contacts__socials-item swiper-lazy">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="contacts__info" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1200">
-                                <a href="mailto:iwan.agapov2015@gmail.com?subject=Вопрос%20с%20сайта!">iwan.agapov2015@gmail.com</a>
-                                <a href="tel:+79522491494">+7 (952) 249-14-94</a>
-                                <p>Санкт-Петербург,</p>
-                                <p>Литейный проспект, дом 26,</p>
-                                <p>БЦ "Преображенский двор", офис 2014</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="screen__body">
-                        <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                            <picture>
-                                <source media="(max-width: 599px)" data-srcset="img/contacts/contacts_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/contacts/contacts_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <source media="(min-width: 900px)" data-srcset="img/contacts/contacts_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
-                                <img data-src="img/contacts/contacts_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
-                            </picture>
-                        </div>
-                    </div>
+                  </div>
+                  <button type="submit" class="contacts__button button">задать вопрос</button>
+                </form>
+                <h3 class="contacts__main-title">Ещё больше обо мне:</h3>
+                <div class="contacts__socials" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1500">
+                  <a href="https://vk.com/iwan_agapov" target="_blank" class="contacts__socials-link">
+                    <img data-src="img/contacts/vk.png" src="img/1x1.png" alt="VK" class="contacts__socials-item swiper-lazy">
+                  </a>
+                  <a href="https://www.instagram.com/iwan_agapov/" target="_blank" class="contacts__socials-link">
+                    <img data-src="img/contacts/instagram.png" src="img/1x1.png" alt="Instagram" class="contacts__socials-item swiper-lazy">
+                  </a>
+                  <a href="https://spb.mmir.pro/agents/19210" target="_blank" class="contacts__socials-link">
+                    <img data-src="img/main/macromir-logo.png" src="img/1x1.png" alt="MacroMir" class="contacts__socials-item swiper-lazy">
+                  </a>
+                  <a href="https://wa.me/message/6C4RVMYLMX54F1" target="_blank" class="contacts__socials-link">
+                    <img data-src="img/contacts/whats.png" src="img/1x1.png" alt="VK" class="contacts__socials-item swiper-lazy">
+                  </a>
+                  <a href="https://t.me/Ivanrealty198" target="_blank" class="contacts__socials-link">
+                    <img data-src="img/contacts/telegram.png" src="img/1x1.png" alt="VK" class="contacts__socials-item swiper-lazy">
+                  </a>
                 </div>
+              </div>
+              <div class="contacts__info" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1200">
+                <a href="mailto:iwan.agapov2015@gmail.com?subject=Вопрос%20с%20сайта!">iwan.agapov2015@gmail.com</a>
+                <a href="tel:+79522491494">+7 (952) 249-14-94</a>
+                <p>Санкт-Петербург,</p>
+                <p>Литейный проспект, дом 26,</p>
+                <p>БЦ "Преображенский двор", офис 2014</p>
+              </div>
             </div>
-            <div class="page__pagination"></div>
-            <div class="page__scroll"></div>
-        </main>
-    </div>
+          </div>
+          <div class="screen__body">
+            <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+              <picture>
+                <source media="(max-width: 599px)" data-srcset="img/contacts/contacts_bg-mobile.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 600px) and (max-width: 899px)" data-srcset="img/contacts/contacts_bg-tablet.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <source media="(min-width: 900px)" data-srcset="img/contacts/contacts_bg-desktop.jpg" srcset="img/1x1.png" class="swiper-lazy">
+                <img data-src="img/contacts/contacts_bg-desktop.jpg" src="img/1x1.png" alt="Иван Агапов. Риелтор. Недвижимость - просто!" class="swiper-lazy">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page__pagination"></div>
+      <div class="page__scroll"></div>
+    </main>
+  </div>
 
-    <!--! ====================================== ПОПАП УЗНАТЬ СТОИМОСТЬ ========================================  -->
-    <aside class="popup" id="popup-cost">
-        <div class="popup__body">
-            <div class="popup__content popup-test cost-test">
-                <button type="button" class="popup__close close-popup">
+  <!--! ====================================== ПОПАП УЗНАТЬ СТОИМОСТЬ ========================================  -->
+  <aside class="popup" id="popup-cost">
+    <div class="popup__body">
+      <div class="popup__content popup-test cost-test">
+        <button type="button" class="popup__close close-popup">
                     <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
                 </button>
-                <form action="php/sendmail-3.php" method="POST" class="popup-test__form">
-                    <div class="popup-test__header">
-                        <h4 class="popup-test__main-title cost-test__main-title">Оценка стоимости квартиры</h4>
-                        <span class="popup-test__page cost-test__page">1/6</span>
-                    </div>
-                    <div class="popup-test__progress">
-                        <div class="popup-test__progress-value cost-test__progress-value">
-                            <span class="visually-hidden">Прогресс прохождения теста</span>
-                        </div>
-                    </div>
-                    <div class="popup-test__container cost-test__container-1">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Сколько комнат в квартире?</h5>
-                            <div class="popup-test__form-box">
-                                <div>
-                                    <label class="popup-test__label">
+        <form action="php/sendmail-3.php" method="POST" class="popup-test__form">
+          <div class="popup-test__header">
+            <h4 class="popup-test__main-title cost-test__main-title">Оценка стоимости квартиры</h4>
+            <span class="popup-test__page cost-test__page">1/6</span>
+          </div>
+          <div class="popup-test__progress">
+            <div class="popup-test__progress-value cost-test__progress-value">
+              <span class="visually-hidden">Прогресс прохождения теста</span>
+            </div>
+          </div>
+          <div class="popup-test__container cost-test__container-1">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Сколько комнат в квартире?</h5>
+              <div class="popup-test__form-box">
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms" value="studio" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Студия</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms" value="one" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">1-комнатная квартира</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms" value="two" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">2-комнатная квартира</span>
 									</label>
-                                </div>
-                                <div>
-                                    <label class="popup-test__label">
+                </div>
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms" value="three" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">3-комнатная квартира</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms" value="four" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">4-комнатная квартира</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms" value="other" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Другой вариант</span>
 									</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-up cost-test__button-up_1">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container cost-test__container-2 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Примерная площадь квартиры</h5>
-                            <div class="popup-test__form-box">
-                                <div>
-                                    <label class="popup-test__label">
+                </div>
+              </div>
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-up cost-test__button-up_1">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container cost-test__container-2 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Примерная площадь квартиры</h5>
+              <div class="popup-test__form-box">
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="size-of-the-apartment" value="20-30" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">20-30 кв.м.</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="size-of-the-apartment" value="30-40" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">30-40 кв.м.</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="size-of-the-apartment" value="40-50" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">40-50 кв.м.</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="size-of-the-apartment" value="50-60" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">50-60 кв.м.</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="size-of-the-apartment" value="60-70" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">60-70 кв.м.</span>
 									</label>
-                                </div>
-                                <div>
-                                    <label class="popup-test__label">
+                </div>
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="size-of-the-apartment" value="70-80" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">70-80 кв.м.</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="size-of-the-apartment" value="80-90" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">80-90 кв.м.</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="size-of-the-apartment" value="90-100" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">90-100 кв.м.</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="size-of-the-apartment" value="100+" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Больше 100 кв.м.</span>
 									</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back cost-test__button-back_2"><span>→</span> Назад</button>
-                            <button type="button" class="button-popup popup-test__button-up cost-test__button-up_2">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container cost-test__container-3 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Этаж</h5>
-                            <label class="popup-test__label">
+                </div>
+              </div>
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back cost-test__button-back_2"><span>→</span> Назад</button>
+              <button type="button" class="button-popup popup-test__button-up cost-test__button-up_2">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container cost-test__container-3 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Этаж</h5>
+              <label class="popup-test__label">
 								<input type="radio" name="floor" value="first" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">Первый этаж</span>
 							</label>
-                            <label class="popup-test__label">
+              <label class="popup-test__label">
 								<input type="radio" name="floor" value="last" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">Последний этаж</span>
 							</label>
-                            <label class="popup-test__label">
+              <label class="popup-test__label">
 								<input type="radio" name="floor" value="not-first-last" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">Не первый и не последний этаж</span>
 							</label>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back cost-test__button-back_3"><span>→</span> Назад</button>
-                            <button type="button" class="button-popup popup-test__button-up cost-test__button-up_3">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container cost-test__container-4 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Состояние ремонта</h5>
-                            <div class="popup-test__form-box">
-                                <div>
-                                    <label class="popup-test__label">
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back cost-test__button-back_3"><span>→</span> Назад</button>
+              <button type="button" class="button-popup popup-test__button-up cost-test__button-up_3">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container cost-test__container-4 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Состояние ремонта</h5>
+              <div class="popup-test__form-box">
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="repair" value="without" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Без отделки</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="repair" value="required" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Требуется ремонт</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="repair" value="cosmetic" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Косметический ремонт</span>
 									</label>
-                                </div>
-                                <div>
-                                    <label class="popup-test__label">
+                </div>
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="repair" value="european" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Евроремонт</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="repair" value="designer" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Дизайнерский ремонт</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="repair" value="other" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Другой вариант</span>
 									</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back cost-test__button-back_4"><span>→</span> Назад</button>
-                            <button type="button" class="button-popup popup-test__button-up cost-test__button-up_4">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container cost-test__container-5 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Адрес дома, в котором находится квартира</h5>
-                            <input type="text" name="address" class="popup-test__text" placeholder="Например, ул. Оптиков, д. 33, к. 1">
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back cost-test__button-back_5"><span>→</span> Назад</button>
-                            <button type="button" class="button-popup popup-test__button-up cost-test__button-up_5">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container cost-test__container-6 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Для чего Вам нужна оценка?</h5>
-                            <div class="popup-test__form-box">
-                                <div>
-                                    <label class="popup-test__label">
+                </div>
+              </div>
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back cost-test__button-back_4"><span>→</span> Назад</button>
+              <button type="button" class="button-popup popup-test__button-up cost-test__button-up_4">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container cost-test__container-5 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Адрес дома, в котором находится квартира</h5>
+              <input type="text" name="address" class="popup-test__text" placeholder="Например, ул. Оптиков, д. 33, к. 1">
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back cost-test__button-back_5"><span>→</span> Назад</button>
+              <button type="button" class="button-popup popup-test__button-up cost-test__button-up_5">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container cost-test__container-6 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Для чего Вам нужна оценка?</h5>
+              <div class="popup-test__form-box">
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="reason" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Просто интересуюсь</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="reason" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Планирую продавать квартиру</span>
 									</label>
-                                </div>
-                                <div>
-                                    <label class="popup-test__label">
+                </div>
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="reason" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Для суда</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="reason" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Для раздела квартиры с родственниками</span>
 									</label>
-                                </div>
-                            </div>
-                            <div class="popup-test__form-box popup-test__form-box_indent">
-                                <label class="popup-test__label">
+                </div>
+              </div>
+              <div class="popup-test__form-box popup-test__form-box_indent">
+                <label class="popup-test__label">
 									<input type="radio" name="reason" class="popup-test__radio visually-hidden">
 									<span class="popup-test__point"></span>
 								</label>
-                                <input type="text" name="other-reason" class="popup-test__text popup-test__text_position" placeholder="Другое...">
-                            </div>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back cost-test__button-back_6"><span>→</span> Назад</button>
-                            <button type="button" class="button-popup popup-test__button-up cost-test__button-up_6">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container cost-test__container-7 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Заполните форму, чтобы получить результаты</h5>
-                            <input type="text" name="name-3" class="popup-test__text" placeholder="Введите имя" required>
-                            <input type="tel" name="telNumber-3" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup-test__text" placeholder="Введите номер телефона" required>
-                            <div class="privacy">
-                                <label>
+                <input type="text" name="other-reason" class="popup-test__text popup-test__text_position" placeholder="Другое...">
+              </div>
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back cost-test__button-back_6"><span>→</span> Назад</button>
+              <button type="button" class="button-popup popup-test__button-up cost-test__button-up_6">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container cost-test__container-7 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Заполните форму, чтобы получить результаты</h5>
+              <input type="text" name="name-3" class="popup-test__text" placeholder="Введите имя" required>
+              <input type="tel" name="telNumber-3" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup-test__text" placeholder="Введите номер телефона" required>
+              <div class="privacy">
+                <label>
 									<input type="checkbox" class="privacy__checkbox" required>
 									<span class="privacy__text">Согласен с <a href="/files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
 								</label>
-                            </div>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back cost-test__button-back_7"><span>→</span> Назад</button>
-                            <button type="submit" class="button-popup popup-test__button-up button-popup_size">Получить результаты</button>
-                        </div>
-                    </div>
-                </form>
+              </div>
             </div>
-        </div>
-    </aside>
-    <!--! ====================================== ПОПАП РАССЧЁТ НАЛОГА ПРИ ПРОДАЖЕ ========================================  -->
-    <aside class="popup" id="popup-tax">
-        <div class="popup__body">
-            <div class="popup__content popup-test tax-test">
-                <button type="button" class="popup__close close-popup">
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back cost-test__button-back_7"><span>→</span> Назад</button>
+              <button type="submit" class="button-popup popup-test__button-up button-popup_size">Получить результаты</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <!--! ====================================== ПОПАП РАССЧЁТ НАЛОГА ПРИ ПРОДАЖЕ ========================================  -->
+  <aside class="popup" id="popup-tax">
+    <div class="popup__body">
+      <div class="popup__content popup-test tax-test">
+        <button type="button" class="popup__close close-popup">
                     <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
                 </button>
-                <form action="php/sendmail-4.php" method="POST" class="popup-test__form">
-                    <div class="popup-test__header">
-                        <h4 class="popup-test__main-title tax-test__main-title">Бесплатно рассчитать сумму налога при продаже квартиры</h4>
-                        <span class="popup-test__page tax-test__page">1/3</span>
-                    </div>
-                    <div class="popup-test__progress">
-                        <div class="popup-test__progress-value tax-test__progress-value">
-                            <span class="visually-hidden">Прогресс прохождения теста</span>
-                        </div>
-                    </div>
-                    <div class="popup-test__container tax-test__container-1">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">На основании чего Вы получили квартиру в собственность?</h5>
-                            <label class="popup-test__label">
+        <form action="php/sendmail-4.php" method="POST" class="popup-test__form">
+          <div class="popup-test__header">
+            <h4 class="popup-test__main-title tax-test__main-title">Бесплатно рассчитать сумму налога при продаже квартиры</h4>
+            <span class="popup-test__page tax-test__page">1/3</span>
+          </div>
+          <div class="popup-test__progress">
+            <div class="popup-test__progress-value tax-test__progress-value">
+              <span class="visually-hidden">Прогресс прохождения теста</span>
+            </div>
+          </div>
+          <div class="popup-test__container tax-test__container-1">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">На основании чего Вы получили квартиру в собственность?</h5>
+              <label class="popup-test__label">
 								<input type="radio" name="first-radio-group" value="contract" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">По договору купли-продажи</span>
 							</label>
-                            <label class="popup-test__label">
+              <label class="popup-test__label">
 								<input type="radio" name="first-radio-group" value="inherit" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">По наследству или дарению от ближайших членов семьи</span>
 							</label>
-                            <label class="popup-test__label">
+              <label class="popup-test__label">
 								<input type="radio" name="first-radio-group" value="privatize" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">В результате приватизации</span>
 							</label>
-                            <label class="popup-test__label">
+              <label class="popup-test__label">
 								<input type="radio" name="first-radio-group" value="transfer" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">В результате передачи имущества плательщику ренты</span>
 							</label>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-up tax-test__button-up_1">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container tax-test__container-2 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">В каком году зарегистрировано право собственности на вашу квартиру?</h5>
-                            <label class="popup-test__label">
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-up tax-test__button-up_1">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container tax-test__container-2 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">В каком году зарегистрировано право собственности на вашу квартиру?</h5>
+              <label class="popup-test__label">
 								<input type="radio" name="second-radio-group" value="before" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">До 2016 года</span>
 							</label>
-                            <label class="popup-test__label">
+              <label class="popup-test__label">
 								<input type="radio" name="second-radio-group" value="after" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">После 2016 года</span>
 							</label>
-                            <label class="popup-test__label">
+              <label class="popup-test__label">
 								<input type="radio" name="second-radio-group" value="not-know" class="popup-test__radio visually-hidden">
 								<span class="popup-test__point">Не знаю</span>
 							</label>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back tax-test__button-back_2"><span>→</span> Назад</button>
-                            <button type="button" class="button-popup popup-test__button-up tax-test__button-up_2">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container tax-test__container-3 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Напишите точный адрес или кадастровый номер объекта недвижимости</h5>
-                            <input type="text" name="address-2" class="popup-test__text" placeholder="Введите адрес или кадастровый номер">
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back tax-test__button-back_3"><span>→</span> Назад</button>
-                            <button type="button" class="button-popup popup-test__button-up tax-test__button-up_3">Результат</button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container tax-test__container-4 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Я рассчитаю сумму налога, исходя из кадастровой стоимости, и свяжусь с Вами</h5>
-                            <div class="popup-test__label">
-                                <input type="text" name="name-4" class="popup-test__text" placeholder="Введите имя" required>
-                                <input type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" name="telNumber-4" class="popup-test__text" placeholder="Введите номер телефона" required>
-                                <div class="privacy">
-                                    <label>
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back tax-test__button-back_2"><span>→</span> Назад</button>
+              <button type="button" class="button-popup popup-test__button-up tax-test__button-up_2">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container tax-test__container-3 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Напишите точный адрес или кадастровый номер объекта недвижимости</h5>
+              <input type="text" name="address-2" class="popup-test__text" placeholder="Введите адрес или кадастровый номер">
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back tax-test__button-back_3"><span>→</span> Назад</button>
+              <button type="button" class="button-popup popup-test__button-up tax-test__button-up_3">Результат</button>
+            </div>
+          </div>
+          <div class="popup-test__container tax-test__container-4 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Я рассчитаю сумму налога, исходя из кадастровой стоимости, и свяжусь с Вами</h5>
+              <div class="popup-test__label">
+                <input type="text" name="name-4" class="popup-test__text" placeholder="Введите имя" required>
+                <input type="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" name="telNumber-4" class="popup-test__text" placeholder="Введите номер телефона" required>
+                <div class="privacy">
+                  <label>
 										<input type="checkbox" class="privacy__checkbox" required>
 										<span class="privacy__text">Согласен с <a href="/files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
 									</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back tax-test__button-back_4"><span>→</span> Назад</button>
-                            <button type="submit" class="button-popup popup-test__button-up">Отправить</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
+              </div>
             </div>
-        </div>
-    </aside>
-    <!--! ====================================== ПОПАП РАЗМЕСТИТЬ ОБЪЯВЛЕНИЕ ========================================  -->
-    <aside class="popup" id="popup-ad">
-        <div class="popup__body">
-            <div class="popup__content popup-test tax-test">
-                <button type="button" class="popup__close close-popup">
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back tax-test__button-back_4"><span>→</span> Назад</button>
+              <button type="submit" class="button-popup popup-test__button-up">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <!--! ====================================== ПОПАП РАЗМЕСТИТЬ ОБЪЯВЛЕНИЕ ========================================  -->
+  <aside class="popup" id="popup-ad">
+    <div class="popup__body">
+      <div class="popup__content popup-test tax-test">
+        <button type="button" class="popup__close close-popup">
                     <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
                 </button>
-                <form action="php/sendmail-7.php" method="POST" class="popup-test__form">
-                    <div class="popup-test__header">
-                        <h4 class="popup-test__main-title tax-test__main-title">Оставьте заявку прямо сейчас</h4>
-                    </div>
-                    <div class="popup-test__flex-container">
-                        <div class="popup-test__form-group popup-test__form-group_height">
-                            <h5 class="popup-test__title">Ваша квартира появится на 60 площадках уже сегодня!</h5>
-                            <input type="text" name="name-7" class="popup-test__text" placeholder="Введите имя" required>
-                            <input type="tel" name="telNumber-7" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup-test__text" placeholder="Введите номер телефона" required>
-                            <div class="privacy">
-                                <label>
+        <form action="php/sendmail-7.php" method="POST" class="popup-test__form">
+          <div class="popup-test__header">
+            <h4 class="popup-test__main-title tax-test__main-title">Оставьте заявку прямо сейчас</h4>
+          </div>
+          <div class="popup-test__flex-container">
+            <div class="popup-test__form-group popup-test__form-group_height">
+              <h5 class="popup-test__title">Ваша квартира появится на 60 площадках уже сегодня!</h5>
+              <input type="text" name="name-7" class="popup-test__text" placeholder="Введите имя" required>
+              <input type="tel" name="telNumber-7" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup-test__text" placeholder="Введите номер телефона" required>
+              <div class="privacy">
+                <label>
 									<input type="checkbox" class="privacy__checkbox" required>
 									<span class="privacy__text">Согласен с <a href="/files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
 								</label>
-                            </div>
-                        </div>
-                        <img src="img/partners/popup-image.jpg" alt="" class="popup-test__image">
-                    </div>
-                    <div class="popup-test__footer popup-test__footer_position">
-                        <button type="submit" class="button button_center">оставить заявку</button>
-                    </div>
-                </form>
+              </div>
             </div>
-        </div>
-    </aside>
-    <!--! ====================================== ПОПАП ПОДОБРАТЬ КВАРТИРУ ========================================  -->
-    <aside class="popup" id="popup-buy">
-        <div class="popup__body">
-            <div class="popup__content popup-test buy-test">
-                <button type="button" class="popup__close close-popup">
+            <img src="img/partners/popup-image.jpg" alt="" class="popup-test__image">
+          </div>
+          <div class="popup-test__footer popup-test__footer_position">
+            <button type="submit" class="button button_center">оставить заявку</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <!--! ====================================== ПОПАП ПОДОБРАТЬ КВАРТИРУ ========================================  -->
+  <aside class="popup" id="popup-buy">
+    <div class="popup__body">
+      <div class="popup__content popup-test buy-test">
+        <button type="button" class="popup__close close-popup">
                     <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
                 </button>
-                <form action="php/sendmail-5.php" method="POST" class="popup-test__form">
-                    <div class="popup-test__header">
-                        <h4 class="popup-test__main-title buy-test__main-title">Подберу квартиру Вашей мечты после заполнения формы</h4>
-                        <span class="popup-test__page buy-test__page">1/3</span>
-                    </div>
-                    <div class="popup-test__progress">
-                        <div class="popup-test__progress-value buy-test__progress-value">
-                            <span class="visually-hidden">Прогресс прохождения теста</span>
-                        </div>
-                    </div>
-                    <div class="popup-test__container buy-test__container-1">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Выберите количество комнат</h5>
-                            <div class="popup-test__form-box">
-                                <div>
-                                    <label class="popup-test__label">
+        <form action="php/sendmail-5.php" method="POST" class="popup-test__form">
+          <div class="popup-test__header">
+            <h4 class="popup-test__main-title buy-test__main-title">Подберу квартиру Вашей мечты после заполнения формы</h4>
+            <span class="popup-test__page buy-test__page">1/3</span>
+          </div>
+          <div class="popup-test__progress">
+            <div class="popup-test__progress-value buy-test__progress-value">
+              <span class="visually-hidden">Прогресс прохождения теста</span>
+            </div>
+          </div>
+          <div class="popup-test__container buy-test__container-1">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Выберите количество комнат</h5>
+              <div class="popup-test__form-box">
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms__buy" value="studio" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Студия</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms__buy" value="one" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">1-комнатная квартира</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms__buy" value="two" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">2-комнатная квартира</span>
 									</label>
-                                </div>
-                                <div>
-                                    <label class="popup-test__label">
+                </div>
+                <div>
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms__buy" value="three" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">3-комнатная квартира</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms__buy" value="four" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">4-комнатная квартира</span>
 									</label>
-                                    <label class="popup-test__label">
+                  <label class="popup-test__label">
 										<input type="radio" name="how-many-rooms__buy" value="other" class="popup-test__radio visually-hidden">
 										<span class="popup-test__point">Другой вариант</span>
 									</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-up buy-test__button-up_1">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container buy-test__container-2 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Укажите желаемую площадь Вашей будущей квартиры</h5>
-                            <div class="popup-test__form-box">
-                                <input type="text" name="from" placeholder="от (м³)" class="popup-test__text popup-test__text_position">
-                                <input type="text" name="to" placeholder="до (м³)" class="popup-test__text popup-test__text_indent">
-                            </div>
-                            <h5 class="popup-test__title popup-test__title popup-test__title_position">Укажите стоимость</h5>
-                            <div class="popup-test__form-box">
-                                <input type="text" name="from-2" placeholder="от (т.р.)" class="popup-test__text popup-test__text_position">
-                                <input type="text" name="to-2" placeholder="до (т.р.)" class="popup-test__text popup-test__text_indent">
-                            </div>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back buy-test__button-back_2"><span>→</span> Назад</button>
-                            <button type="button" class="button-popup popup-test__button-up buy-test__button-up_2">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container buy-test__container-3 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Укажите станцию метро</h5>
-                            <select name="metro" class="popup-test__text popup-test__select">
+                </div>
+              </div>
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-up buy-test__button-up_1">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container buy-test__container-2 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Укажите желаемую площадь Вашей будущей квартиры</h5>
+              <div class="popup-test__form-box">
+                <input type="text" name="from" placeholder="от (м³)" class="popup-test__text popup-test__text_position">
+                <input type="text" name="to" placeholder="до (м³)" class="popup-test__text popup-test__text_indent">
+              </div>
+              <h5 class="popup-test__title popup-test__title popup-test__title_position">Укажите стоимость</h5>
+              <div class="popup-test__form-box">
+                <input type="text" name="from-2" placeholder="от (т.р.)" class="popup-test__text popup-test__text_position">
+                <input type="text" name="to-2" placeholder="до (т.р.)" class="popup-test__text popup-test__text_indent">
+              </div>
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back buy-test__button-back_2"><span>→</span> Назад</button>
+              <button type="button" class="button-popup popup-test__button-up buy-test__button-up_2">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container buy-test__container-3 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Укажите станцию метро</h5>
+              <select name="metro" class="popup-test__text popup-test__select">
 								<option selected>Выберите вариант из списка</option>
 								<option value="Автово">Автово</option>
 								<option value="Адмиралтейская">Адмиралтейская</option>
@@ -1405,74 +1403,74 @@
 								<option value="Чкаловская">Чкаловская</option>
 								<option value="Электросила">Электросила</option>
 							</select>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back buy-test__button-back_3"><span>→</span> Назад</button>
-                            <button type="button" class="button-popup popup-test__button-up buy-test__button-up_3">Вперед <span>→</span></button>
-                        </div>
-                    </div>
-                    <div class="popup-test__container buy-test__container-4 hide">
-                        <div class="popup-test__form-group">
-                            <h5 class="popup-test__title">Я подберу для Вас подходящие варианты квартиры и свяжусь с Вами!</h5>
-                            <div class="popup-test__label">
-                                <input type="text" name="name-5" class="popup-test__text" placeholder="Введите имя" required>
-                                <input type="tel" name="telNumber-5" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup-test__text" placeholder="Введите номер телефона" required>
-                                <div class="privacy">
-                                    <label>
+            </div>
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back buy-test__button-back_3"><span>→</span> Назад</button>
+              <button type="button" class="button-popup popup-test__button-up buy-test__button-up_3">Вперед <span>→</span></button>
+            </div>
+          </div>
+          <div class="popup-test__container buy-test__container-4 hide">
+            <div class="popup-test__form-group">
+              <h5 class="popup-test__title">Я подберу для Вас подходящие варианты квартиры и свяжусь с Вами!</h5>
+              <div class="popup-test__label">
+                <input type="text" name="name-5" class="popup-test__text" placeholder="Введите имя" required>
+                <input type="tel" name="telNumber-5" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup-test__text" placeholder="Введите номер телефона" required>
+                <div class="privacy">
+                  <label>
 										<input type="checkbox" class="privacy__checkbox" required>
 										<span class="privacy__text">Согласен с <a href="/files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
 									</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="popup-test__footer">
-                            <button type="button" class="button-popup popup-test__button-back buy-test__button-back_4"><span>→</span> Назад</button>
-                            <button type="submit" class="button-popup popup-test__button-up">Отправить</button>
-                        </div>
-                    </div>
-                </form>
+                </div>
+              </div>
             </div>
-        </div>
-    </aside>
-    <!--! ====================================== ПОПАП ЗАДАЙТЕ МНЕ ВОПРОС ========================================  -->
-    <aside class="popup" id="popup-question">
-        <div class="popup__body">
-            <div class="popup__content popup-test tax-test">
-                <button type="button" class="popup__close close-popup">
+            <div class="popup-test__footer">
+              <button type="button" class="button-popup popup-test__button-back buy-test__button-back_4"><span>→</span> Назад</button>
+              <button type="submit" class="button-popup popup-test__button-up">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <!--! ====================================== ПОПАП ЗАДАЙТЕ МНЕ ВОПРОС ========================================  -->
+  <aside class="popup" id="popup-question">
+    <div class="popup__body">
+      <div class="popup__content popup-test tax-test">
+        <button type="button" class="popup__close close-popup">
                     <span class="visually-hidden">Крестик - закрывает форму (модальное окно) при нажатии</span>
                 </button>
-                <form action="php/sendmail-6.php" method="POST" class="popup-test__form">
-                    <div class="popup-test__header">
-                        <h4 class="popup-test__main-title tax-test__main-title">Задайте мне вопрос и получите ответ</h4>
-                    </div>
-                    <div class="popup-test__form-group popup-test__form-group_height">
-                        <h5 class="popup-test__title">Я перезвоню Вам и отвечу на вопрос в ближайшее время!</h5>
-                        <input type="text" name="name-6" class="popup-test__text" placeholder="Введите имя" required>
-                        <input type="tel" name="telNumber-6" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup-test__text" placeholder="Введите номер телефона" required>
-                        <textarea name="question-6" class="popup-test__text popup-test__textarea" placeholder="Введите Ваш вопрос" required></textarea>
-                        <div class="privacy">
-                            <label>
+        <form action="php/sendmail-6.php" method="POST" class="popup-test__form">
+          <div class="popup-test__header">
+            <h4 class="popup-test__main-title tax-test__main-title">Задайте мне вопрос и получите ответ</h4>
+          </div>
+          <div class="popup-test__form-group popup-test__form-group_height">
+            <h5 class="popup-test__title">Я перезвоню Вам и отвечу на вопрос в ближайшее время!</h5>
+            <input type="text" name="name-6" class="popup-test__text" placeholder="Введите имя" required>
+            <input type="tel" name="telNumber-6" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" class="popup-test__text" placeholder="Введите номер телефона" required>
+            <textarea name="question-6" class="popup-test__text popup-test__textarea" placeholder="Введите Ваш вопрос" required></textarea>
+            <div class="privacy">
+              <label>
 								<input type="checkbox" class="privacy__checkbox" required>
-								<span class="privacy__text">Согласен с <a href="/files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
+								<span class="privacy__text">Согласен с <a href="files/Politika_Konfidentsialnosti.pdf" target="_blank" class="privacy__link"> политикой конфидициальности</a></span>
 							</label>
-                        </div>
-                    </div>
-                    <div class="popup-test__footer popup-test__footer_position">
-                        <button type="submit" class="button button_center">задать вопрос</button>
-                    </div>
-                </form>
             </div>
-        </div>
-    </aside>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/burger.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/test.js"></script>
-    <script src="js/spoiler.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/popups.js"></script>
-    <script src="js/buy-or-sale.js"></script>
-    <script src="js/script.js"></script>
+          </div>
+          <div class="popup-test__footer popup-test__footer_position">
+            <button type="submit" class="button button_center">задать вопрос</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </aside>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/burger.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/test.js"></script>
+  <script src="js/spoiler.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/popups.js"></script>
+  <script src="js/buy-or-sale.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
