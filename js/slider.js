@@ -48,7 +48,8 @@ new Swiper('.feedback-slider', {
     nested: true,
     // Переключение при клике на слайд
     slideToClickedSlide: false,
-
+    // Автовысота
+    // autoHeight: true,
 });
 
 new Swiper('.portfolio-slider', {

@@ -1,0 +1,272 @@
+/* ! ------------------------fonts-------------------- */
+
+@font-face {
+    font-family: "Trajan Pro";
+    src: url("../fonts/TrajanPro-regular.woff2"), url("../fonts/TrajanPro-regular.woff"), url("../fonts/TrajanPro-regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "City Nova Regular";
+    src: url("../fonts/City-Nova-regular.woff2"), url("../fonts/City-Nova-regular.woff"), url("../fonts/City-Nova-regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* ! -------------------reset-styles------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+
+/* ! ------------------------body-------------------- */
+
+html,
+body {
+    min-width: 320px;
+    height: 100vh;
+    width: 100%;
+    font-family: serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button {
+    cursor: pointer;
+    background-color: unset;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/* ! ------------------------ Основные стили -------------------- */
+
+.body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.body {
+    background-image: url("../img/thanks/thanks__bg-mobile.jpg");
+}
+
+.body__container {
+    width: 90%;
+    height: 200px;
+}
+
+.body__title {
+    font-size: 20px;
+}
+
+.body__subtitle {
+    font-size: 12px;
+}
+
+.body__button {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+.body__container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #e9411d;
+    font-family: "Trajan Pro";
+    color: #fff;
+}
+
+.body__container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.body__title {
+    position: relative;
+    z-index: 3;
+}
+
+.body__subtitle {
+    position: relative;
+    z-index: 3;
+    margin-top: 10px;
+}
+
+.body__button {
+    position: relative;
+    z-index: 3;
+    display: block;
+    top: 0;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    text-decoration: none;
+    background: linear-gradient(to left, #E94110, #Eb6320);
+    font-family: "City Nova Regular", Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.body__button:hover {
+    top: -5px;
+    box-shadow: 0 0 40px rgba(233, 65, 29, 0.7);
+}
+
+.body__button:active {
+    top: 0;
+}
+
+.body__button::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 200px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 100%);
+    position: absolute;
+    left: -80px;
+    top: -50px;
+    z-index: 1;
+    transform: rotate(45deg);
+    -webkit-animation-name: slideme;
+    animation-name: slideme;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes slideme {
+    0% {
+        left: -110px;
+        margin-left: 0px;
+    }
+    30% {
+        left: 110%;
+        margin-left: 60px;
+    }
+    100% {
+        left: 110%;
+        margin-left: 60px;
+    }
+}
+
+@keyframes slideme {
+    0% {
+        left: -110px;
+        margin-left: 0px;
+    }
+    30% {
+        left: 110%;
+        margin-left: 60px;
+    }
+    100% {
+        left: 110%;
+        margin-left: 60px;
+    }
+}
+
+@media (min-width: 900px) {
+    .body {
+        background-image: url("../img/thanks/thanks__bg-desktop.jpg");
+    }
+    .body__container {
+        width: 890px;
+        height: 400px;
+    }
+    .body__title {
+        font-size: 50px;
+    }
+    .body__subtitle {
+        font-size: 25px;
+    }
+    .body__button {
+        margin-top: 50px;
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 640px) and (max-width:899px) {
+    .body {
+        background-image: url("../img/thanks/thanks__bg-tablet.jpg");
+    }
+    .body__container {
+        width: 600px;
+        height: 400px;
+    }
+    .body__title {
+        font-size: 42px;
+    }
+    .body__subtitle {
+        font-size: 22px;
+    }
+    .body__button {
+        margin-top: 50px;
+        font-size: 25px;
+    }
+}
