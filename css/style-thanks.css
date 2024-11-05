@@ -86,7 +86,7 @@ button:focus {
 }
 
 .body {
-    background-image: url("../img/thanks/thanks__bg-mobile.jpg");
+    background-image: url("https://alexeenkov.github.io/Agapov/img/thanks/thanks__bg-mobile.jpg");
 }
 
 .body__container {
@@ -233,7 +233,7 @@ button:focus {
 
 @media (min-width: 900px) {
     .body {
-        background-image: url("../img/thanks/thanks__bg-desktop.jpg");
+        background-image: url("https://alexeenkov.github.io/Agapov/img/thanks/thanks__bg-desktop.jpg");
     }
     .body__container {
         width: 890px;
@@ -253,7 +253,7 @@ button:focus {
 
 @media (min-width: 640px) and (max-width:899px) {
     .body {
-        background-image: url("../img/thanks/thanks__bg-tablet.jpg");
+        background-image: url("https://alexeenkov.github.io/Agapov/img/thanks/thanks__bg-tablet.jpg");
     }
     .body__container {
         width: 600px;
